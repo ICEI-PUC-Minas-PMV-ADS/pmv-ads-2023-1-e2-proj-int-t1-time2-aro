@@ -1,23 +1,25 @@
-# TÍTULO DO PROJETO
+# Permita-se
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Eixo 2 - Projeto: Desenvolvimento de uma Aplicação Interativa`
 
-`SEMESTRE`
+`2023.1`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Amanda Ramires Guimarães Brito
+* Gabriel Augusto Alves Lourenço
+* Lucas Marcelo Dias Souza
+* Nayra Alessandra Simao Reis
+* Pricilla Baier de Araujo
+* Roberta Gomes de Freitas
 
 ## Orientador
 
-* Nome completo do professor 1
+* Rosilane Ribeiro da Mota
 
 ## Instruções de utilização
 
