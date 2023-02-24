@@ -1,18 +1,18 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Durante a pandemia, o isolamento social e o medo perante uma nova realidade mundial fizeram com que casos de saúde mental disparassem de forma alarmante. Um estudo realizado pela Universidade do Estado do Rio de Janeiro (UERJ) detectou o aumento de 90% nos casos de depressão e de 50% nas crises de ansiedade ou sintomas de estresse agudo entre março e abril de 2020.  
+ 
+Nesse sentido, boa parte dos brasileiros buscaram soluções naturais para esses problemas. Uma das formas de tratamento que mais ganharam destaque foi a aromaterapia, um ramo da fitoterapia que utiliza óleos essenciais extraídos das plantas para auxiliar tratamentos físicos, emocionais e energéticos.  
+ 
+Além disso, segundo dados divulgados pelo Serviço Brasileiro de Apoio às Micro e Pequenas Empresas (Sebrae), a produção mundial de óleos essenciais é de aproximadamente 45 mil toneladas, avaliadas em US$ 700 milhões. Estima-se que a produção nacional de óleos essenciais seja equivalente a 13,5% da produção total, posicionando o Brasil como o quarto maior exportador em comparação aos outros países. 
+
+Por outro lado, mesmo que o cenário nacional e os números sejam positivos, os microempreendedores ainda têm dificuldades em conquistar a confiança do cliente, diferente das grandes marcas, que imprimem uma credibilidade para o consumidor como se a marca por si só, agregasse qualidade ao produto. 
+
+Diante disso, essa barreira da desconfiança não é facilmente vencida, é uma atividade que demanda bastante esforço dos pequenos empreendedores. Contudo, apesar de ser uma tarefa difícil, ela pode ser descomplicada com o auxílio da tecnologia. 
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Conforme foi contextualizado, o microempreendedor tem dificuldades em passar a mesma confiança de uma marca grande para os seus clientes, principalmente no ramo de soluções naturais. Dessa forma, o problema que se busca resolver com esse projeto é a ampliação da credibilidade e da reputação da loja **Permita-se** de produtos terapêuticos e cosméticos naturais, através da proximidade entre clientes e produtos ofertados.
 
 ## Objetivos
 
