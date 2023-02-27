@@ -34,10 +34,14 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+O mercado de aromaterapia e produtos naturais, possui um público diversificado que estão em busca do autocuidado, tratando corpo e mente de forma natural e saudável. Visando a praticidade e agilidade na hora da compra, e que necessitam de ajuda na hora da escolha de seus produtos.  
+Desta forma, estabeleceu-se como público-alvo desta solução homens e mulheres entre 25 e 40 anos que se enquadram no papel de fornecedor, vendedor e possíveis clientes. 
+
+
+
+
+ 
 
 > **Links Úteis**:
 > - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
