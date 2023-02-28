@@ -16,12 +16,7 @@ Conforme foi contextualizado, o microempreendedor tem dificuldades em passar a m
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+O objetivo dessa aplicação interativa é identificar e compor uma rede de confiabilidade e credibilidade para que a loja **Permita-se** alcance de forma efetiva seu público alvo. Criando uma proximidade entre os clientes e a loja, permitindo com que ambos estejam cientes de suas necessidades.
 
 ## Justificativa
 
