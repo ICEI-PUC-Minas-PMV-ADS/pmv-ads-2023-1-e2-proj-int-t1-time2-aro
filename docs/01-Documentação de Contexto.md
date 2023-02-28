@@ -20,12 +20,7 @@ O objetivo dessa aplicação interativa é identificar e compor uma rede de conf
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Conforme exposto anteriormente, o microempreendedor possui dificuldades de se manter no mercado, a apllicação será desenvolvida afim atender as demandas dos da loja, podendo estreitar assim a relação cliente x loja. Dessa forma será utilizado o retorno de possíveis clientes para que seja possível indicar e apresentar o produto que melhor irá atender a ele no momento de sua requisição. 
 
 ## Público-Alvo
 
