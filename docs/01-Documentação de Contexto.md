@@ -16,11 +16,11 @@ Conforme foi contextualizado, o microempreendedor tem dificuldades em passar a m
 
 ## Objetivos
 
-O objetivo dessa aplicação interativa é identificar e compor uma rede de confiabilidade e credibilidade para que a loja **Permita-se** alcance de forma efetiva seu público alvo. Criando uma proximidade entre os clientes e a loja, permitindo com que ambos estejam cientes de suas necessidades.
+O objetivo dessa aplicação interativa é fornecer informações para aumentar a confiabilidade e credibilidade do cliente nos serviços prestados pela loja **Permita-se**. Criando uma proximidade entre os clientes e a loja.
 
 ## Justificativa
 
-Conforme exposto anteriormente, o microempreendedor possui dificuldades de se manter no mercado, a apllicação será desenvolvida afim atender as demandas dos da loja, podendo estreitar assim a relação cliente x loja. Dessa forma será utilizado o retorno de possíveis clientes para que seja possível indicar e apresentar o produto que melhor irá atender a ele no momento de sua requisição. 
+Conforme exposto anteriormente, o microempreendedor possui maior dificuldade de se manter no mercado em comparação a grandes marcas, esse fator combinado a um mercado defasado num cenário durante/pós pandemia da COVID-19 agrega a ideia da aplicação que será desenvolvida afim de atender as necessidades da loja de se manter no mercado e também as demandas dos clientes, visando estreitar essa relação e também agregando valor aos serviços por nós oferecidos. Dessa forma, será utilizado o retorno dos clientes para que possamos indicar e apresentar a ele um produto que irá se encaixar nas necessidades dele 
 
 ## Público-Alvo
 
