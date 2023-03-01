@@ -32,7 +32,6 @@ Lembre-se que você deve ser enumerar e descrever precisamente e personalizada t
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
 |Bianca Souza        | Deseja uma plataforma onde consiga postar os seus produtos, com fotos e todas as especificações de cada um. | Para facilitar na divulgação dos seus produtos. |
 |Iza Souza           | Deseja uma plataforma onde consiga filtrar e ordenar seus produtos. | Para direcionar a venda com o produto correto para cada cliente. |
 |Fernanda Mendes     |Deseja uma plataforma de venda onde ela como cliente tenha ajuda de como escolher o produto específico para ela.| Para auxiliar a escolher o melhor produto de acordo com seu perfil. |
