@@ -20,12 +20,12 @@ As personas levantadas durante o processo de entendimento do problema são apres
 | **Iza Souza** |      |      |
 |------------------------------|------|------|
 |<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-grupo-2-permita-se/blob/2b1224cfa3538c834e3b9b944ce6aedb40bd4e9b/docs/img/persona2.jpg"> | **Idade:** 34 anos  | **Ocupação:** Técnica de laboratório e socia da loja Permita-se que atua como vendedora dos produtos. Empreendedora. |
-| **Motivações:** Bianca Souza é motivada pelo crescimento profissional e pelo amor aos familares.	| **Frustrações:** -- | **Hobbies, História:** Viajar, leitura e assistir series/filmes|
+| **Motivações:** Iza Souza é movida pelo crescimento profissional e pelo amor aos familares.	| **Frustrações:** -- | **Hobbies, História:** Viajar, leitura e assistir series/filmes|
 
 | **Fernanda Mendes** |      |      |
 |------------------------------|------|------|
 |<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-grupo-2-permita-se/blob/2b1224cfa3538c834e3b9b944ce6aedb40bd4e9b/docs/img/persona3.jpg"> | **Idade:** 27 anos  | **Ocupação:** Biomédica, empreendedora e cliente da loja Permita-se |
-| **Motivações:** Bianca Souza é motivada pelo amor a família e pelos estudos.	| **Frustrações:** -- | **Hobbies, História:** passeios com os amigos, viagens.|
+| **Motivações:** Fernanda encontra motivação no amor a família e pelos estudos.	| **Frustrações:** -- | **Hobbies, História:** passeios com os amigos, viagens.|
 
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
