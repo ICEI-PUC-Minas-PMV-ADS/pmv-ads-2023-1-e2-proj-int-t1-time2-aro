@@ -16,7 +16,7 @@ Conforme foi contextualizado, o microempreendedor tem dificuldades em passar a m
 
 ## Objetivos
 
-O objetivo dessa aplicação interativa é fornecer informações para aumentar a confiabilidade e credibilidade do cliente nos serviços prestados pela loja **Permita-se**. Criando uma proximidade entre os clientes e a loja.
+O objetivo dessa aplicação interativa é fornecer informações para aumentar a confiabilidade e credibilidade do cliente nos serviços prestados pela loja **Permita-se**. Criando uma proximidade entre os clientes e a loja. Criando uma proximidade entre os clientes e a loja com o aumento da confiança na qualidade dos produtos da loja
 
 ## Justificativa
 
