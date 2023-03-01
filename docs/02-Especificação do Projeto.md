@@ -14,7 +14,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 | **Bianca Souza** |      |      |
 |------------------------------|------|------|
-|<img src="docs/img/persona1.jpg"> | **Idade:** 40 anos  | **Ocupação:** Terapeuta Holística, Massoterapeuta e socia da loja Permita-se que atua como fornecedora dos produtos artesanais. Empreendedora. |
+|<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-grupo-2-permita-se/blob/c01ff7a964af8db93944ebc0d695ab01cedac971/docs/img/persona1.jpg"> | **Idade:** 40 anos  | **Ocupação:** Terapeuta Holística, Massoterapeuta e socia da loja Permita-se que atua como fornecedora dos produtos artesanais. Empreendedora. |
 | **Motivações:** Bianca Souza é motivada pela necessidade de aprendizado através de cursos, por trabalhos artesanais e pela família	| **Frustrações:** -- | **Hobbies, História:** Estudar Levar uma vida saudável aos clientes  Viajar|
 
 
