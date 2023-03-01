@@ -12,7 +12,7 @@ Diante disso, essa barreira da desconfiança não é facilmente vencida, é uma 
 
 ## Problema
 
-Conforme foi contextualizado, o microempreendedor tem dificuldades em passar a mesma confiança de uma marca grande para os seus clientes, principalmente no ramo de soluções naturais. Dessa forma, o problema que se busca resolver com esse projeto é a ampliação da credibilidade e da reputação da loja **Permita-se** de produtos terapêuticos e cosméticos naturais, através da proximidade entre clientes e produtos ofertados.
+Conforme foi contextualizado, muitos consumidores têm a percepção de que as grandes marcas possuem mais conhecimento e expertise em relação aos produtos de aromaterapia, o que afeta negativamente a reputação de uma loja menor e independente. Entretanto, esse comportamento não deveria ser tratada como padrão, já que pequenos empreendimentos podem ter competência igual ou até maior que seus competidores maiores. Dessa forma, o problema que se busca resolver com esse projeto é a falta de credibilidade perante os consumidores, da loja **Permita-se** de produtos terapêuticos e cosméticos naturais, relacionado ao imaginário popular de que uma loja maior tende a ser mais confiável e entender melhor da área.
 
 ## Objetivos
 
