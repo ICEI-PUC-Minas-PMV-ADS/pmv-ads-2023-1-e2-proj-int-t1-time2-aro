@@ -20,10 +20,9 @@ O objetivo dessa aplicação interativa é fornecer informações para aumentar 
 
 ## Justificativa
 
-Conforme exposto anteriormente, o microempreendedor possui maior dificuldade de se manter no mercado em comparação a grandes marcas, esse fator combinado a um mercado defasado num cenário durante/pós pandemia da COVID-19 agrega a ideia da aplicação que será desenvolvida afim de atender as necessidades da loja de se manter no mercado e também as demandas dos clientes, visando estreitar essa relação e também agregando valor aos serviços por nós oferecidos. Dessa forma, será utilizado o retorno dos clientes para que possamos indicar e apresentar a ele um produto que irá se encaixar nas necessidades dele 
+Conforme exposto anteriormente, o microempreendedor possui maior dificuldade de se manter no mercado em comparação a grandes marcas, esse fator combinado a um mercado defasado num cenário durante/pós pandemia da COVID-19 agrega a ideia da aplicação que será desenvolvida a fim de atender as necessidades da loja de se manter no mercado e também as demandas dos clientes, visando estreitar essa relação e também agregando valor aos serviços oferecidos pela loja. Dessa forma, será utilizado o retorno dos clientes para que possamos indicar e apresentar a ele um produto que irá se encaixar nas necessidades dele 
 
 ## Público-Alvo
-
 
 O mercado de aromaterapia e produtos naturais, possui um público diversificado que estão em busca do autocuidado, tratando corpo e mente de forma natural e saudável. Visando a praticidade e agilidade na hora da compra, e que necessitam de ajuda na hora da escolha de seus produtos.  
 Desta forma, estabeleceu-se como público-alvo desta solução homens e mulheres entre 25 e 40 anos que se enquadram no papel de fornecedor, vendedor e possíveis clientes. 
