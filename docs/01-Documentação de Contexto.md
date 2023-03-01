@@ -16,11 +16,11 @@ Conforme foi contextualizado, o microempreendedor tem dificuldades em passar a m
 
 ## Objetivos
 
-O objetivo dessa aplicação interativa é fornecer informações para aumentar a confiabilidade e credibilidade do cliente nos serviços prestados pela loja **Permita-se**. Criando uma proximidade entre os clientes e a loja. Criando uma proximidade entre os clientes e a loja com o aumento da confiança na qualidade dos produtos da loja
+O objetivo dessa aplicação interativa é fornecer informações para aumentar a confiabilidade e credibilidade do cliente nos serviços prestados pela loja **Permita-se**. Criando uma proximidade entre os clientes e a loja. Criando uma proximidade entre os clientes e a loja com o aumento da confiança na qualidade dos produtos da loja.
 
 ## Justificativa
 
-Conforme exposto anteriormente, o microempreendedor possui maior dificuldade de se manter no mercado em comparação a grandes marcas, esse fator combinado a um mercado defasado num cenário durante/pós pandemia da COVID-19 agrega a ideia da aplicação que será desenvolvida a fim de atender as necessidades da loja de se manter no mercado e também as demandas dos clientes, visando estreitar essa relação e também agregando valor aos serviços oferecidos pela loja. Dessa forma, será utilizado o retorno dos clientes para que possamos indicar e apresentar a ele um produto que irá se encaixar nas necessidades dele 
+Conforme exposto anteriormente, o microempreendedor possui maior dificuldade de se manter no mercado em comparação a grandes marcas, esse fator combinado a um mercado defasado num cenário durante/pós pandemia da COVID-19 agrega a ideia da aplicação que será desenvolvida a fim de atender as necessidades da loja de se manter no mercado e também as demandas dos clientes, visando estreitar essa relação e também agregando valor aos serviços oferecidos pela loja. Dessa forma, será utilizado o retorno dos clientes para que possamos indicar e apresentar a ele um produto que irá se encaixar nas necessidades dele.
 
 ## Público-Alvo
 
