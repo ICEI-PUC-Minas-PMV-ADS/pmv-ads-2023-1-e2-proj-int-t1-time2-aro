@@ -43,15 +43,26 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-01| A aplicação deve permitir o usuário criar um perfil no site  | ALTA | 
+|RF-02| A aplicação deve permitir o usuário terá acesso a um Quiz interativo que sugere os melhores produtos baseado nas necessidades em que ele informar    | ALTA |
+|RF-03| A aplicação deve permitir  o usuário poderá salvar/editar o resultado do Quiz em seu perfil na plataforma (Limite de 5 Quis Salvos)  | ALTA | 
+|RF-04| A aplicação deverá permitir que o usuário utilize as funções buscar/filtrar produtos    | MÉDIA |
+|RF-05| A aplicação deve permitir o usuário salvar produtos no perfil (favoritos)  | MÉDIA | 
+|RF-06| A aplicação deve permitir o usuário encontrar produtos relacionados (listados por categoria)    | BAIXA|
+|RF-07| A aplicação deve permitir o usuário selecionar os produtos que tem interesse (criar um carrinho)   | BAIXA|
+
+
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-01| A aplicação deve ser de faço acesso  | Alta  | 
+|RNF-02| A aplicação deverá ser responsiva permitindo a visualização em um celular de forma adequada.  |  Alta  |
+|RNF-03| O site deve ser publicado em um ambiente acessível publicamente na Internet (GitHub)  | Alta  | 
+|RNF-04| A aplicação deve ter bom nível de contraste entre os elementos da tela e um design simples.  | Média | 
+|RNF-05| A aplicação deve ser protegida contra acesso não autorizado. | Média  | 
+|RNF-06| O site deve ser compatível com os principais navegadores da atualidade (Google Chrome, Opera, Firefox, Microsoft Edge).  |  Média | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -74,8 +85,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|RE-01 |O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 19/06/2023.  |
+|RE-02 |O aplicativo deve se restringir às tecnologias básicas da Web no Frontend        |
+|RE-03 |A equipe não pode subcontratar o desenvolvimento do trabalho.         |
 
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
