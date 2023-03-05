@@ -13,7 +13,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 | **Iza Souza** |      |      |
 |------------------------------|------|------|
-|![persona2](img/persona2.jpg) | **Idade:** 34 anos  | **Ocupação:** Técnica de laboratório, empreendedora e cliente da loja Permita-se que atua como vendedora dos produtos. |
+|![persona2](img/persona2.jpg) | **Idade:** 34 anos  | **Ocupação:** Técnica de laboratório, empreendedora e cliente da loja Permita-se  |
 | **Motivações:** Iza Souza é movida pelo crescimento profissional e pelo amor aos familares.	| **Frustrações:** -- | **Hobbies, História:** Viajar, leitura e assistir series/filmes|
 
 | **Fernanda Mendes** |      |      |
