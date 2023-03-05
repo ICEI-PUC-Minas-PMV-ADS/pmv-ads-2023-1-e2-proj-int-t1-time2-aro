@@ -8,12 +8,12 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 | **Bianca Souza** |      |      |
 |------------------------------|------|------|
-|![persona1](img/persona1.jpg) | **Idade:** 40 anos  | **Ocupação:** Terapeuta Holística, Massoterapeuta e socia da loja Permita-se que atua como fornecedora dos produtos artesanais. Empreendedora. |
+|![persona1](img/persona1.jpg) | **Idade:** 40 anos  | **Ocupação:** Terapeuta Holística, Massoterapeuta e socia da loja Permita-se que atua como proprietaria e vendedora da loja Permita-se. Empreendedora. |
 | **Motivações:** Bianca Souza é motivada pela necessidade de aprendizado através de cursos, por trabalhos artesanais e pela família	| **Frustrações:** -- | **Hobbies, História:** Estudar, levar uma vida saudável aos clientes, viajar|
 
 | **Iza Souza** |      |      |
 |------------------------------|------|------|
-|![persona2](img/persona2.jpg) | **Idade:** 34 anos  | **Ocupação:** Técnica de laboratório e socia da loja Permita-se que atua como vendedora dos produtos. Empreendedora. |
+|![persona2](img/persona2.jpg) | **Idade:** 34 anos  | **Ocupação:** Técnica de laboratório, empreendedora e cliente da loja Permita-se que atua como vendedora dos produtos. |
 | **Motivações:** Iza Souza é movida pelo crescimento profissional e pelo amor aos familares.	| **Frustrações:** -- | **Hobbies, História:** Viajar, leitura e assistir series/filmes|
 
 | **Fernanda Mendes** |      |      |
@@ -28,12 +28,14 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
 |Bianca Souza        | Deseja uma plataforma onde consiga postar os seus produtos, com fotos e todas as especificações de cada um. | Para facilitar na divulgação dos seus produtos. |
-|Iza Souza           | Deseja uma plataforma onde consiga filtrar e ordenar seus produtos. | Para direcionar a venda com o produto correto para cada cliente. |
-|Fernanda Mendes     |Deseja uma plataforma de venda onde ela como cliente tenha ajuda de como escolher o produto específico para ela.| Para auxiliar a escolher o melhor produto de acordo com seu perfil. |
-|Julia Freitas       | Deseja um canal de comunicação de fácil acesso com os vendedores da loja através do catálogo de vendas. | Para agilizar o processo de compra e tirar dúvidas caso seja necessário. |
-|Marcela Amorim      | Deseja localizar em uma página todas as informações necessárias para a escolha do seu produto. | Para não se perder entre as páginas e ter agilidade na compra.  |
-|Lorena Marques      | Deseja uma plataforma de venda onde ela possa salvar os produtos escolhido. | Para finalizar a compra depois caso não deseje finalizar naquele momento. |
-|Tomas Magno         | Deseja ter acesso a informações sobre o produto de forma clara e acessível.| Para conhecer melhor a marca e os produtos ofertados. |
+|Bianca Souza          | Deseja uma plataforma onde consiga filtrar e ordenar seus produtos. | Para direcionar a venda com o produto correto para cada cliente. |
+|Bianca Souza     |Deseja uma plataforma onde o cliente consiga criar um cadastro no site  | Para futuramente o cliente receber ofertas via e- mail. |
+|Iza Souza      | Deseja um canal de comunicação de fácil acesso com os vendedores da loja através do catálogo de vendas. | Para agilizar o processo de compra e tirar dúvidas caso seja necessário. |
+|Iza Souza       | Deseja localizar por categorias todas as informações necessárias para a escolha do seu produto. | Para não se perder entre as páginas e ter agilidade na compra.  |
+|Iza Souza        | Deseja deixar como produtos favoritos. | Para finalizar a compra mais tarde. |
+|Fernanda Mendes        | Deseja ter acesso a informações sobre o produto de forma clara e acessível.| Para conhecer melhor a marca e os produtos ofertados. |
+|Fernanda Mendes     |   Deseja pesquisar o produto por uma barra de busca | Para facilitar a localização do produto desejado. |
+|Fernanda Mendes       |Deseja criar um carrinho com os produtos desejados. | Para finalizar a compra com mais rapidez.  |
 
 ## Requisitos
 
@@ -43,26 +45,15 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-01| A aplicação deve permitir o usuário criar um perfil no site  | ALTA | 
-|RF-02| A aplicação deve permitir o usuário terá acesso a um Quiz interativo que sugere os melhores produtos baseado nas necessidades em que ele informar    | ALTA |
-|RF-03| A aplicação deve permitir  o usuário poderá salvar/editar o resultado do Quiz em seu perfil na plataforma (Limite de 5 Quiz Salvos)  | ALTA | 
-|RF-04| A aplicação deverá permitir que o usuário utilize as funções buscar/filtrar produtos    | MÉDIA |
-|RF-05| A aplicação deve permitir o usuário salvar produtos no perfil (favoritos)  | MÉDIA | 
-|RF-06| A aplicação deve permitir o usuário encontrar produtos relacionados (listados por categoria)    | BAIXA|
-|RF-07| A aplicação deve permitir o usuário selecionar os produtos que tem interesse (criar um carrinho)   | BAIXA|
-
-
+|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
+|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-01| A aplicação deve ser de faço acesso  | Alta  | 
-|RNF-02| A aplicação deverá ser responsiva permitindo a visualização em um celular de forma adequada.  |  Alta  |
-|RNF-03| O site deve ser publicado em um ambiente acessível publicamente na Internet (GitHub)  | Alta  | 
-|RNF-04| A aplicação deve ter bom nível de contraste entre os elementos da tela e um design simples.  | Média | 
-|RNF-05| A aplicação deve ser protegida contra acesso não autorizado. | Média  | 
-|RNF-06| O site deve ser compatível com os principais navegadores da atualidade (Google Chrome, Opera, Firefox, Microsoft Edge).  |  Média | 
+|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
+|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -85,9 +76,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|RE-01 |O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 19/06/2023.  |
-|RE-02 |O aplicativo deve se restringir às tecnologias básicas da Web no Frontend        |
-|RE-03 |A equipe não pode subcontratar o desenvolvimento do trabalho.         |
+|01| O projeto deverá ser entregue até o final do semestre |
+|02| Não pode ser desenvolvido um módulo de backend        |
 
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
