@@ -10,7 +10,6 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 
-* Amanda Ramires Guimarães Brito
 * Gabriel Augusto Alves Lourenço
 * Lucas Marcelo Dias Souza
 * Nayra Alessandra Simao Reis
