@@ -26,7 +26,7 @@ Conforme exposto anteriormente, o microempreendedor possui maior dificuldade de 
 
 O mercado de aromaterapia e produtos naturais, possui um público diversificado que estão em busca do autocuidado, tratando corpo e mente de forma natural e saudável. Visando a praticidade e agilidade na hora da compra, e que necessitam de ajuda na hora da escolha de seus produtos.  
  
-Desta forma, estabeleceu-se como público-alvo desta solução público adulto que se enquadram no papel de fornecedor, vendedor e possíveis clientes. 
+Desta forma, estabeleceu-se como público-alvo desta solução o público adulto que estão em busca de tratamento encontrado no aromaterapia. 
 
 
 
