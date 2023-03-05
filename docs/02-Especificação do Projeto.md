@@ -45,15 +45,28 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-01|A aplicação deve permitir o usuário criar um perfil no site  | Alta | 
+|RF-02| A aplicação deve permitir o usuário terá acesso a um Quiz interativo que sugere os melhores produtos baseado nas necessidades em que ele informar    | Alta |
+|RF-03| A aplicação deve permitir  o usuário poderá salvar/editar o resultado do Quiz em seu perfil na plataforma (Limite de 5 Quiz Salvos)  | ALTA | 
+|RF-04| EmitA aplicação deverá permitir que o usuário utilize as funções buscar/filtrar produtos   |Alta |
+|RF-05| A aplicação deve permitir o usuário salvar produtos no perfil (favoritos)  | Média | 
+|RF-06| A aplicação deve permitir o usuário encontrar produtos relacionados (listados por categoria)   |Baixa|
+|RF-07| A aplicação deve permitir o usuário selecionar os produtos que tem interesse (criar um carrinho)  |Baixa |
+|RF-08| A aplicação deve permitir o usuário encaminhar o seu “carrinho de compras” para algum canal de comunicação para a finalização do pedido (Whatsapp, Instagram)  | Alta | 
+|RF-09| A aplicação deve permitir entrar em contato com os responsáveis da loja por outros canais (redes sociais) | Alta | 
+
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-01| A aplicação deve ser de faço acesso   | Alta | 
+|RNF-02|A aplicação deverá ser responsiva permitindo a visualização em um celular de forma adequada.  |  Alta | 
+|RNF-03| O site deve ser publicado em um ambiente acessível publicamente na Internet (GitHub)  | Alta | 
+|RNF-04|A aplicação deve ter bom nível de contraste entre os elementos da tela e um design simples.  |  Média | 
+|RNF-05| A aplicação deve ser protegida contra acesso não autorizado.  | Média | 
+|RNF-06| O site deve ser compatível com os principais navegadores da atualidade (Google Chrome, Opera, Firefox, Microsoft Edge).  |  Média | 
+
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
