@@ -47,7 +47,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----|
 |RF-01|A aplicação deve permitir o usuário criar um perfil no site  | Alta | 
 |RF-02| A aplicação deve permitir o usuário terá acesso a um Quiz interativo que sugere os melhores produtos baseado nas necessidades em que ele informar    | Alta |
-|RF-03| A aplicação deve permitir  o usuário poderá salvar/editar o resultado do Quiz em seu perfil na plataforma (Limite de 5 Quiz Salvos)  | ALTA | 
+|RF-03| A aplicação deve permitir  o usuário poderá salvar/editar o resultado do Quiz em seu perfil na plataforma (Limite de 5 Quiz Salvos)  | Alta| 
 |RF-04| EmitA aplicação deverá permitir que o usuário utilize as funções buscar/filtrar produtos   |Alta |
 |RF-05| A aplicação deve permitir o usuário salvar produtos no perfil (favoritos)  | Média | 
 |RF-06| A aplicação deve permitir o usuário encontrar produtos relacionados (listados por categoria)   |Baixa|
