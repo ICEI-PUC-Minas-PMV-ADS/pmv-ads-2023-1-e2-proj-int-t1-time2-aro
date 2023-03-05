@@ -48,7 +48,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-01|A aplicação deve permitir o usuário criar um perfil no site  | Alta | 
 |RF-02| A aplicação deve permitir o usuário terá acesso a um Quiz interativo que sugere os melhores produtos baseado nas necessidades em que ele informar    | Alta |
 |RF-03| A aplicação deve permitir  o usuário poderá salvar/editar o resultado do Quiz em seu perfil na plataforma (Limite de 5 Quiz Salvos)  | Alta| 
-|RF-04| EmitA aplicação deverá permitir que o usuário utilize as funções buscar/filtrar produtos   |Alta |
+|RF-04| EmitA aplicação deverá permitir que o usuário utilize as funções buscar/filtrar produtos   |Média |
 |RF-05| A aplicação deve permitir o usuário salvar produtos no perfil (favoritos)  | Média | 
 |RF-06| A aplicação deve permitir o usuário encontrar produtos relacionados (listados por categoria)   |Baixa|
 |RF-07| A aplicação deve permitir o usuário selecionar os produtos que tem interesse (criar um carrinho)  |Baixa |
@@ -89,8 +89,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|RE-01| O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 19/06/2023 |
+|RE-02| O aplicativo deve se restringir às tecnologias básicas da Web no Frontend     |
+|RE-03| A equipe não pode subcontratar o desenvolvimento do trabalho   |
 
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
