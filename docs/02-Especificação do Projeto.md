@@ -8,7 +8,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 | **Bianca Souza** |      |      |
 |------------------------------|------|------|
-|![persona1](img/persona1.jpg) | **Idade:** 40 anos  | **Ocupação:** Terapeuta Holística, Massoterapeuta e socia da loja Permita-se que atua como proprietaria e vendedora da loja Permita-se. Empreendedora. |
+|![persona1](img/persona1.jpg) | **Idade:** 40 anos  | **Ocupação:** Terapeuta Holística, Massoterapeuta e proprietaria da loja Permita-se e atua como vendedora. Empreendedora. |
 | **Motivações:** Bianca Souza é motivada pela necessidade de aprendizado através de cursos, por trabalhos artesanais e pela família	| **Frustrações:** -- | **Hobbies, História:** Estudar, levar uma vida saudável aos clientes, viajar|
 
 | **Iza Souza** |      |      |
