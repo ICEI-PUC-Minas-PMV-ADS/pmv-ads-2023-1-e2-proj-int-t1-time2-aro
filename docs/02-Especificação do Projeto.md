@@ -1,12 +1,6 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Especificação do Projeto 
-
-A definição exata do problema e os pontos mais relevantes a serem tratados neste projeto foi discutido com membros da equipe e debatido sobre quem este tema tem mais impacto. Estabelecendo a ideia de personas e seus problemas como usuários baseados em clientes reais. 
-
-
+A definição do problema e os pontos mais relevantes a serem tratados neste projeto foram consolidados com a participação de clientes da loja **Permita-se** a partir de conversas e entrevistas. Os detalhes levantados nesse processo foram agrupados na forma de personas e histórias de usuários.
 
 ## Personas
 
@@ -14,17 +8,17 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 | **Bianca Souza** |      |      |
 |------------------------------|------|------|
-|<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-grupo-2-permita-se/blob/c01ff7a964af8db93944ebc0d695ab01cedac971/docs/img/persona1.jpg"> | **Idade:** 40 anos  | **Ocupação:** Terapeuta Holística, Massoterapeuta e socia da loja Permita-se que atua como fornecedora dos produtos artesanais. Empreendedora. |
+|![persona1](img/persona1.jpg) | **Idade:** 40 anos  | **Ocupação:** Terapeuta Holística, Massoterapeuta e socia da loja Permita-se que atua como fornecedora dos produtos artesanais. Empreendedora. |
 | **Motivações:** Bianca Souza é motivada pela necessidade de aprendizado através de cursos, por trabalhos artesanais e pela família	| **Frustrações:** -- | **Hobbies, História:** Estudar, levar uma vida saudável aos clientes, viajar|
 
 | **Iza Souza** |      |      |
 |------------------------------|------|------|
-|<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-grupo-2-permita-se/blob/2b1224cfa3538c834e3b9b944ce6aedb40bd4e9b/docs/img/persona2.jpg"> | **Idade:** 34 anos  | **Ocupação:** Técnica de laboratório e socia da loja Permita-se que atua como vendedora dos produtos. Empreendedora. |
+|![persona2](img/persona2.jpg) | **Idade:** 34 anos  | **Ocupação:** Técnica de laboratório e socia da loja Permita-se que atua como vendedora dos produtos. Empreendedora. |
 | **Motivações:** Iza Souza é movida pelo crescimento profissional e pelo amor aos familares.	| **Frustrações:** -- | **Hobbies, História:** Viajar, leitura e assistir series/filmes|
 
 | **Fernanda Mendes** |      |      |
 |------------------------------|------|------|
-|<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-grupo-2-permita-se/blob/2b1224cfa3538c834e3b9b944ce6aedb40bd4e9b/docs/img/persona3.jpg"> | **Idade:** 27 anos  | **Ocupação:** Biomédica, empreendedora e cliente da loja Permita-se |
+|![persona3](img/persona3.jpg) | **Idade:** 27 anos  | **Ocupação:** Biomédica, empreendedora e cliente da loja Permita-se |
 | **Motivações:** Fernanda encontra motivação no amor a família e pelos estudos.	| **Frustrações:** -- | **Hobbies, História:** passeios com os amigos, viagens.|
 
 
@@ -91,5 +85,7 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 > - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Casos de Uso
+
+O objetivo do diagrama de caso de uso em UML é demonstrar as diferentes maneiras que um usuário pode interagir com o sistema. Para o nosso caso, teremos apenas dois usuários: Cliente e Gerente, e no diagrama abaixo, podemos visualizar as funcionalidades acessadas por cada um.
 
 ![diagrama-casos-de-uso](img/casos-de-uso-permita-se.drawio.png)
