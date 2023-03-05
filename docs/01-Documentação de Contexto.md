@@ -25,8 +25,8 @@ Conforme exposto anteriormente, o microempreendedor possui maior dificuldade de 
 ## Público-Alvo
 
 O mercado de aromaterapia e produtos naturais, possui um público diversificado que estão em busca do autocuidado, tratando corpo e mente de forma natural e saudável. Visando a praticidade e agilidade na hora da compra, e que necessitam de ajuda na hora da escolha de seus produtos.  
-Desta forma, estabeleceu-se como público-alvo desta solução homens e mulheres entre 25 e 40 anos que se enquadram no papel de fornecedor, vendedor e possíveis clientes. 
-
+ 
+Desta forma, estabeleceu-se como público-alvo desta solução público adulto que se enquadram no papel de fornecedor, vendedor e possíveis clientes. 
 
 
 
