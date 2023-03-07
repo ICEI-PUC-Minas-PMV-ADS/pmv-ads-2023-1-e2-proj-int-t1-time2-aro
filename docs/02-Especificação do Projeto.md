@@ -4,7 +4,7 @@ A definição do problema e os pontos mais relevantes a serem tratados neste pro
 
 ## Personas
 
-As personas levantadas durante o processo de entendimento do problema são apresentadas na Figuras que se seguem. 
+As personas levantadas durante o processo de entendimento do problema são apresentadas nas tabelas que se seguem. 
 
 | **Bianca Souza** |      |      |
 |------------------------------|------|------|
@@ -45,43 +45,28 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-01|A aplicação deve permitir o usuário criar um perfil no site  | Alta | 
-|RF-02| A aplicação deve permitir o usuário terá acesso a um Quiz interativo que sugere os melhores produtos baseado nas necessidades em que ele informar    | Alta |
-|RF-03| A aplicação deve permitir  o usuário poderá salvar/editar o resultado do Quiz em seu perfil na plataforma (Limite de 5 Quiz Salvos)  | Alta| 
-|RF-04| EmitA aplicação deverá permitir que o usuário utilize as funções buscar/filtrar produtos   |Média |
-|RF-05| A aplicação deve permitir o usuário salvar produtos no perfil (favoritos)  | Média | 
-|RF-06| A aplicação deve permitir o usuário encontrar produtos relacionados (listados por categoria)   |Baixa|
-|RF-07| A aplicação deve permitir o usuário selecionar os produtos que tem interesse (criar um carrinho)  |Baixa |
-|RF-08| A aplicação deve permitir o usuário encaminhar o seu “carrinho de compras” para algum canal de comunicação para a finalização do pedido (Whatsapp, Instagram)  | Alta | 
-|RF-09| A aplicação deve permitir entrar em contato com os responsáveis da loja por outros canais (redes sociais) | Alta | 
+|RF-01| O sistema deve permitir que os clientes criem uma conta | Alta |
+|RF-02| O sistema deve permitir que os gerentes cadastrem e atualizem informações de produtos, como descrições, preços e imagens. | Alta | 
+|RF-03| O sistema deve permitir que os gerentes cadastrem e atualizem *quizzes* interativos. | Alta |
+|RF-04| O sistema deve permitir que os clienter acessem a um *quiz* interativo que sugere os melhores produtos baseado nas suas necessidades | Alta |
+|RF-05| O sistema deve permitir que os clientes salvem o resultado do *quiz* em seu perfil | Média | 
+|RF-06| O sistema deve permitir que os clientes pesquisem produtos por nome e categoria.	| Média |
+|RF-07| O sistema deve permitir que os clientes favoritem os produtos escolhidos | Baixa | 
+|RF-08| O sistema deve permitir que os clientes adicionem produtos a um carrinho de compras  | Alta |
+|RF-09| O sistema deve permitir que os clientes concluam a compra direcionando o pedido para um canal de comunicação externo com algum vendedor(a). | Alta | 
+|RF-10| O sistema deve permitir que os clientes entrem em contato com a loja por meio de outros canais (redes sociais) | Baixa | 
 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-01| A aplicação deve ser de faço acesso   | Alta | 
-|RNF-02|A aplicação deverá ser responsiva permitindo a visualização em um celular de forma adequada.  |  Alta | 
-|RNF-03| O site deve ser publicado em um ambiente acessível publicamente na Internet (GitHub)  | Alta | 
-|RNF-04|A aplicação deve ter bom nível de contraste entre os elementos da tela e um design simples.  |  Média | 
-|RNF-05| A aplicação deve ser protegida contra acesso não autorizado.  | Média | 
-|RNF-06| O site deve ser compatível com os principais navegadores da atualidade (Google Chrome, Opera, Firefox, Microsoft Edge).  |  Média | 
-
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+|RNF-01| O sistema deve ser fácil de usar, intuitivo e ter uma interface amigável para os usuários | Alta | 
+|RNF-02| O sistema deve ser responsivo permitindo a visualização em diferentes tamanhos de telas.  |  Médio | 
+|RNF-03| O sistema deve ser publicado em um ambiente acessível publicamente na Internet | Alta | 
+|RNF-04| O sistema deve garantir a privacidade e a segurança das informações dos usuários |  Alta | 
+|RNF-05| O sistema deve ser fácil de manter, atualizar e corrigir, sem afetar a disponibilidade ou a qualidade do serviço  | Média | 
+|RNF-06| O sistema deve ser compatível com os principais navegadores da atualidade (Google Chrome, Opera, Firefox, Microsoft Edge).  |  Média | 
 
 ## Restrições
 
@@ -90,15 +75,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |RE-01| O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 19/06/2023 |
-|RE-02| O aplicativo deve se restringir às tecnologias básicas da Web no Frontend     |
+|RE-02| O sistema deve se restringir às tecnologias básicas da Web no Frontend |
 |RE-03| A equipe não pode subcontratar o desenvolvimento do trabalho   |
-
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Casos de Uso
 
