@@ -9,17 +9,17 @@ As personas levantadas durante o processo de entendimento do problema são apres
 | **Bianca Souza** |      |      |
 |------------------------------|------|------|
 |![persona1](img/persona1.jpg) | **Idade:** 40 anos  | **Ocupação:** Terapeuta Holística, Massoterapeuta e proprietaria da loja Permita-se e atua como vendedora. Empreendedora. |
-| **Motivações:** Bianca Souza é motivada pela necessidade de aprendizado através de cursos, por trabalhos artesanais e pela família	| **Frustrações:** -- | **Hobbies, História:** Estudar, levar uma vida saudável aos clientes, viajar|
+| **Motivações:** Bianca Souza é motivada pela necessidade de aprendizado através de cursos, por trabalhos artesanais e pela família	| **Frustrações:** Não conseguir passar credibilidade de seus produtos somente através das redes sociais | **Hobbies, História:** Estudar, levar uma vida saudável aos clientes, viajar|
 
 | **Iza Souza** |      |      |
 |------------------------------|------|------|
 |![persona2](img/persona2.jpg) | **Idade:** 34 anos  | **Ocupação:** Técnica de laboratório, empreendedora e cliente da loja Permita-se  |
-| **Motivações:** Iza Souza é movida pelo crescimento profissional e pelo amor aos familares.	| **Frustrações:** -- | **Hobbies, História:** Viajar, leitura e assistir series/filmes|
+| **Motivações:** Iza Souza é movida pelo crescimento profissional e pelo amor aos familares.	| **Frustrações:** Plataformas de vendas sem todas as informações dos produtos | **Hobbies, História:** Viajar, leitura e assistir series/filmes|
 
 | **Fernanda Mendes** |      |      |
 |------------------------------|------|------|
 |![persona3](img/persona3.jpg) | **Idade:** 27 anos  | **Ocupação:** Biomédica, empreendedora e cliente da loja Permita-se |
-| **Motivações:** Fernanda encontra motivação no amor a família e pelos estudos.	| **Frustrações:** -- | **Hobbies, História:** passeios com os amigos, viagens.|
+| **Motivações:** Fernanda encontra motivação no amor a família e pelos estudos.	| **Frustrações:** Dificuldade em localizar e ordenar os produtos desejados na hora da compra | **Hobbies, História:** passeios com os amigos, viagens.|
 
 
 ## Histórias de Usuários
@@ -48,7 +48,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-01| O sistema deve permitir que os clientes criem uma conta | Alta |
 |RF-02| O sistema deve permitir que os gerentes cadastrem e atualizem informações de produtos, como descrições, preços e imagens. | Alta | 
 |RF-03| O sistema deve permitir que os gerentes cadastrem e atualizem *quizzes* interativos. | Alta |
-|RF-04| O sistema deve permitir que os clienter acessem a um *quiz* interativo que sugere os melhores produtos baseado nas suas necessidades | Alta |
+|RF-04| O sistema deve permitir que os clientes acessem a um *quiz* interativo que sugere os melhores produtos baseado nas suas necessidades | Alta |
 |RF-05| O sistema deve permitir que os clientes salvem o resultado do *quiz* em seu perfil | Média | 
 |RF-06| O sistema deve permitir que os clientes pesquisem produtos por nome e categoria.	| Média |
 |RF-07| O sistema deve permitir que os clientes favoritem os produtos escolhidos | Baixa | 
@@ -75,7 +75,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |RE-01| O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 19/06/2023 |
-|RE-02| O sistema deve se restringir às tecnologias básicas da Web no Frontend |
+|RE-02| O sistema deve se restringir às tecnologias de C# |
 |RE-03| A equipe não pode subcontratar o desenvolvimento do trabalho   |
 
 ## Diagrama de Casos de Uso
