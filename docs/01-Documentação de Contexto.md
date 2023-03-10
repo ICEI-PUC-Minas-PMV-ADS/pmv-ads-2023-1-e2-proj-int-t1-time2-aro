@@ -27,13 +27,3 @@ Conforme exposto anteriormente, o microempreendedor possui maior dificuldade de 
 O mercado de aromaterapia e produtos naturais, possui um público diversificado que estão em busca do autocuidado, tratando corpo e mente de forma natural e saudável. Visando a praticidade e agilidade na hora da compra, e que necessitam de ajuda na hora da escolha de seus produtos.  
  
 Desta forma, estabeleceu-se como público-alvo desta solução, o público adulto, que estão em busca de tratamento através da aromaterapia. 
-
-
-
- 
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
