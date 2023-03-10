@@ -6,6 +6,8 @@
 
 `2023.1`
 
+**FIX ME**
+
 Durante a pandemia, o isolamento social e o medo perante uma nova realidade mundial fizeram com que casos de saúde mental disparassem de forma alarmante. Um estudo realizado pela Universidade do Estado do Rio de Janeiro (UERJ) detectou o aumento de 90% nos casos de depressão e de 50% nas crises de ansiedade ou sintomas de estresse agudo entre março e abril de 2020.
 
 Nesse sentido, boa parte dos brasileiros buscaram soluções naturais para esses problemas. Uma das formas de tratamento que mais ganharam destaque foi a aromaterapia, um ramo da fitoterapia que utiliza óleos essenciais extraídos das plantas para auxiliar tratamentos físicos, emocionais e energéticos.
