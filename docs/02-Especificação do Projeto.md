@@ -75,7 +75,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |RE-01| O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 19/06/2023 |
-|RE-02| O sistema deve se restringir às tecnologias de C# |
+|RE-02| O sistema deve se restringir às tecnologias de C# e banco de dados |
 |RE-03| A equipe não pode subcontratar o desenvolvimento do trabalho   |
 
 ## Diagrama de Casos de Uso
