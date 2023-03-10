@@ -18,6 +18,8 @@ Por outro lado, mesmo que o cenário nacional e os números sejam positivos, os 
 
 Diante disso, essa barreira da desconfiança não é facilmente vencida, é uma atividade que demanda bastante esforço dos pequenos empreendedores. Contudo, apesar de ser uma tarefa difícil, ela pode ser descomplicada com o auxílio da tecnologia.
 
+**FIX ME**
+
 ## Integrantes
 
 * Gabriel Augusto Alves Lourenço
@@ -56,6 +58,7 @@ O link e o usuário/senha descritos acima são apenas exemplos de como tais info
 <li><a href="docs/11-Registro de Testes de Usabilidade.md"> Registro de Testes de Usabilidade</a></li>
 <li><a href="docs/12-Apresentação do Projeto.md"> Apresentação do Projeto</a></li>
 <li><a href="docs/13-Referências.md"> Referências</a></li>
+<li><a href="docs/ADS - Cronograma Projeto Aplicação Interativa - 2023_1.pdf"> Cronograma</a></li>
 </ol>
 
 # Código
