@@ -17,7 +17,7 @@ Para construir o diagrama foi usado como ferramenta o site diagrams.net (https:/
 
 ## Projeto da Base de Dados
 
-O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
+No projeto de base de dados, as entidades e relacionamentos identificados no Modelo ER foram representados no formato de tabelas, com colunas e as chaves primárias/estrangeiras que representam as restrições de integridade.
 
 ![projeto-base-de-dados](img/projeto-base-de-dados.png)
 
