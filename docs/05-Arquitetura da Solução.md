@@ -4,7 +4,7 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ## Diagrama de Classes
 
-O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
+O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória. Inicialmente o projeto contará com 9 classes - Usuário, Gerente, Cliente, Questionário, Favoritos, Pedido, Carrinho, Item e Produto - Seus atributos, métodos e suas ligações são representadas no diagrama.
 
 ![diagrama-de-classes](img/diagrama-de-classes.png)
 
@@ -18,8 +18,6 @@ Para construir o diagrama foi usado como ferramenta o site diagrams.net (https:/
 ## Projeto da Base de Dados
 
 O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
- 
-Para mais informações, consulte o microfundamento "Modelagem de Dados".
 
 ![projeto-base-de-dados](img/projeto-base-de-dados.png)
 
