@@ -13,8 +13,6 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 O nosso modelo ER demonstra a relação entre as entidades na nossa aplicação interativa.
 Para construir o diagrama foi usado como ferramenta o site diagrams.net (https://app.diagrams.net/).
 
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
-
 ![modelo-er](img/modelo-er.png)
 
 ## Projeto da Base de Dados
