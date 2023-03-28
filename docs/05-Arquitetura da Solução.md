@@ -23,7 +23,7 @@ No projeto de base de dados, as entidades e relacionamentos identificados no Mod
 
 ## Tecnologias Utilizadas
 
-Será utilizado o Visual Studio e para o Banco de Dados o SQL Server. Linguagem utilizada será C#, Framework React e IDEs Visual Studio.
+Será utilizado o Visual Studio e para o Banco de Dados o SQL Server. Linguagem utilizada será C#, Framework .NET e IDEs Visual Studio.
 
 
 ## Hospedagem
