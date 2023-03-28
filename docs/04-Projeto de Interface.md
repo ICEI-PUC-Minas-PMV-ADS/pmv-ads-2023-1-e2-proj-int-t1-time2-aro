@@ -15,6 +15,7 @@ O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamen
 
 ![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
 
+
 As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
 
 > **Links Úteis**:
@@ -22,7 +23,13 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+![1](https://user-images.githubusercontent.com/114036574/228103972-81dfc4ae-463b-4b8f-820d-39ec6717eb9f.png)
+![2](https://user-images.githubusercontent.com/114036574/228104079-117ae2dd-379f-4849-bb47-51e1d645f622.png)
+![3](https://user-images.githubusercontent.com/114036574/228104105-7f2a0a27-db81-4c88-99b2-3cbf71d1a2d9.png)
+![4](https://user-images.githubusercontent.com/114036574/228104131-97f92b4f-bdf3-4626-ba1c-a96ade08166d.png)
+![5](https://user-images.githubusercontent.com/114036574/228104149-72e3240b-2a15-462b-835b-d08395ebf525.png)
+![6](https://user-images.githubusercontent.com/114036574/228104174-01a5664e-1374-41cb-8bc0-947038ff18b7.png)
+
 
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
  
