@@ -1,4 +1,5 @@
 # Permita-se
+![logomarca Permita-se](https://user-images.githubusercontent.com/114036574/228099490-2ebba070-00dd-4164-8f8e-151ceef31b9e.png)
 
 `Análise e Desenvolvimento de Sistemas`
 
@@ -8,7 +9,7 @@
 
 Nosso projeto é um site ecommerce para a loja **Permita-se** de produtos de aromaterapia. 
 
-Ele tem como objetivo oferecer uma experiência personalizada aos clientes, por meio de um questionário que auxilia na escolha dos produtos ideais para suas necessidades. O site contará com uma ampla variedade de produtos, como óleos essenciais, velas aromáticas, difusores e outros acessórios relacionados à aromaterapia. O questionário será composto por perguntas sobre preferências pessoais, objetivos de uso e problemas de saúde, para que o sistema possa sugerir produtos específicos para cada cliente. 
+Ele tem como objetivo oferecer uma experiência personalizada aos clientes, por meio de um questionário que auxilia na escolha dos produtos ideais para suas necessidades. O site contará com uma ampla variedade de produtos, como Roll on terapeutico, velas aromáticas, escalda pés e outros produtos relacionados à aromaterapia. O questionário será composto por perguntas sobre preferências pessoais, objetivos de uso e problemas de saúde, para que o sistema possa sugerir produtos específicos para cada cliente. 
 
 Além disso, o site terá um design atraente e intuitivo, facilitando a navegação e a compra dos produtos.
 
