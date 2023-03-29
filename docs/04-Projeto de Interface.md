@@ -23,13 +23,16 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ## Wireframes
 
-![1](https://user-images.githubusercontent.com/114036574/228103972-81dfc4ae-463b-4b8f-820d-39ec6717eb9f.png)
-![2](https://user-images.githubusercontent.com/114036574/228104079-117ae2dd-379f-4849-bb47-51e1d645f622.png)
-![3](https://user-images.githubusercontent.com/114036574/228104105-7f2a0a27-db81-4c88-99b2-3cbf71d1a2d9.png)
-![4](https://user-images.githubusercontent.com/114036574/228104131-97f92b4f-bdf3-4626-ba1c-a96ade08166d.png)
-![5](https://user-images.githubusercontent.com/114036574/228104149-72e3240b-2a15-462b-835b-d08395ebf525.png)
-![6](https://user-images.githubusercontent.com/114036574/228104174-01a5664e-1374-41cb-8bc0-947038ff18b7.png)
 
+
+
+![1](https://user-images.githubusercontent.com/114036574/228689821-2a3e8202-fbcd-4147-a36a-e6c8ecbe8a7f.png)
+![2](https://user-images.githubusercontent.com/114036574/228689824-fbb399fa-b04e-45b8-882f-029a45f6f66b.png)
+![3](https://user-images.githubusercontent.com/114036574/228689826-7b2e1d50-8bab-4022-9542-83f4f410c401.png)
+![4](https://user-images.githubusercontent.com/114036574/228689829-28d26162-a673-4e44-8fd3-78e1ebce95b5.png)
+![5](https://user-images.githubusercontent.com/114036574/228689833-6e40204e-704d-47e9-b2f2-2893b8f4e421.png)
+![6](https://user-images.githubusercontent.com/114036574/228689837-e144462a-0b71-40c7-9555-c45eb59f4177.png)
+![7](https://user-images.githubusercontent.com/114036574/228689838-bd11efc0-fd52-4c5a-84fb-079760b392dd.png)
 
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
  
