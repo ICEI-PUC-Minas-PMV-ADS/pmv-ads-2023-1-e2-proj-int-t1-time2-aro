@@ -10,17 +10,27 @@ Por exemplo:
  
 | **Caso de Teste** 	| **CT-01 – Cadastrar perfil** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-00X - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que esses consigam criar e gerenciar seu perfil. |
+|	Requisito Associado 	| RF-01 - AO sistema deve permitir que os clientes criem uma conta. |
 | Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html<br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, celular, CPF, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site (link a ser disponibilizado)<br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, celular, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
 |Critério de Êxito | - O cadastro foi realizado com sucesso. |
 |  	|  	|
-| Caso de Teste 	| CT-02 – Efetuar login	|
-|Requisito Associado | RF-00Y	- A aplicação deve possuir opção de fazer login, sendo o login o endereço de e-mail. |
-| Objetivo do Teste 	| Verificar se o usuário consegue realizar login. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" |
-|Critério de Êxito | - O login foi realizado com sucesso. |
 
+| **Caso de Teste** 	| **CT-02 – Cadastro e atualização de produtos**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-02	-O sistema deve permitir que os gerentes cadastrem e atualizem informações de produtos, como descrições, preços e imagens. |
+| Objetivo do Teste 	| Verificar se o usuário *GERENTE* consegue efetuar o cadastro e atualização dos produtos. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site (link a ser disponibilizado)<br> - Clicar no botão "Entrar" <br> - Preencher os dados solicitados <br> <br> - Clicar em "Login" <br> - Clicar em "Alterar ou Cadastrar produto" |
+|Critério de Êxito | - Os cadastros e alterações foram realizados com sucesso. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-03 – Cadastro de Quizzes**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-03 O sistema deve permitir que os gerentes cadastrem e atualizem quizzes interativos. |
+| Objetivo do Teste 	| Verificar se o usuário *GERENTE* consegue realizar a postagem e/ou atualização de quizzes interativos. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site (link a ser disponibilizado)<br> - Clicar no botão "Entrar" <br> - Preencher os dados solicitados <br> - Clicar em "Login" <br> - Clicar em "Alterar ou Cadastrar produto" |
+|Critério de Êxito | - Os cadastros e alterações foram realizados com sucesso. |
+|  	|  	|
  
 > **Links Úteis**:
 > - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
