@@ -20,7 +20,7 @@ Por exemplo:
 |:---:	|:---:	|
 |Requisito Associado | RF-02	-O sistema deve permitir que os gerentes cadastrem e atualizem informações de produtos, como descrições, preços e imagens. |
 | Objetivo do Teste 	| Verificar se o usuário *GERENTE* consegue efetuar o cadastro e atualização dos produtos. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site (link a ser disponibilizado)<br> - Clicar no botão "Entrar" <br> - Preencher os dados solicitados <br> <br> - Clicar em "Login" <br> - Clicar em "Alterar ou Cadastrar produto" |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site (link a ser disponibilizado)<br> - Clicar no botão "Entrar" <br> - Preencher os dados solicitados. <br> - Clicar em "Login" <br> - Clicar em "Alterar ou Cadastrar produto" |
 |Critério de Êxito | - Os cadastros e alterações foram realizados com sucesso. |
 |  	|  	|
 
@@ -28,8 +28,16 @@ Por exemplo:
 |:---:	|:---:	|
 |Requisito Associado | RF-03 O sistema deve permitir que os gerentes cadastrem e atualizem quizzes interativos. |
 | Objetivo do Teste 	| Verificar se o usuário *GERENTE* consegue realizar a postagem e/ou atualização de quizzes interativos. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site (link a ser disponibilizado)<br> - Clicar no botão "Entrar" <br> - Preencher os dados solicitados <br> - Clicar em "Login" <br> - Clicar em "Alterar ou Cadastrar produto" |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site (link a ser disponibilizado)<br> - Clicar no botão "Entrar" <br> - Preencher os dados solicitados <br> - Clicar em "Login" <br> - Clicar em "Alterar ou Cadastrar produto" <br> - Salvar alterações e disponibilizar. |
 |Critério de Êxito | - Os cadastros e alterações foram realizados com sucesso. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-04 – Acesso e armazenamento de quizzes**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-04 O sistema deve permitir que os clientes acessem a um quiz interativo que sugere os melhores produtos baseado nas suas necessidades. <br> RF-05 O sistema deve permitir que os clientes salvem o resultado do quiz em seu perfil |
+| Objetivo do Teste 	| Verificar se o usuário *Cliente* consegue realizar os quizzes interativos, bem como o armazenamento deste em seu perfil. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site (link a ser disponibilizado)<br> - Clicar no botão "Entrar" <br> - Preencher os dados solicitados <br> - Clicar em "Login" <br> - Realizar o quizz que deverá aparecer na tela inicial(casos de primeiro acesso). <br> Clicar em "Salvar resultado". |
+|Critério de Êxito | - O cliente conseguiu realizar o Quizz corretamente e o resultado foi salvo em seu perfil. |
 |  	|  	|
  
 > **Links Úteis**:
