@@ -18,6 +18,7 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 | Critérios de êxito | Uma nova conta sera criada.                                                                       |
 <br>
 
+
 | Caso de teste 02     |  CT 02 - Fazer login (Usuario)                                                                 | 
 | ------- | ------------------------------------------------------------------------------------------------------------ | 
 | Objetivo do teste | Verificar se o a funcionalidade acessar sua conta está funcionando corretamente            | 
@@ -25,12 +26,14 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 | Critérios de êxito | Fazer o longin corretamente                                                          |
 <br>
 
+
 | Caso de teste 03   |  CT 03 - Realizar Quiz(Usuario)                                                                    | 
 | ------- | ------------------------------------------------------------------------------------------------------------ | 
 | Objetivo do teste | Verificar se o a funcionalidade do QUIZ está funcionando corretamente           | 
 | Ações esperadas | 1- acessar a plataforma 2- Realizar QUIZ                                                 |
 | Critérios de êxito | O QUIZ irá aparecer corretamente.                                                                       |
 <b>
+  
 
 | Caso de teste 04    |  CT 04 - Vizualizar produtos (Usuario)                                                                    | 
 | ------- | ------------------------------------------------------------------------------------------------------------ | 
@@ -38,6 +41,7 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 | Ações esperadas | 1- acessar a plataforma 2- Realizar QUIZ  3 - consultar produtos.     |
 | Critérios de êxito | Os produtos irão constar corretamente                                                        |
 <br>
+  
 
 | Caso de teste 05    |  CT 05 - Favoritar Produto (Usuario)                                                                    | 
 | ------- | ------------------------------------------------------------------------------------------------------------ | 
@@ -46,12 +50,14 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 | Critérios de êxito |  Irá favoritar os produtos corretamente                                                  |
 <br>
 
+  
 | Caso de teste 06    |  CT 06 - Adicionar Produto no carrinho (Usuario)                                                                    | 
 | ------- | ------------------------------------------------------------------------------------------------------------ | 
 | Objetivo do teste | Verificar se o a funcionalidade adicionar produto ao carrinho funciona corretamente                  | 
 | Ações esperadas | 1-  acessar a plataforma 2- realizar QUIZ 3 - ir em produtos 4 - favoritar produto  5 - adicionar produtos               |
 | Critérios de êxito | O produto será adicionado                                                       |
 <b>
+  
 
 | Caso de teste 07    |  CT 07 - Finalizar compra via Whatsapp ou Instagram (Usuario)                                                          | 
 | ------- | ------------------------------------------------------------------------------------------------------------ | 
