@@ -11,14 +11,14 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 #
 
 
-| Caso de teste 01     |  CT 01 - Cadastro (Usuario/Cliente)                                                                    | 
+| Caso de teste 01     |  CT 01 - Cadastro (Usuario)                                                                    | 
 | ------- | ------------------------------------------------------------------------------------------------------------ | 
 | Objetivo do teste | Verificar se o a funcionalidade de cadastrar novo usuario está funcionando corretamente            | 
 | Ações esperadas | 1- acessar a area de cadastro. 2-colocar os dados para criaçao de conta. 3- salvar informaçoes. 4- Testar botão "Entrar Sem Login"      |
 | Critérios de êxito | Uma nova conta sera criada.                                                                       |
 <br>
 
-| Caso de teste 02     |  CT 02 - Fazer login (Usuario/Cliente)                                                                 | 
+| Caso de teste 02     |  CT 02 - Fazer login (Usuario)                                                                 | 
 | ------- | ------------------------------------------------------------------------------------------------------------ | 
 | Objetivo do teste | Verificar se o a funcionalidade acessar sua conta está funcionando corretamente            | 
 | Ações esperadas |  1- clicar em entrar. 2- Colocar o email e senha. 3- entrar na sua conta     |
@@ -32,7 +32,7 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 | Critérios de êxito | O QUIZ irá aparecer corretamente.                                                                       |
 <b>
 
-| Caso de teste 04    |  CT 04 - Vizualizar produtos (Usuario/Cliente)                                                                    | 
+| Caso de teste 04    |  CT 04 - Vizualizar produtos (Usuario)                                                                    | 
 | ------- | ------------------------------------------------------------------------------------------------------------ | 
 | Objetivo do teste | Verificar se os produtos estão sendo apresentados corretamente.    | 
 | Ações esperadas | 1- acessar a plataforma 2- Realizar QUIZ  3 - consultar produtos.     |
@@ -46,7 +46,7 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 | Critérios de êxito |  Irá favoritar os produtos corretamente                                                  |
 <br>
 
-| Caso de teste 06    |  CT 06 - Adicionar Produto no carrinho (paciente)                                                                    | 
+| Caso de teste 06    |  CT 06 - Adicionar Produto no carrinho (Usuario)                                                                    | 
 | ------- | ------------------------------------------------------------------------------------------------------------ | 
 | Objetivo do teste | Verificar se o a funcionalidade adicionar produto ao carrinho funciona corretamente                  | 
 | Ações esperadas | 1-  acessar a plataforma 2- realizar QUIZ 3 - ir em produtos 4 - favoritar produto  5 - adicionar produtos               |
