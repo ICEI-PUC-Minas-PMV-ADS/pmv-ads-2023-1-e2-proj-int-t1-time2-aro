@@ -39,7 +39,39 @@ Por exemplo:
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site (link a ser disponibilizado)<br> - Clicar no botão "Entrar" <br> - Preencher os dados solicitados <br> - Clicar em "Login" <br> - Realizar o quizz que deverá aparecer na tela inicial(casos de primeiro acesso). <br> Clicar em "Salvar resultado". |
 |Critério de Êxito | - O cliente conseguiu realizar o Quizz corretamente e o resultado foi salvo em seu perfil. |
 |  	|  	|
- 
+
+| **Caso de Teste** 	| **CT-05 – Busca**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-06 O sistema deve permitir que os clientes pesquisem produtos por nome e categoria. |
+| Objetivo do Teste 	| Verificar se o usuário *Cliente* obtém êxito ao buscar o produto desejado. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site (link a ser disponibilizado)<br> - Clicar na lupa, onde está escrito "buscar" <br> - Digitar o produto desejado <br> - Pressionar enter. <br> - Aguardar a conclusão da busca. |
+|Critério de Êxito | - O cliente conseguiu buscar e encontrar o produto desejado. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-06 – Favoritos**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-07 O sistema deve permitir que os clientes favoritem os produtos escolhidos. |
+| Objetivo do Teste 	| Verificar se o usuário *Cliente* obtém êxito ao favoritar um produto. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site (link a ser disponibilizado)<br> - Clicar no botão "Entrar" <br> - Preencher os dados solicitados <br> - Clicar em "Login" <br> - Navegar até a página do produto desejado. <br> - Na página do produto, pressionar o botão "Adicionar a favorito ♥ ". <br> - Acessar o perfil para visualizar os produtos salvos como favoritos. |
+|Critério de Êxito | - O cliente conseguiu adicionar um produto à sua lista de favoritos e também consegue visualizar os produtos em seu perfil. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-07 – Carrinho de compras e compras**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-08 O sistema deve permitir que os clientes adicionem produtos a um carrinho de compras. <br> RF-09 O sistema deve permitir que os clientes concluam a compra direcionando o pedido para um canal de comunicação externo com algum vendedor(a). |
+| Objetivo do Teste 	| Verificar se o usuário *Cliente* obtém êxito ao adicionar um produto ao carrinho de compras e ao efetuar uma compra. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site (link a ser disponibilizado)<br> - Clicar no botão "Entrar" <br> - Preencher os dados solicitados <br> - Clicar em "Login" <br> - Navegar até a página do produto desejado. <br> - Na página do produto, pressionar o botão "Adicionar ao carrinho 🛒 de compras ". <br> - Acessar o carrinho. <br> - Pressionar botão  "Finalizar com vendedor externo" <br>   |
+|Critério de Êxito | - O cliente conseguiu adicionar um produto ao seu carrinho de compras e concluir a compra com vendedor externo. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-08 – Contato com a loja**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-10 O sistema deve permitir que os clientes entrem em contato com a loja por meio de outros canais (redes sociais) |
+| Objetivo do Teste 	| Verificar se o usuário *Cliente* obtém êxito ao adicionar um produto ao carrinho de compras e ao efetuar uma compra. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site (link a ser disponibilizado)<br> - Ir até o fim da página, onde estarão localizados os botões contendo as redes sociais do site(instagram e e-mail)  |
+|Critério de Êxito | - O cliente conseguiu ser direcionado a pagina de contado desejada. |
+|  	|  	|
+
 > **Links Úteis**:
 > - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
 > - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
