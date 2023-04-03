@@ -21,10 +21,8 @@ O Diagrama de fluxo traz um modelo de como o usuário pode fluir através do sis
 ![Diagrama de fluxo drawio](https://user-images.githubusercontent.com/114036574/229626035-a2360d26-98a8-4301-bcef-8b8cec5bbbd9.png)
 
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
 
-> **Links Úteis**:
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
+
 
 ## Wireframes
 
