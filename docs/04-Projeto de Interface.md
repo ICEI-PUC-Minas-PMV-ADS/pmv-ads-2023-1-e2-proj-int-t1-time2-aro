@@ -5,9 +5,15 @@
 
 Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
 
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
 
 ## Diagrama de Fluxo
+
+O Diagrama de fluxo traz como o usuário pode fluir através do sistema pelas telas de acordo com o planejamento da aplicação interativa, seguindo os requisitos funcionais, não funcionais, restrições e histórias das personas. Neste diagrama podemos identificar algumas funcionabilidades que são requisitos do sistema, como:
+o sistema permitir a criação de uma conta pelos clientes (RF-01).
+O sistema permitir que os clientes acessem a um quiz interativo que sugere os melhores produtos baseado nas suas necessidades (RF-04).
+O sistema permitir que os clientes favoritem os produtos escolhidos (RF-07).
+O sistema permitir que os clientes adicionem produtos a um carrinho de compras (RF-08).
+O sistema permitir que os clientes concluam a compra direcionando o pedido para um canal de comunicação externo com algum vendedor(a) (RF-09).
 
 ![Diagrama de fluxo drawio](https://user-images.githubusercontent.com/114036574/229626035-a2360d26-98a8-4301-bcef-8b8cec5bbbd9.png)
 
