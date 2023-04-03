@@ -10,7 +10,7 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 ## Modelo ER (Projeto Conceitual)
 
-O nosso modelo ER demonstra a relação entre as entidades na nossa aplicação interativa.
+O nosso modelo ER demonstra a relação entre as entidades na nossa aplicação interativa. No modelo usamos como base as estruturas de classe do diagrama de classe e seus atributos para construir as entidades. Mapeando as funcionabilidades foram então levantado os relacionamentos entre as entidades.
 Para construir o diagrama foi usado como ferramenta o site diagrams.net (https://app.diagrams.net/).
 
 ![modelo-er](img/modelo-er.png)
