@@ -8,15 +8,8 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 ## Diagrama de Fluxo
 
-O Diagrama de fluxo traz um modelo de como o usuário pode fluir através do sistema pelas telas de acordo com o planejamento da aplicação interativa, seguindo os requisitos funcionais, não funcionais, restrições e histórias das personas. Neste diagrama podemos identificar algumas funcionabilidades que são requisitos do sistema, como: <br /> 
- O sistema permitir a criação de uma conta pelos clientes (RF-01). <br />
- O sistema permitir que os clientes acessem a um quiz interativo que sugere os melhores produtos baseado nas suas necessidades (RF-04). <br />
- O sistema permitir que os clientes favoritem os produtos escolhidos (RF-07). <br />
- O sistema permitir que os clientes adicionem produtos a um carrinho de compras (RF-08). <br />
- O sistema permitir que os clientes concluam a compra direcionando o pedido para um canal de comunicação externo com algum vendedor(a) (RF-09). <br />
+O Diagrama de fluxo traz um modelo de como o usuário pode fluir através do sistema pelas telas de acordo com o planejamento da aplicação interativa, seguindo os requisitos funcionais, não funcionais, restrições e histórias das personas.
  
-
-
 
 ![Diagrama de fluxo drawio](https://user-images.githubusercontent.com/114036574/229626035-a2360d26-98a8-4301-bcef-8b8cec5bbbd9.png)
 
