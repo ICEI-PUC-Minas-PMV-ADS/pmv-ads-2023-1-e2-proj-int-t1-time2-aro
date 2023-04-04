@@ -62,6 +62,13 @@ Na tela de produtos, o usuário poderá conhecer os produtos, favoritar e coloca
 
 ![Produtos](https://user-images.githubusercontent.com/114036574/229868815-b8a69008-81ff-448b-9e7d-383133ad9b93.png)
 
+## Tela - Favoritos
+
+Na tela de favoritos o usuário poderá acessar seus produtos salvoss na lista de favooritos
+
+![Favoritos](https://user-images.githubusercontent.com/114036574/229937067-f6e08e65-0911-44c8-8187-4d39a316914a.png)
+
+
 ## Tela - Carrinho de compras
 
 Na tela carrinho de compras o usuário poderá visualizar os produtos esccolhidos e finalizar as compras esconlhendo um direicionamento para o instagram ou Whatsaap.
