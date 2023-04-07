@@ -11,7 +11,8 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 O Diagrama de fluxo traz um modelo de como o usuário pode fluir através do sistema pelas telas de acordo com o planejamento da aplicação interativa, seguindo os requisitos funcionais, não funcionais, restrições e histórias das personas.
  
 
-![Diagrama de fluxo drawio](https://user-images.githubusercontent.com/114036574/229626035-a2360d26-98a8-4301-bcef-8b8cec5bbbd9.png)
+![Diagrama de fluxo (1)](https://user-images.githubusercontent.com/114036574/230609921-866f9a9c-f028-411b-ab45-3bcec9967b6b.png)
+
 
 
 
