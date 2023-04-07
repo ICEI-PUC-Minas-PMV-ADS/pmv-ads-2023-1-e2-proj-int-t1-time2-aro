@@ -11,60 +11,54 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 #
 
 
-| Caso de teste 01     |  CT 01 - Cadastro (Usuario)                                                                    | 
-| ------- | ------------------------------------------------------------------------------------------------------------ | 
-| Objetivo do teste | Verificar se o a funcionalidade de cadastrar novo usuario está funcionando corretamente            | 
-| Ações esperadas | 1- acessar a area de cadastro. 2-colocar os dados para criaçao de conta. 3- salvar informaçoes. 4- Testar botão "Entrar Sem Login"      |
-| Critérios de êxito | Uma nova conta sera criada.                                                                       |
-<br>
+ 
+| **Caso de Teste** 	| **CT-01 – Acesso a Plataforma** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RNF-01 - A aplicação deve ser de faço acesso. |
+| Objetivo do Teste 	| Verificar se o usuário consegue acessar a plataforma de maneira rapida e fácil. |
+| Passos 	| - Acessar o navegador com a URL do site <br> -Verificar o funcionamento da tela de login e seu desempenho no momento do cadastro. |
+|Critério de Êxito | - Acesso fácil realizado. |
+|  	|  	|
 
+| **Caso de Teste** 	| **CT-02 – Responsividade**	|
+|:---:	|:---:	|
+|Requisito Associado | RNF-02	-A aplicação deverá ser responsiva permitindo a visualização em um celular de forma adequada. |
+| Objetivo do Teste 	| Verificar se o site possui responsividade nos disposivitos mobile e desktop. |
+| Passos 	| - Acessar URL em ambos dispositivos <br> - Navegar na plataforma e analisar desempenho.  |
+|Critério de Êxito | - Responsividade realizada. |
+|  	|  	|
 
-| Caso de teste 02     |  CT 02 - Fazer login (Usuario)                                                                 | 
-| ------- | ------------------------------------------------------------------------------------------------------------ | 
-| Objetivo do teste | Verificar se o a funcionalidade acessar sua conta está funcionando corretamente            | 
-| Ações esperadas |  1- clicar em entrar. 2- Colocar o email e senha. 3- entrar na sua conta     |
-| Critérios de êxito | Fazer o longin corretamente                                                          |
-<br>
+| **Caso de Teste** 	| **CT-03 – Publicamente Acessível**	|
+|:---:	|:---:	|
+|Requisito Associado | RNF-03 O site deve ser publicado em um ambiente acessível publicamente na Internet (GitHub) . |
+| Objetivo do Teste 	| Verificar se o site está publicamente acessivel na Internet. |
+| Passos 	| - Acessar o navegador <br> - Abrir o GitHub <br> -Acessar o site hospedado na ferramenta. |
+|Critério de Êxito | - Acesso a internet realizado. |
+|  	|  	|
 
+| **Caso de Teste** 	| **CT-04 – Contraste e Design**	|
+|:---:	|:---:	|
+|Requisito Associado | RNF-04 A aplicação deve ter bom nível de contraste entre os elementos da tela e um design simples.  |
+| Objetivo do Teste 	| Verificar se o site possui um design simples e harmôico para o tema escolhido.
+| Passos 	| - Acessar o navegador <br> - Acessar a tela de login <br> -Verificar se o site possui clareza nas escritas de acordo com a palet de cores escolhida. |
+|Critério de Êxito | - Contraste e Design realizado. |
+|  	|  	|
 
-| Caso de teste 03   |  CT 03 - Realizar Quiz(Usuario)                                                                    | 
-| ------- | ------------------------------------------------------------------------------------------------------------ | 
-| Objetivo do teste | Verificar se o a funcionalidade do QUIZ está funcionando corretamente           | 
-| Ações esperadas | 1- acessar a plataforma 2- Realizar QUIZ                                                 |
-| Critérios de êxito | O QUIZ irá aparecer corretamente.                                                                       |
-<b>
-  
+| **Caso de Teste** 	| **CT-05 – Acesso Protegido** 
+|:---:	|:---:	|
+|Requisito Associado | RNF-05 A aplicação deve ser protegida contra acesso não autorizado. . |
+| Objetivo do Teste 	| Verificar segurança de acesso. |
+| Passos 	| - Acessar o navegador <br> - Realizar login com um e-mail cadastrado <br> - Inserir outra senha para verificar se erro de usuario e senha será exibido. |
+|Critério de Êxito | - Segurança de Acesso realizado. |
+|  	|  	|
 
-| Caso de teste 04    |  CT 04 - Vizualizar produtos (Usuario)                                                                    | 
-| ------- | ------------------------------------------------------------------------------------------------------------ | 
-| Objetivo do teste | Verificar se os produtos estão sendo apresentados corretamente.    | 
-| Ações esperadas | 1- acessar a plataforma 2- Realizar QUIZ  3 - consultar produtos.     |
-| Critérios de êxito | Os produtos irão constar corretamente                                                        |
-<br>
-  
-
-| Caso de teste 05    |  CT 05 - Favoritar Produto (Usuario)                                                                    | 
-| ------- | ------------------------------------------------------------------------------------------------------------ | 
-| Objetivo do teste | Verificar se o usuário consegue favoritar produto           | 
-| Ações esperadas | 1-  acessar a plataforma 2- realizar QUIZ 3 - ir em produtos 4-favoritar produto    |
-| Critérios de êxito |  Irá favoritar os produtos corretamente                                                  |
-<br>
-
-  
-| Caso de teste 06    |  CT 06 - Adicionar Produto no carrinho (Usuario)                                                                    | 
-| ------- | ------------------------------------------------------------------------------------------------------------ | 
-| Objetivo do teste | Verificar se o a funcionalidade adicionar produto ao carrinho funciona corretamente                  | 
-| Ações esperadas | 1-  acessar a plataforma 2- realizar QUIZ 3 - ir em produtos 4 - favoritar produto  5 - adicionar produtos               |
-| Critérios de êxito | O produto será adicionado                                                       |
-<b>
-  
-
-| Caso de teste 07    |  CT 07 - Finalizar compra via Whatsapp ou Instagram (Usuario)                                                          | 
-| ------- | ------------------------------------------------------------------------------------------------------------ | 
-| Objetivo do teste | Verificar se o a funcionalidade finalizar compra está funcionando corretamente                   | 
-| Ações esperadas | 1- entrar na plataforma 2- ir em carrinho 3- clicar no icone direcionador                   |
-| Critérios de êxito | O direcionamento irá ocorrer corretamente                                                        |
-<b>
+| **Caso de Teste** 	| **CT-06 – Favoritos**	|
+|:---:	|:---:	|
+|Requisito Associado | RNF-06 O site deve ser compatível com os principais navegadores da atualidade (Google Chrome, Opera, Firefox, Microsoft Edge). . |
+| Objetivo do Teste 	| Verificar URL de acesso em todos os navegadores atuais. |
+| Passos 	| - Acessar os avegador <br> - Informar URL nos navegadores <br> -Confirmar Acessos sem erros. |
+|Critério de Êxito | - Site compatível realizado. |
+|  	|  	|
 
 
 As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Testes de Usabilidade".
