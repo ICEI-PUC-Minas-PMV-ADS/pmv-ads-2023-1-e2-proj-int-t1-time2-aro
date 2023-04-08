@@ -33,7 +33,7 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 |Requisito Associado | RNF-03 O site deve ser publicado em um ambiente acessível publicamente na Internet (GitHub) . |
 | Objetivo do Teste 	| Verificar se o site está publicamente acessivel na Internet. |
 | Passos 	| - Acessar o navegador <br> - Abrir o GitHub <br> -Acessar o site hospedado na ferramenta. |
-|Critério de Êxito | - Realizar acesso online pelo GitHUb. |
+|Critério de Êxito | - Realizar acesso público da página. |
 |  	|  	|
 
 | **Caso de Teste** 	| **CT-04 – Contraste e Design**	|
