@@ -56,7 +56,7 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 |:---:	|:---:	|
 |Requisito Associado | RNF-06 O site deve ser compatível com os principais navegadores da atualidade (Google Chrome, Opera, Firefox, Microsoft Edge). . |
 | Objetivo do Teste 	| Verificar URL de acesso em todos os navegadores atuais. |
-| Passos 	| - Acessar os avegador <br> - Informar URL nos navegadores <br> -Confirmar Acessos sem erros. |
+| Passos 	| - Acessar os navegadores <br> - Informar URL nos navegadores <br> -Confirmar Acessos sem erros. |
 |Critério de Êxito | - Site compatível realizado. |
 |  	|  	|
 
