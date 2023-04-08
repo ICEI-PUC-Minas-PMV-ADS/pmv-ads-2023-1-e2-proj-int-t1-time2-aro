@@ -22,16 +22,4 @@ No projeto de base de dados, as entidades e relacionamentos identificados no Mod
 
 ## Tecnologias Utilizadas
 
-Será utilizado o Visual Studio e para o Banco de Dados o SQL Server. Linguagem utilizada será C#, Framework .NET e IDEs Visual Studio.
-
-
-## Hospedagem
-
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+IDE Visual Studio, linguagem de programação C#, Frameworks .NET e SQL Server para Banco de Dados.
