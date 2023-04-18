@@ -12,9 +12,9 @@ namespace permita_se.Models
         public string Descricao { get; set; }
         public double Preco { get; set; }
         public string ImagemUrl { get; set; }
-    }
 
-    public int CategoriaId { get; set; }
-    [ForeignKey("CategoriaId")]
-    public Categoria Categoria { get; set; }
+        public int CategoriaId { get; set; }
+        [ForeignKey("CategoriaId")]
+        public Categoria Categoria { get; set; }
+    }
 }

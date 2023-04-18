@@ -4,7 +4,7 @@ using permita_se.Models;
 
 namespace permita_se.Data
 {
-    public class AppDbContext : System.Data.Entity.DbContext
+    public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
