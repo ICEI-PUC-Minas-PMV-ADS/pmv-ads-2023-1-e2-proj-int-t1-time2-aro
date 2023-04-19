@@ -28,12 +28,12 @@ namespace permita_se.Model
         [StringLength(20)]
         public string Senha { get; set; }
         [Column("idade")]
-        public int? Idade { get; set; }
+        public int Idade { get; set; }
         [Column("telefone")]
         [StringLength(20)]
         public string Telefone { get; set; }
         [Column("gerente")]
-        public bool? Gerente { get; set; }
+        public bool Gerente { get; set; }
 
         [InverseProperty(nameof(Favorito.IdUsuarioNavigation))]
         public virtual ICollection<Favorito> Favoritos { get; set; }

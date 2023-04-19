@@ -1,11 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using permita_se.Models;
-using System;
-using System.Collections.Generic;
+using permita_se.Model;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace permita_se.Controllers
 {
