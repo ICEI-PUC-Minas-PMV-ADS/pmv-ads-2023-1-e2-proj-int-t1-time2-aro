@@ -1,6 +1,6 @@
 using System;
 
-namespace permita_se.Models
+namespace permita_se.Model
 {
     public class ErrorViewModel
     {
