@@ -5,20 +5,19 @@ using System.Threading.Tasks;
 
 namespace permita_se.Controllers
 {
-    public class ProdutosController : Controller
+    public class CategoriasController : Controller
     {
-
         private readonly PermitaSeDbContext _context;
 
-        public ProdutosController(PermitaSeDbContext context)
+        public CategoriasController(PermitaSeDbContext context)
         {
             _context = context;
         }
 
         public async Task<IActionResult> Index()
         {
-            var allProdutos = await _context.Produtos.Include(p => p.Categoria).ToListAsync();
-            return View(allProdutos);
+            var allCategorias = await _context.Categorias.ToListAsync();
+            return View(allCategorias);
         }
     }
 }
