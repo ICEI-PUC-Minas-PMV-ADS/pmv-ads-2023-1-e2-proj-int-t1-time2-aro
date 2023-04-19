@@ -18,7 +18,7 @@ namespace permita_se.Controllers
         public async Task<IActionResult> Index()
         {
             var allProdutos = await _context.Produtos.Include(p => p.Categoria).ToListAsync();
-            return View(allProdutos);
+             return View(allProdutos);
         }
     }
 }
