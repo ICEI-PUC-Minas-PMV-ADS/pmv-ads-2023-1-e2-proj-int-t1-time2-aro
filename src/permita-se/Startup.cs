@@ -1,14 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using permita_se.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace permita_se
 {
@@ -25,7 +21,8 @@ namespace permita_se
         public void ConfigureServices(IServiceCollection services)
         {
             //DbContext Configuração.
-            services.AddDbContext<AppDbContext>();
+            services.AddDbContext<PermitaSeDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
             services.AddControllersWithViews();
         }
 

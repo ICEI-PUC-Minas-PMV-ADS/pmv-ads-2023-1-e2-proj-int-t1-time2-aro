@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "mssql1": {
+      "secretStore": "LocalSecretsFile",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/databases/permita-se",
+      "type": "mssql.azure",
+      "connectionId": "DefaultConnectionString",
+      "dynamicId": null
+    }
+  }
+}
