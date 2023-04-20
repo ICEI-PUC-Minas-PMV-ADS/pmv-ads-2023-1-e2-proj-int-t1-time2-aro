@@ -15,7 +15,7 @@ namespace permita_se.Data
         {
         }
 
-        public virtual DbSet<Categoria> Categoria { get; set; }
+        public virtual DbSet<Categoria> Categorias { get; set; }
         public virtual DbSet<Favorito> Favoritos { get; set; }
         public virtual DbSet<OpcaoResposta> OpcaoResposta { get; set; }
         public virtual DbSet<PerguntaQuestionario> PerguntaQuestionarios { get; set; }
@@ -111,7 +111,7 @@ namespace permita_se.Data
 
                 entity.Property(e => e.Nome).IsUnicode(false);
 
-                entity.HasOne(d => d.IdCategoriaNavigation)
+                entity.HasOne(d => d.Categoria)
                     .WithMany(p => p.Produtos)
                     .HasForeignKey(d => d.IdCategoria)
                     .OnDelete(DeleteBehavior.ClientSetNull)
