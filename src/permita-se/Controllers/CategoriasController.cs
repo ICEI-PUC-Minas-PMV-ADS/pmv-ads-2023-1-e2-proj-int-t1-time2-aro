@@ -1,22 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using permita_se.Data;
+using permita_se.Data.Services;
 using System.Threading.Tasks;
 
 namespace permita_se.Controllers
 {
     public class CategoriasController : Controller
     {
-        private readonly PermitaSeDbContext _context;
+        private readonly ICategoriasService _service;
 
-        public CategoriasController(PermitaSeDbContext context)
+        public CategoriasController(ICategoriasService service)
         {
-            _context = context;
+            _service = service;
         }
 
         public async Task<IActionResult> Index()
         {
-            var allCategorias = await _context.Categorias.ToListAsync();
+            var allCategorias = await _service.GetAll();
             return View(allCategorias);
         }
     }

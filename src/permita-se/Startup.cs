@@ -5,6 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using permita_se.Data;
+using permita_se.Data.Services;
+using permita_se.Data.Services.Impl;
 
 namespace permita_se
 {
@@ -20,9 +22,13 @@ namespace permita_se
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //DbContext Configuração.
+            //DbContext configuration.
             services.AddDbContext<PermitaSeDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
+
+            //Services configuration
+            services.AddScoped<ICategoriasService, CategoriasService>();
+
             services.AddControllersWithViews();
         }
 
