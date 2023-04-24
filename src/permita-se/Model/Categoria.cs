@@ -21,11 +21,19 @@ namespace permita_se.Model
         [Column("nome")]
         [StringLength(100)]
         [DisplayName("Categoria")]
+        [Required(ErrorMessage = "O campo {0} é obrigatório")]
+        [MinLength(2, ErrorMessage = "O campo {0} deve ter no mínimo {1} caracteres")]
+        [MaxLength(100, ErrorMessage = "O campo {0} deve ter no máximo {1} caracteres")]
+        [RegularExpression(@"^(?!\s)[a-zA-Z0-9\- ]+(?<!\s)$", ErrorMessage = "Caracteres inválidos no campo {0}")]
         public string Nome { get; set; }
 
         [Column("descricao")]
         [StringLength(255)]
         [DisplayName("Descrição")]
+        [Required(ErrorMessage = "O campo {0} é obrigatório")]
+        [MinLength(3, ErrorMessage = "O campo {0} deve ter no mínimo {1} caracteres")]
+        [MaxLength(255, ErrorMessage = "O campo {0} deve ter no máximo {1} caracteres")]
+        [RegularExpression(@"^(?!\s)[a-zA-Z0-9\- ]+(?<!\s)$", ErrorMessage = "Caracteres inválidos no campo {0}")]
         public string Descricao { get; set; }
 
         [InverseProperty(nameof(Produto.Categoria))]

@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using permita_se.Data;
 using permita_se.Data.Services;
+using permita_se.Model;
 using System.Threading.Tasks;
 
 namespace permita_se.Controllers
@@ -24,6 +23,18 @@ namespace permita_se.Controllers
         public IActionResult Criar()
         { 
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Criar(Categoria categoria)
+        {
+            if (ModelState.IsValid)
+            {
+                _service.Add(categoria);
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(categoria);
         }
     }
 }

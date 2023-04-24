@@ -16,7 +16,8 @@ namespace permita_se.Data.Services.Impl
 
         public void Add(Categoria categoria)
         {
-            throw new System.NotImplementedException();
+            _context.Add(categoria);
+            _context.SaveChanges();
         }
 
         public void Delete(int id)
