@@ -20,5 +20,10 @@ namespace permita_se.Controllers
             var allCategorias = await _service.GetAll();
             return View(allCategorias);
         }
+
+        public IActionResult Criar()
+        { 
+            return View();
+        }
     }
 }
