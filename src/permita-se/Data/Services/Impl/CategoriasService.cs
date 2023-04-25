@@ -14,30 +14,34 @@ namespace permita_se.Data.Services.Impl
             _context = context;
         }
 
-        public void Add(Categoria categoria)
+        public async Task AddAsync(Categoria categoria)
         {
-            _context.Add(categoria);
-            _context.SaveChanges();
+            await _context.AddAsync(categoria);
+            await _context.SaveChangesAsync();
         }
 
-        public void Delete(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new System.NotImplementedException();
+            var categoria = await _context.Categorias.FindAsync(id);
+            _context.Categorias.Remove(categoria);
+            await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Categoria>> GetAll()
+        public async Task<IEnumerable<Categoria>> GetAllAsync()
         {
             return await _context.Categorias.ToListAsync();
         }
 
-        public Categoria GetById(int id)
+        public async Task<Categoria> GetByIdAsync(int id)
         {
-            throw new System.NotImplementedException();
+            return await _context.Categorias.FindAsync(id);
         }
 
-        public Categoria Update(int id, Categoria newCategoria)
+        public async Task<Categoria> UpdateAsync(int id, Categoria newCategoria)
         {
-            throw new System.NotImplementedException();
+            _context.Update(newCategoria);
+            await _context.SaveChangesAsync();
+            return newCategoria;
         }
     }
 }

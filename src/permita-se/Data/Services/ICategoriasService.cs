@@ -6,10 +6,10 @@ namespace permita_se.Data.Services
 {
     public interface ICategoriasService
     {
-        Task<IEnumerable<Categoria>> GetAll();
-        Categoria GetById(int id);
-        void Add(Categoria categoria);
-        Categoria Update(int id, Categoria newCategoria);
-        void Delete(int id);
+        Task<IEnumerable<Categoria>> GetAllAsync();
+        Task<Categoria> GetByIdAsync(int id);
+        Task AddAsync(Categoria categoria);
+        Task<Categoria> UpdateAsync(int id, Categoria newCategoria);
+        Task DeleteAsync(int id);
     }
 }
