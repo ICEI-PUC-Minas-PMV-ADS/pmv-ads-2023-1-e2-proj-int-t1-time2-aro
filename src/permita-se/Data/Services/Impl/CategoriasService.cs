@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using permita_se.Data.Base.Impl;
 using permita_se.Model;
 using System;
 using System.Collections.Generic;
@@ -6,38 +7,10 @@ using System.Threading.Tasks;
 
 namespace permita_se.Data.Services.Impl
 {
-    public class CategoriasService : ICategoriasService
+    public class CategoriasService : EntityBaseRepository<Categoria>, ICategoriasService
     {
-        private readonly PermitaSeDbContext _context;
-        public CategoriasService(PermitaSeDbContext context)
+        public CategoriasService(PermitaSeDbContext context) : base(context)
         {
-            _context = context;
-        }
-
-        public void Add(Categoria categoria)
-        {
-            _context.Add(categoria);
-            _context.SaveChanges();
-        }
-
-        public void Delete(int id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public async Task<IEnumerable<Categoria>> GetAll()
-        {
-            return await _context.Categorias.ToListAsync();
-        }
-
-        public Categoria GetById(int id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Categoria Update(int id, Categoria newCategoria)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

@@ -16,7 +16,7 @@ namespace permita_se.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var allCategorias = await _service.GetAll();
+            var allCategorias = await _service.GetAllAsync();
             return View(allCategorias);
         }
 
@@ -26,15 +26,51 @@ namespace permita_se.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Criar(Categoria categoria)
+        public async Task<IActionResult> Criar([Bind("Nome,Descricao")]Categoria categoria)
         {
             if (ModelState.IsValid)
             {
-                _service.Add(categoria);
+                await _service.AddAsync(categoria);
                 return RedirectToAction(nameof(Index));
             }
 
             return View(categoria);
+        }
+
+        public async Task<IActionResult> Editar(int id)
+        {
+            var categoria = await _service.GetByIdAsync(id);
+
+            return categoria == null ? View("NotFound") : View(categoria);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Editar(int id, Categoria categoria)
+        {
+            if (ModelState.IsValid)
+            {
+                await _service.UpdateAsync(id, categoria);
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(categoria);
+        }
+
+        public async Task<IActionResult> Deletar(int id)
+        {
+            var categoria = await _service.GetByIdAsync(id);
+
+            return categoria == null ? View("NotFound") : View(categoria);
+        }
+
+        [HttpPost, ActionName("Deletar")]
+        public async Task<IActionResult> DeletarConfirmado(int id)
+        {
+            var categoria = await _service.GetByIdAsync(id);
+            if (categoria == null) return View("NotFound");
+
+            await _service.DeleteAsync(id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
