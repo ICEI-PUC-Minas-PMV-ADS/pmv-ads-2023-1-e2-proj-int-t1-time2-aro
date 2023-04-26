@@ -4,46 +4,42 @@
     ViewData["Title"] = "Categorias";
 }
 
-<body>
+<div class="row">
+    <div class="col-md-8 offset-md-2">
 
-
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-
-
-
-            <table class="table">
-                <thead>
-                    <tr class="text-center">
-                        <th>@Html.DisplayNameFor(model => model.Nome)</th>
-                        <th>@Html.DisplayNameFor(model => model.Descricao)</th>
-                        <th>Gerenciamento</th>
+        <table class="table">
+            <thead>
+                <tr class="text-center">
+                    <th>@Html.DisplayNameFor(model => model.Nome)</th>
+                    <th>@Html.DisplayNameFor(model => model.Descricao)</th>
+                    <th>Gerenciamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Descricao)
+                        </td>
+                        <td class="align-middle">
+                            <a class="btn btn-outline-primary" asp-action="Editar" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i> Editar</a> |
+                            <a class="btn btn-danger text-white" asp-action="Deletar" asp-route-id="@item.Id"><i class="bi bi-trash"></i> Deletar</a>
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td class="align-middle">
-                                @Html.DisplayFor(modelItem => item.Nome)
-                            </td>
-                            <td class="align-middle">
-                                @Html.DisplayFor(modelItem => item.Descricao)
-                            </td>
-                            <td class="align-middle">
-                                <a class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Editar </a> |
-                                <a class="btn btn-danger text-white"><i class="bi bi-trash"></i>Deletar </a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
+                }
+            </tbody>
 
+        </table>
 
-
-            </table>
-
-
-
-        </div>
     </div>
-</body>
+</div>
+
+<div style="position: fixed; right: 25px; bottom: 65px;" class="text-white">
+    <a asp-controller="Categorias" asp-action="Criar" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i> Adicionar
+    </a>
+</div>y>
