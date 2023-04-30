@@ -3,87 +3,212 @@
 }
 
 <style>
-    h1 {
-        font-family: Franklin Gothic Medium;
-        font-size: 20px;
+    * {
+        font-family: effra,Helvetica,Arial,sans-serif;
+    }
+
+
+    h1 span {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        display: inline-block;
+        color: #040404;
+        font-family: effra,Helvetica,Arial,sans-serif;
+    }
+
+    h2 {
+        font-family: effra,Helvetica,Arial,sans-serif;
+        font-size: 17px;
         text-align: center;
     }
 
     h3 {
-        font-family: sans-serif;
-        font-size: 20px;
-        text-align: center;
-        margin: 45px 10px 10px 10px;
-    }
-
-    h6 {
-        font-family: Franklin Gothic Medium;
-        font-size: 15px;
+        font-family: effra,Helvetica,Arial,sans-serif;
+        font-size: 17px;
         text-align: center;
     }
 
-    q {
-        quotes: '"' '"';
+
+    .cards {
+        display: grid;
+        grid-column: 1/-1;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        background: #fff;
+        grid-gap: 2rem;
+        padding: 2rem;
+        perspective: 1000px;
     }
 
-        q ::before, q ::after {
-            quotes: '"' '"';
-            color: black;
-            font-size: 60px;
-            top: 10px;
+    .framework-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 1rem;
+        text-align: center;
+        padding-top: 3rem;
+        position: relative;
+        transform-origin: top center;
+        --rotate: 10deg;
+        transform: rotateX(var(--rotate));
+        transition: transform 0.2s;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+        .framework-card:before {
+            right: auto;
+            left: 20px;
         }
+
+        .framework-card:hover {
+            transform: rotateX(-20deg);
+        }
+
+        card:before,
+        .framework-card:after {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: #5c0dac;
+            border: 1px solid #000;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+            top: 15px;
+            right: 20px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .framework-card:before,
+        .framework-card:after {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: #5c0dac;
+            border: 1px solid #000;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+            top: 15px;
+            right: 20px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .framework-card img {
+            height: 80px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .framework-card p {
+            font-family: 'radnika-next';
+            font-weight: 900;
+            background: #f1d7ff;
+        }
+
+    h4 {
+        font-family: effra,Helvetica,Arial,sans-serif;
+        font-size: 17px;
+        text-align: left;
+    }
+
+    .newspaper {
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+        font-size: 15px;
+        background-color: #f2e8e1;
+    }
+
+    Contato a {
+        color: black;
+        font-size: 15px;
+        text-decoration: none;
+    }
+
 </style>
 
 <body>
+
     <div class="text-center">
-        <h1>CONHEÇA NOSSAS LINHAS</h1>
-
+        <h1>
+            <span>B</span>
+            <span>E</span>
+            <span>M</span>
+            <span>-</span>
+            <span>V</span>
+            <span>I</span>
+            <span>N</span>
+            <span>D</span>
+            <span>O</span>
+        </h1>
         <br />
 
-        <h6>
-            <q>
-                Praticar o autocuidado é uma forma inteligente e eficaz de melhorar inúmeros aspectos em prol da qualidade de vida: <p> aumenta a autoestima,
-                diminui os custos com a saúde e melhora as funções mentais e físicas.</p>
-        </h6></q>
-
-        <hr />
-
+        <h2>
+            "Praticar o autocuidado é uma forma inteligente e eficaz de melhorar inúmeros aspectos em prol da qualidade de vida.
+            Aumenta a autoestima,
+            diminui os custos com a saúde e melhora as funções mentais e físicas."
+            <hr />
+            <img src="https://blog.artelasse.com.br/wp-content/uploads/2022/02/beneficios-da-aromaterapia.jpg" style=" border-radius: 20%;"
+        </h2>
         <br />
+        <br />
+        <br />
+        <h3>
+            -Para quem ainda não conhece, a aromaterapia é uma prática terapêutica que utiliza as propriedades dos óleos essenciais para recuperar o equilíbrio e a harmonia do organismo.
+            <br>  Além disso, ajuda a promover a saúde física, mental e o bem-estar.
+            <br> Os óleos essenciais são muito utilizados para procedimentos estéticos e terapeuticos por possuirem inúmeras funções
+        </h3>
     </div>
-    <div style='
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    align-self: center'>
-        <div class="spa" style='width: 30%'>
-            Linha Spa 
-            <p> </p> 
-            asjdiashlaj diçfj çeifj eçif jweçifwjoçe aeiçof 
+
+    <div class="cards" style="max-width: 100%;">
+        <div class="framework-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXnk_N9lpA2ycWrH-_Z-UNuqt8rcx37zK-9c-kz9eLFAuvYYMTw7wrg8w3yeYW9bTy6Co&usqp=CAU">
+            <p>Linha Roll On</p>
+            Garante proteção por 48 horas mantendo a hidratação natural da pele.
+            <br> Sua fórmula contém extratos naturais, mantendo a hidratação natural da sua pele protegendo e cuidado de você.
         </div>
-        <div class="Terapeutico" style='width: 30%; align-items: center'>
-            Linha Terapeutica
-            <p> </p>
-            asjdisaldjasldksadpsadjiosansm
-            <p>sdoamfklndsadlasdailkfhndjlakdcndjalkhfdhd</p>
+        <div class="framework-card" style="max-width: 100%;">
+            <img src="https://img.freepik.com/vetores-premium/conjunto-de-produtos-cosmeticos-de-beleza-para-a-pele-em-aquarela_255026-346.jpg">
+            <p>linha Terapeutica</p>
+            Dentre os benefícios da aromaterapia temos: aliviar os sintomas de ansiedade, insônia, dor, depressão, resfriado, promover o bem-estar e fortalecer as defesas do corpo.
+            <br>Essa terapia revela que existem ligações entre o olfato e os sentimentos.
         </div>
-        <div class="Home Sweet" style='width: 30%; align-items: center'>
-            Linha Home Sweet
-            <p> </p>
-            asjdisaldjasldksadpsadjiosansjk.dslk
-            <p>sdoamfklndsadlasdailkfhndjlakdcndjalkhfdhd</p>
+        <div class="framework-card" style="max-width: 100%;">
+            <img src="https://thumbs.dreamstime.com/b/mujer-con-una-mascarilla-cosm%C3%A9tica-vector-120634426.jpg">
+            <p>Linha SPA</p>
+            Criada para espaços funcionais, com modelos e design que se destacam em ambientes menores como apartamentos, coberturas e pequenas áreas de lazer, mas que também se integram a grandes ambientes como uma opção de relaxamento para o stress do dia a dia.
         </div>
 
     </div>
 
-    <div>
-        <div class="text-center">
-            <h3>Quem Somos?</h3>
-            <p> - Somos duas mulheres, irmãs, amigas e empreendedoras que nos unimos para trazer saúde e bem estar através da fitoterapia, da fitoenergética e da aromaterapia.</p>
-            <p> Permita-se nasceu da vontade de ajudar as pessoas a se conhecer, a se amar e se cuidar!</p>
-            <p>Acreditamos que o auto cuidado é a melhor maneira de cuidar do seu corpo e mente para uma vida melhor!</p>
-            <p>Apresentamos a vocês a nossa linha de produtos terapêuticos 100% natural e cosméticos tudo feito artesanalmente com muito amor e carinho.</p>
-            <p>Permita-se sentir!</p>
-        </div>
+    <h4> <strong> ❤ Diquinhas: </strong> </h4>
+    <p>
+        <br>🌸Uma dica para aplicar a aromoterapia em sua casa de forma simples é fazer um aromatizador caseiro. Coloque as pétalas de uma rosa branca em 60 ml de álcool e deixe descansar por 30 minutos.
+        Após isso, basta coar as pétalas e acrescentar três gotas do óleo essencial de sua preferência.
+        <br>🌸Para amenizar as cólicas menstruais dilua uma gota de camomila romana em 10 ml de óleo vegetal de amêndoa doce e massageie a barriga.
+        <br>🌸Se você deseja dar brilho e aumentar o crescimento dos cabelos acrescente 25 gotas Ylang- Ylang em 100 ml de seu condicionador ou creme de pentear.
+    </p>
+
+    <br />
+    <br />
+    <br />
+
+    <div class="newspaper">
+        <h5>Quem Somos?</h5>
+        <p>
+            Somos duas mulheres, irmãs, amigas e empreendedoras que nos unimos para trazer saúde e bem estar através da fitoterapia, da fitoenergética e da aromaterapia.
+            Permita-se nasceu da vontade de ajudar as pessoas a se conhecer, a se amar e se cuidar!
+            Acreditamos que o auto cuidado é a melhor maneira de cuidar do seu corpo e mente para uma vida melhor!
+            Apresentamos a vocês a nossa linha de produtos terapêuticos 100% natural e cosméticos tudo feito artesanalmente com muito amor e carinho.
+            Permita-se sentir!
+        </p>
     </div>
+
+    <div class="contato">
+
+        <a href="https://instagram.com/permita_se.harmonia?igshid=ZWIzMWE5ZmU3Zg==" target="_blank">
+            <img src="./css/instagram (1).png" target="_blank">
+        </a>
+
 </body>
 
