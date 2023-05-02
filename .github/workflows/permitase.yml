@@ -8,7 +8,7 @@ env:
   AZURE_WEBAPP_PACKAGE_PATH: .\published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 5.0.x
-  WORKING_DIRECTORY: ..\..\src\permita-se\permita-se.csproj
+  WORKING_DIRECTORY: src\permita-se
 jobs:
   build:
     runs-on: windows-latest
