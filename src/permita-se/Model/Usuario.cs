@@ -11,6 +11,7 @@ namespace permita_se.Model
         public Usuario()
         {
             Favoritos = new HashSet<Favorito>();
+            Pedidos = new HashSet<Pedido>();
         }
 
         [Key]
@@ -35,7 +36,10 @@ namespace permita_se.Model
         [Column("gerente")]
         public bool Gerente { get; set; }
 
-        [InverseProperty(nameof(Favorito.IdUsuarioNavigation))]
+        [InverseProperty(nameof(Favorito.Usuario))]
         public virtual ICollection<Favorito> Favoritos { get; set; }
+
+        [InverseProperty(nameof(Pedido.Usuario))]
+        public virtual ICollection<Pedido> Pedidos { get; set; }
     }
 }

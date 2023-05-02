@@ -15,10 +15,13 @@ namespace permita_se.Data
         {
         }
 
+        public virtual DbSet<CarrinhoItem> CarrinhoItems { get; set; }
         public virtual DbSet<Categoria> Categorias { get; set; }
         public virtual DbSet<Favorito> Favoritos { get; set; }
-        public virtual DbSet<OpcaoResposta> OpcaoResposta { get; set; }
-        public virtual DbSet<PerguntaQuestionario> PerguntaQuestionarios { get; set; }
+        public virtual DbSet<OpcaoResposta> OpcaoRespostas { get; set; }
+        public virtual DbSet<Pedido> Pedidos { get; set; }
+        public virtual DbSet<PedidoItem> PedidoItems { get; set; }
+        public virtual DbSet<PerguntaQuestionario> PerguntasQuestionarios { get; set; }
         public virtual DbSet<Pergunta> Perguntas { get; set; }
         public virtual DbSet<Produto> Produtos { get; set; }
         public virtual DbSet<Questionario> Questionarios { get; set; }
@@ -36,6 +39,17 @@ namespace permita_se.Data
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
 
+            modelBuilder.Entity<CarrinhoItem>(entity =>
+            {
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.HasOne(d => d.Produto)
+                    .WithMany(p => p.CarrinhoItems)
+                    .HasForeignKey(d => d.IdProduto)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_pedido_item_produto");
+            });
+
             modelBuilder.Entity<Categoria>(entity =>
             {
                 entity.Property(e => e.Id).ValueGeneratedNever();
@@ -50,13 +64,13 @@ namespace permita_se.Data
                 entity.HasKey(e => new { e.IdUsuario, e.IdProduto })
                     .HasName("PK__favorito__D59D8EC601C60CFF");
 
-                entity.HasOne(d => d.IdProdutoNavigation)
+                entity.HasOne(d => d.Produto)
                     .WithMany(p => p.Favoritos)
                     .HasForeignKey(d => d.IdProduto)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__favoritos__id_pr__6477ECF3");
 
-                entity.HasOne(d => d.IdUsuarioNavigation)
+                entity.HasOne(d => d.Usuario)
                     .WithMany(p => p.Favoritos)
                     .HasForeignKey(d => d.IdUsuario)
                     .OnDelete(DeleteBehavior.ClientSetNull)
@@ -69,11 +83,33 @@ namespace permita_se.Data
 
                 entity.Property(e => e.Texto).IsUnicode(false);
 
-                entity.HasOne(d => d.IdPerguntaNavigation)
-                    .WithMany(p => p.OpcaoResposta)
+                entity.HasOne(d => d.Pergunta)
+                    .WithMany(p => p.OpcoesRespostas)
                     .HasForeignKey(d => d.IdPergunta)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__opcao_res__id_pe__6EF57B66");
+            });
+
+            modelBuilder.Entity<Pedido>(entity =>
+            {
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.HasOne(d => d.Usuario)
+                    .WithMany(p => p.Pedidos)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_pedido_usuario");
+            });
+
+            modelBuilder.Entity<PedidoItem>(entity =>
+            {
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.HasOne(d => d.Produto)
+                    .WithMany(p => p.PedidoItems)
+                    .HasForeignKey(d => d.IdProduto)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_carrinho_item_produto");
             });
 
             modelBuilder.Entity<PerguntaQuestionario>(entity =>
@@ -81,14 +117,14 @@ namespace permita_se.Data
                 entity.HasKey(e => new { e.IdQuestionario, e.IdPergunta })
                     .HasName("PK__pergunta__DC4D1DA718F174D8");
 
-                entity.HasOne(d => d.IdPerguntaNavigation)
-                    .WithMany(p => p.PerguntaQuestionarios)
+                entity.HasOne(d => d.Pergunta)
+                    .WithMany(p => p.PerguntasQuestionarios)
                     .HasForeignKey(d => d.IdPergunta)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__pergunta___id_pe__6C190EBB");
 
-                entity.HasOne(d => d.IdQuestionarioNavigation)
-                    .WithMany(p => p.PerguntaQuestionarios)
+                entity.HasOne(d => d.Questionario)
+                    .WithMany(p => p.PerguntasQuestionarios)
                     .HasForeignKey(d => d.IdQuestionario)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__pergunta___id_qu__6B24EA82");

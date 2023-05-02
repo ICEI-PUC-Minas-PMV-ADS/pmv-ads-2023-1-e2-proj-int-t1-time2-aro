@@ -10,7 +10,7 @@ namespace permita_se.Model
     {
         public Questionario()
         {
-            PerguntaQuestionarios = new HashSet<PerguntaQuestionario>();
+            PerguntasQuestionarios = new HashSet<PerguntaQuestionario>();
         }
 
         [Key]
@@ -20,7 +20,7 @@ namespace permita_se.Model
         [StringLength(100)]
         public string Titulo { get; set; }
 
-        [InverseProperty(nameof(PerguntaQuestionario.IdQuestionarioNavigation))]
-        public virtual ICollection<PerguntaQuestionario> PerguntaQuestionarios { get; set; }
+        [InverseProperty(nameof(PerguntaQuestionario.Questionario))]
+        public virtual ICollection<PerguntaQuestionario> PerguntasQuestionarios { get; set; }
     }
 }
