@@ -1,0 +1,78 @@
+﻿@using permita_se.Models;
+@model NewProdutoVM
+
+@{
+    ViewData["Title"] = "Criar um novo produto";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h4>Criar um novo produto</h4>
+        </p>
+
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Criar">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Nome" class="control-label"></label>
+                                <input asp-for="Nome" class="form-control" />
+                                <span asp-validation-for="Nome" class="text-danger"></span>
+                            </div>
+      
+                            <div class="form-group">
+                                <label asp-for="Preco" class="control-label"></label>
+                                <input asp-for="Preco" type="number" class="form-control" />
+                                <span asp-validation-for="Preco" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ImagemURL" class="control-label"></label>
+                                <input asp-for="ImagemURL" class="form-control" />
+                                <span asp-validation-for="ImagemURL" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">                           
+                            <div class="form-group">
+                                <label asp-for="IdCategoria" class="control-label"></label>
+                                <select asp-for="IdCategoria" class="form-control" asp-items="ViewBag.IdCategoria"></select>
+                                <span asp-validation-for="IdCategoria" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label asp-for="Descricao" class="control-label"></label>
+                                <textarea asp-for="Descricao" class="form-control"></textarea>
+                                <span asp-validation-for="Descricao" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 offset-4 text-center">
+                        <img width="100%" id="ImageUrlPreview" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-outline-success float-right" />
+                        <a class="btn btn-outline-secondary" asp-action="Index">Show all</a>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $("#ImagemURL").on("change", function () {
+            var output = document.getElementById("ImagemURLPreview");
+            output.src = $(this).val();
+        })
+    </script>
+}

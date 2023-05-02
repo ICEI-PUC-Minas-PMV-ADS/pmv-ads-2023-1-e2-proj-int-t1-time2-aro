@@ -28,6 +28,7 @@ namespace permita_se
 
             //Services configuration
             services.AddScoped<ICategoriasService, CategoriasService>();
+            services.AddScoped<IProdutoService, ProdutoService>();
 
             services.AddControllersWithViews();
         }
