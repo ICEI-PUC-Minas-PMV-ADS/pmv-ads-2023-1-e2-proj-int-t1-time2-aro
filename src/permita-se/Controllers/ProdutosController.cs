@@ -25,7 +25,7 @@ namespace permita_se.Controllers
             return View(allProdutos);
         }
 
-        public async Task<IActionResult> Filter(string searchString)
+        public async Task<IActionResult> Filtro(string searchString)
         {
             var allProdutos = await _service.GetAllAsync(n => n.Categoria);
 
@@ -39,7 +39,7 @@ namespace permita_se.Controllers
         }
 
         // produto-details
-        public async Task<IActionResult> Details(int id)
+        public async Task<IActionResult> Detalhe(int id)
         {
             var produtoDetail = await _service.GetProdutoByIdAsync(id);
             return View(produtoDetail);

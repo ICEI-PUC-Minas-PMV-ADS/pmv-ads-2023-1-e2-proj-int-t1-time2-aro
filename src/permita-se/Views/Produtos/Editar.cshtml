@@ -57,7 +57,7 @@
 
                     <div class="form-group">
                         <input type="submit" value="Editar" class="btn btn-outline-success float-right" />
-                        <a class="btn btn-outline-secondary" asp-action="Index">Show all</a>
+                        <a class="btn btn-outline-secondary" asp-action="Index">Cancelar</a>
                     </div>
 
                 </form>
@@ -72,9 +72,9 @@
     <script>
         $(document).ready(function () {
             var output = document.getElementById("ImageUrlPreview");
-            output.src = $("#ImageURL").val();
+            output.src = $("#ImagemURL").val();
         });
-
+    </script>
     <script>
         $("#ImagemURL").on("change", function () {
             var output = document.getElementById("ImagemURLPreview");
