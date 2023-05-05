@@ -19,7 +19,7 @@ namespace permita_se.Data.Services.Impl
         public async Task AddNewProdutoAsync(NewProdutoVM data)
         {
             var newProduto = new Produto()
-            {
+            {   
                 Nome = data.Nome,
                 Descricao = data.Descricao,
                 Preco = data.Preco,

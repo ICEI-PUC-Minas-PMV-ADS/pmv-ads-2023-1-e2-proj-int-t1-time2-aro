@@ -1,4 +1,5 @@
 ﻿using permita_se.Data.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,7 +9,7 @@ namespace permita_se.Models
 {
     public class NewProdutoVM
 
-    {
+    {   
         public int Id { get; set; }
 
         [Display(Name = "Nome do produto")]
