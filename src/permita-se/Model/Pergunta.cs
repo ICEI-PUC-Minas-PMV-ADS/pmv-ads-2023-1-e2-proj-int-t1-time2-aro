@@ -10,8 +10,8 @@ namespace permita_se.Model
     {
         public Pergunta()
         {
-            OpcaoResposta = new HashSet<OpcaoResposta>();
-            PerguntaQuestionarios = new HashSet<PerguntaQuestionario>();
+            OpcoesRespostas = new HashSet<OpcaoResposta>();
+            PerguntasQuestionarios = new HashSet<PerguntaQuestionario>();
         }
 
         [Key]
@@ -21,9 +21,10 @@ namespace permita_se.Model
         [StringLength(255)]
         public string Texto { get; set; }
 
-        [InverseProperty(nameof(Model.OpcaoResposta.IdPerguntaNavigation))]
-        public virtual ICollection<OpcaoResposta> OpcaoResposta { get; set; }
-        [InverseProperty(nameof(PerguntaQuestionario.IdPerguntaNavigation))]
-        public virtual ICollection<PerguntaQuestionario> PerguntaQuestionarios { get; set; }
+        [InverseProperty(nameof(Model.OpcaoResposta.Pergunta))]
+        public virtual ICollection<OpcaoResposta> OpcoesRespostas { get; set; }
+
+        [InverseProperty(nameof(PerguntaQuestionario.Pergunta))]
+        public virtual ICollection<PerguntaQuestionario> PerguntasQuestionarios { get; set; }
     }
 }

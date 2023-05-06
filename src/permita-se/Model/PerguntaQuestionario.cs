@@ -15,10 +15,11 @@ namespace permita_se.Model
         public int IdPergunta { get; set; }
 
         [ForeignKey(nameof(IdPergunta))]
-        [InverseProperty(nameof(Pergunta.PerguntaQuestionarios))]
-        public virtual Pergunta IdPerguntaNavigation { get; set; }
+        [InverseProperty(nameof(Model.Pergunta.PerguntasQuestionarios))]
+        public virtual Pergunta Pergunta { get; set; }
+
         [ForeignKey(nameof(IdQuestionario))]
-        [InverseProperty(nameof(Questionario.PerguntaQuestionarios))]
-        public virtual Questionario IdQuestionarioNavigation { get; set; }
+        [InverseProperty(nameof(Model.Questionario.PerguntasQuestionarios))]
+        public virtual Questionario Questionario { get; set; }
     }
 }

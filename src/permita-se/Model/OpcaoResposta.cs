@@ -17,7 +17,7 @@ namespace permita_se.Model
         public string Texto { get; set; }
 
         [ForeignKey(nameof(IdPergunta))]
-        [InverseProperty(nameof(Pergunta.OpcaoResposta))]
-        public virtual Pergunta IdPerguntaNavigation { get; set; }
+        [InverseProperty(nameof(Model.Pergunta.OpcoesRespostas))]
+        public virtual Pergunta Pergunta { get; set; }
     }
 }

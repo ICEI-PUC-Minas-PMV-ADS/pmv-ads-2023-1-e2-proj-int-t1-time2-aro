@@ -10,7 +10,9 @@ namespace permita_se.Model
     {
         public Produto()
         {
+            CarrinhoItems = new HashSet<CarrinhoItem>();
             Favoritos = new HashSet<Favorito>();
+            PedidoItems = new HashSet<PedidoItem>();
         }
 
         [Key]
@@ -39,7 +41,13 @@ namespace permita_se.Model
         [InverseProperty(nameof(Model.Categoria.Produtos))]
         public virtual Categoria Categoria { get; set; }
 
-        [InverseProperty(nameof(Favorito.IdProdutoNavigation))]
+        [InverseProperty(nameof(CarrinhoItem.Produto))]
+        public virtual ICollection<CarrinhoItem> CarrinhoItems { get; set; }
+
+        [InverseProperty(nameof(Favorito.Produto))]
         public virtual ICollection<Favorito> Favoritos { get; set; }
+
+        [InverseProperty(nameof(PedidoItem.Produto))]
+        public virtual ICollection<PedidoItem> PedidoItems { get; set; }
     }
 }
