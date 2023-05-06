@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿ using Microsoft.EntityFrameworkCore;
 using permita_se.Model;
 
 
@@ -41,19 +41,15 @@ namespace permita_se.Data
 
             modelBuilder.Entity<CarrinhoItem>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.HasOne(d => d.Produto)
                     .WithMany(p => p.CarrinhoItems)
                     .HasForeignKey(d => d.IdProduto)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_pedido_item_produto");
+                    .HasConstraintName("fk_carrinho_item_produto");
             });
 
             modelBuilder.Entity<Categoria>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Descricao).IsUnicode(false);
 
                 entity.Property(e => e.Nome).IsUnicode(false);
@@ -62,38 +58,34 @@ namespace permita_se.Data
             modelBuilder.Entity<Favorito>(entity =>
             {
                 entity.HasKey(e => new { e.IdUsuario, e.IdProduto })
-                    .HasName("PK__favorito__D59D8EC601C60CFF");
+                    .HasName("PK__favorito__D59D8EC66B775EC9");
 
                 entity.HasOne(d => d.Produto)
                     .WithMany(p => p.Favoritos)
                     .HasForeignKey(d => d.IdProduto)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__favoritos__id_pr__6477ECF3");
+                    .HasConstraintName("fk_favoritos_produto");
 
                 entity.HasOne(d => d.Usuario)
                     .WithMany(p => p.Favoritos)
                     .HasForeignKey(d => d.IdUsuario)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__favoritos__id_us__6383C8BA");
+                    .HasConstraintName("fk_favoritos_usuario");
             });
 
             modelBuilder.Entity<OpcaoResposta>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Texto).IsUnicode(false);
 
                 entity.HasOne(d => d.Pergunta)
                     .WithMany(p => p.OpcoesRespostas)
                     .HasForeignKey(d => d.IdPergunta)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__opcao_res__id_pe__6EF57B66");
+                    .HasConstraintName("fk_opcao_resposta_pergunta");
             });
 
             modelBuilder.Entity<Pedido>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.HasOne(d => d.Usuario)
                     .WithMany(p => p.Pedidos)
                     .HasForeignKey(d => d.IdUsuario)
@@ -103,44 +95,44 @@ namespace permita_se.Data
 
             modelBuilder.Entity<PedidoItem>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.HasOne(d => d.Pedido)
+                    .WithMany(p => p.PedidoItems)
+                    .HasForeignKey(d => d.IdPedido)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_pedido_item_pedido");
 
                 entity.HasOne(d => d.Produto)
                     .WithMany(p => p.PedidoItems)
                     .HasForeignKey(d => d.IdProduto)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_carrinho_item_produto");
+                    .HasConstraintName("fk_pedido_item_produto");
             });
 
             modelBuilder.Entity<PerguntaQuestionario>(entity =>
             {
                 entity.HasKey(e => new { e.IdQuestionario, e.IdPergunta })
-                    .HasName("PK__pergunta__DC4D1DA718F174D8");
+                    .HasName("PK__pergunta__DC4D1DA74B233886");
 
                 entity.HasOne(d => d.Pergunta)
                     .WithMany(p => p.PerguntasQuestionarios)
                     .HasForeignKey(d => d.IdPergunta)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__pergunta___id_pe__6C190EBB");
+                    .HasConstraintName("fk_pergunta_questionario_pergunta");
 
                 entity.HasOne(d => d.Questionario)
                     .WithMany(p => p.PerguntasQuestionarios)
                     .HasForeignKey(d => d.IdQuestionario)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__pergunta___id_qu__6B24EA82");
+                    .HasConstraintName("fk_pergunta_questionario_questionario");
             });
 
             modelBuilder.Entity<Pergunta>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Texto).IsUnicode(false);
             });
 
             modelBuilder.Entity<Produto>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Descricao).IsUnicode(false);
 
                 entity.Property(e => e.ImagemUrl).IsUnicode(false);
@@ -151,20 +143,16 @@ namespace permita_se.Data
                     .WithMany(p => p.Produtos)
                     .HasForeignKey(d => d.IdCategoria)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__produto__id_cate__60A75C0F");
+                    .HasConstraintName("fk_produto_categoria");
             });
 
             modelBuilder.Entity<Questionario>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Titulo).IsUnicode(false);
             });
 
             modelBuilder.Entity<Usuario>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Email).IsUnicode(false);
 
                 entity.Property(e => e.Nome).IsUnicode(false);

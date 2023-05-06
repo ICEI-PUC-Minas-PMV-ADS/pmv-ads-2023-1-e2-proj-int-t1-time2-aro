@@ -14,6 +14,8 @@ namespace permita_se.Model
         public int IdProduto { get; set; }
         [Column("quantidade")]
         public int Quantidade { get; set; }
+        [Column("id_carrinho")]
+        public int IdCarrinho { get; set; }
 
         [ForeignKey(nameof(IdProduto))]
         [InverseProperty(nameof(Model.Produto.CarrinhoItems))]

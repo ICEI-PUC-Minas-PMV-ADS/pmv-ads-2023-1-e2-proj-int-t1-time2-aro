@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -21,5 +22,8 @@ namespace permita_se.Model
         [ForeignKey(nameof(IdUsuario))]
         [InverseProperty(nameof(Model.Usuario.Pedidos))]
         public virtual Usuario Usuario { get; set; }
+
+        [InverseProperty(nameof(PedidoItem.Pedido))]
+        public virtual ICollection<PedidoItem> PedidoItems { get; set; }
     }
 }
