@@ -15,10 +15,11 @@ namespace permita_se.Model
         public int IdProduto { get; set; }
 
         [ForeignKey(nameof(IdProduto))]
-        [InverseProperty(nameof(Produto.Favoritos))]
-        public virtual Produto IdProdutoNavigation { get; set; }
+        [InverseProperty(nameof(Model.Produto.Favoritos))]
+        public virtual Produto Produto { get; set; }
+
         [ForeignKey(nameof(IdUsuario))]
-        [InverseProperty(nameof(Usuario.Favoritos))]
-        public virtual Usuario IdUsuarioNavigation { get; set; }
+        [InverseProperty(nameof(Model.Usuario.Favoritos))]
+        public virtual Usuario Usuario { get; set; }
     }
 }

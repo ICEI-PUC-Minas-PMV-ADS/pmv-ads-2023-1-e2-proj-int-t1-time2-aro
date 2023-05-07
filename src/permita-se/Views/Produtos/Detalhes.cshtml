@@ -1,0 +1,46 @@
+﻿@model Produto
+
+@{
+    ViewData["Title"] = "Detalhes do Produto";
+}
+
+<div class="row">
+        <div class="col-md-8 offset-2">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-header text-white bg-info">
+                            <p class="card-text">
+                                <h5 class="card-title">
+                                    @Model.Nome
+                                </h5>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="@Model.ImagemUrl" width="100%" alt="@Model.Nome">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-text">@Model.Descricao</p>
+                            <p class="card-text"><b>Categoria: </b>@Model.Categoria.Nome
+                                <a></a>
+                            </p>
+                            <p class="card-text ">
+                                <b>Status: </b>
+                                <span class="badge bg-success text-white">DISPONÍVEL</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card-footer ">
+                            <p class="card-text">
+                                <a class="btn btn-outline-primary float-right" asp-action="Index">Voltar</a>
+                                <a class="btn btn-success text-white"><i class="bi bi-cart-plus"></i> Carrinho (Preço @Model.Preco.ToString("c"))</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

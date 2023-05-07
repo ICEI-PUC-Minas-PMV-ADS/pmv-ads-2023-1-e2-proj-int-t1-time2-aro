@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using permita_se.Data.Base;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -6,11 +7,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace permita_se.Model
 {
     [Table("produto")]
-    public partial class Produto
+    public class Produto:IEntityBase
     {
         public Produto()
         {
+            CarrinhoItems = new HashSet<CarrinhoItem>();
             Favoritos = new HashSet<Favorito>();
+            PedidoItems = new HashSet<PedidoItem>();
         }
 
         [Key]
@@ -39,7 +42,13 @@ namespace permita_se.Model
         [InverseProperty(nameof(Model.Categoria.Produtos))]
         public virtual Categoria Categoria { get; set; }
 
-        [InverseProperty(nameof(Favorito.IdProdutoNavigation))]
+        [InverseProperty(nameof(CarrinhoItem.Produto))]
+        public virtual ICollection<CarrinhoItem> CarrinhoItems { get; set; }
+
+        [InverseProperty(nameof(Favorito.Produto))]
         public virtual ICollection<Favorito> Favoritos { get; set; }
+
+        [InverseProperty(nameof(PedidoItem.Produto))]
+        public virtual ICollection<PedidoItem> PedidoItems { get; set; }
     }
 }
