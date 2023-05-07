@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using permita_se.Data.Base;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -6,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace permita_se.Model
 {
     [Table("produto")]
-    public partial class Produto
+    public class Produto:IEntityBase
     {
         public Produto()
         {
