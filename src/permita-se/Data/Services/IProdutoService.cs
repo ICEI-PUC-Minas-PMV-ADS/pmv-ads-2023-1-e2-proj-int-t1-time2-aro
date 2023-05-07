@@ -1,9 +1,7 @@
-﻿using permita_se.Model;
-using permita_se.Data.Base;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using permita_se.Data.Base;
 using permita_se.Data.ViewModel;
-using permita_se.Models;
+using permita_se.Model;
+using System.Threading.Tasks;
 
 namespace permita_se.Data.Services
 {

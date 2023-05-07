@@ -1,8 +1,7 @@
-﻿@using permita_se.Models;
-@model NewProdutoVM
+﻿@model NewProdutoVM
 
 @{
-    ViewData["Title"] = "Criar um novo produto";
+    ViewData["Title"] = "Adicionando produto";
 }
 
 <div class="row">
@@ -23,23 +22,26 @@
                                 <input asp-for="Nome" class="form-control" />
                                 <span asp-validation-for="Nome" class="text-danger"></span>
                             </div>
-      
-                            <div class="form-group">
-                                <label asp-for="Preco" class="control-label"></label>
-                                <input asp-for="Preco" class="form-control" />
-                                <span asp-validation-for="Preco" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="ImagemURL" class="control-label"></label>
-                                <input asp-for="ImagemURL" class="form-control" />
-                                <span asp-validation-for="ImagemURL" class="text-danger"></span>
-                            </div>
                         </div>
                         <div class="col-md-6">                           
                             <div class="form-group">
                                 <label asp-for="IdCategoria" class="control-label"></label>
                                 <select asp-for="IdCategoria" class="form-control" asp-items="ViewBag.IdCategoria"></select>
                                 <span asp-validation-for="IdCategoria" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Preco" class="control-label"></label>
+                                <input asp-for="Preco" class="form-control" />
+                                <span asp-validation-for="Preco" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="ImagemURL" class="control-label"></label>
+                                <input asp-for="ImagemURL" class="form-control" />
+                                <span asp-validation-for="ImagemURL" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -52,7 +54,7 @@
                     </div>
 
                     <div class="col-md-4 offset-4 text-center">
-                        <img width="100%" id="ImageUrlPreview" />
+                        <img width="100%" id="ImagemUrlPreview" />
                     </div>
 
                     <div class="form-group">
@@ -67,17 +69,11 @@
 
     </div>
 </div>
-}
+
 @section Scripts{
     <script>
-        $(document).ready(function () {
-            var output = document.getElementById("ImageUrlPreview");
-            output.src = $("#ImagemURL").val();
-        });
-    </script>
-    <script>
         $("#ImagemURL").on("change", function () {
-            var output = document.getElementById("ImagemURLPreview");
+            var output = document.getElementById('ImagemURLPreview');
             output.src = $(this).val();
         })
     </script>

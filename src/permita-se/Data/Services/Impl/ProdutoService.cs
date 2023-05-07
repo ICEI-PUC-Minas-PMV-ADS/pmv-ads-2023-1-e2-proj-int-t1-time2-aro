@@ -2,7 +2,6 @@
 using permita_se.Data.Base.Impl;
 using permita_se.Data.ViewModel;
 using permita_se.Model;
-using permita_se.Models;
 using System.Linq;
 using System.Threading.Tasks;
 

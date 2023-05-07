@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using permita_se.Data;
 using permita_se.Data.Services;
-using permita_se.Models;
+using permita_se.Data.ViewModel;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -38,14 +36,12 @@ namespace permita_se.Controllers
             return View("Index", allProdutos);
         }
 
-        // produto-details
-        public async Task<IActionResult> Detalhe(int id)
+        public async Task<IActionResult> Detalhes(int id)
         {
             var produtoDetail = await _service.GetProdutoByIdAsync(id);
             return View(produtoDetail);
         }
 
-        // produto-create
         public async Task<IActionResult> Criar()
         {
             var produtoDropdownData = await _service.GetNewProdutoDropdownValues();
@@ -54,7 +50,6 @@ namespace permita_se.Controllers
         }
 
         [HttpPost]
-
         public async Task<IActionResult> Criar(NewProdutoVM produto)
         {
 
@@ -63,7 +58,6 @@ namespace permita_se.Controllers
                 var produtoDropdownData = await _service.GetNewProdutoDropdownValues();
                 ViewBag.IdCategoria = new SelectList(produtoDropdownData.Categorias, "Id", "Nome");
 
-
                 return View(produto);
             }
 
@@ -71,12 +65,10 @@ namespace permita_se.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // produto-edit
-
         public async Task<IActionResult> Editar(int id)
         {
             var produtoDetail = await _service.GetProdutoByIdAsync(id);
-            if (produtoDetail == null) return View("Not Found");
+            if (produtoDetail == null) return View("NotFound");
 
             var response = new NewProdutoVM()
             {
@@ -96,16 +88,14 @@ namespace permita_se.Controllers
         }
 
         [HttpPost]
-
         public async Task<IActionResult> Editar(int id, NewProdutoVM produto)
         {
-            if (id != produto.Id) return View("Not Found");
+            if (id != produto.Id) return View("NotFound");
 
             if (!ModelState.IsValid)
             {
                 var produtoDropdownData = await _service.GetNewProdutoDropdownValues();
                 ViewBag.IdCategoria = new SelectList(produtoDropdownData.Categorias, "Id", "Nome");
-
 
                 return View(produto);
             }
