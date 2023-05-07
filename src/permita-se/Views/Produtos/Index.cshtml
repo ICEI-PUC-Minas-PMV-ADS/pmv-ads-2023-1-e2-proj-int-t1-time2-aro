@@ -4,56 +4,53 @@
     ViewData["Title"] = "Produtos";
 }
 
-<body>
-    <div class="row">
-        @foreach (var item in Model)
-        {
-            <div class="col-md-4 col-xs-6 border-primary mb-3">
-                <div class="card mb-3" style="max-width: 400px">
-                    <div class="row g-0" style="background:#f6eff6">
-                        <div class="col-md-12">
-                            <div class="card-header text-white bg-secondary">
-                                <p class="card-text">
-                                    <h5 class="card-title">
-                                        @item.Nome
-                                        <a class="text-white float-right" asp-action="Editar" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
-                                    </h5>
-                                </p>
-                            </div>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 col-xs-6 border-primary mb-3">
+            <div class="card mb-3" style="background:#f6eff6; max-width: 400px">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-header text-white bg-secondary">
+                            <p class="card-text">
+                                <h5 class="card-title">
+                                    @item.Nome
+                                    <a class="text-white float-right" asp-action="Editar" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
+                                </h5>
+                            </p>
                         </div>
-                        <div class="col-md-6">
-                            <img src="@item.ImagemUrl" width="100%" alt="@item.Nome">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="@item.ImagemUrl" width="100%" alt="@item.Nome">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body" style="font-size: 0.88em">
+                            <p class="card-text">@item.Descricao</p>
+                            <p class="card-text"><b>Categoria: </b>@item.Categoria.Nome</p>
+                            <p class="card-text ">
+                                <b>Status: </b>
+                                <span class="badge bg-success text-white">DISPONÍVEL</span>
+                            </p>
                         </div>
-                        <div class="col-md-6">
-                            <div class="card-body">
-                                <p class="card-text">@item.Descricao</p>
-                                <p class="card-text"><b>Categoria: </b>@item.Categoria.Nome</p>
-                                <p class="card-text ">
-                                    <b>Status: </b>
-                                    <span class="badge bg-success text-white">DISPONÍVEL</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="card-footer ">
-                                <p class="card-text">
-                                    <a class="btn btn-outline-primary float-right" asp-action="Detalhes" asp-route-id="@item.Id">
-                                        <i class="bi bi-eye-fill"></i> Detalhes
-                                    </a>
-                                    <a class="btn btn-success text-white"><i class="bi bi-cart-plus"></i> Carrinho (Preço @item.Preco.ToString("c"))</a>
-                                </p>
-                            </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card-footer">
+                            <p class="card-text">
+                                <a class="btn btn-outline-primary float-right" asp-action="Detalhes" asp-route-id="@item.Id" style="font-size: 0.9em">
+                                    <i class="bi bi-eye-fill"></i> Detalhes
+                                </a>
+                                <a class="btn btn-success text-white" style="font-size: 0.9em"><i class="bi bi-cart-plus"></i> Carrinho (Preço @item.Preco.ToString("c"))</a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        }
-    </div>
+        </div>
+    }
+</div>
 
-    <div style="position: fixed; right: 25px; bottom: 65px;" class="text-white">
-        <a asp-controller="Produtos" asp-action="Criar" class="btn btn-success">
-            <i class="bi bi-plus-circle"></i> Adicionar
-        </a>
-    </div>
-
-</body>
+<div style="position: fixed; right: 25px; bottom: 65px;" class="text-white">
+    <a asp-controller="Produtos" asp-action="Criar" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i> Adicionar
+    </a>
+</div>
