@@ -18,7 +18,6 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 | Objetivo do Teste 	| Verificar se o usuário consegue acessar a plataforma de maneira rapida e fácil. |
 | Passos 	| - Acessar o navegador com a URL do site <br> -Verificar o funcionamento da tela de login e seu desempenho no momento do cadastro. |
 |Critério de Êxito | - Realizar cadastro e login sem dificuldades. |
-|  	|  	|
 
 | **Caso de Teste** 	| **CT-02 – Responsividade**	|
 |:---:	|:---:	|
@@ -26,7 +25,6 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 | Objetivo do Teste 	| Verificar se o site possui responsividade nos disposivitos mobile e desktop. |
 | Passos 	| - Acessar URL em ambos dispositivos <br> - Navegar na plataforma e analisar desempenho.  |
 |Critério de Êxito | - Adaptação e responsividade do site para diferentes tamanhos de tela. |
-|  	|  	|
 
 | **Caso de Teste** 	| **CT-03 – Publicamente Acessível**	|
 |:---:	|:---:	|
@@ -35,7 +33,6 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 | Passos 	| - Abrir o navegador <br> -Acessar o URL do site. |
 |Critério de Êxito | - Abrir o site corretamente.|
 
-|  	|  	|
 
 | **Caso de Teste** 	| **CT-04 – Contraste e Design**	|
 |:---:	|:---:	|
@@ -43,7 +40,6 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 | Objetivo do Teste 	| Verificar se o site possui um design simples e harmôico para o tema escolhido.
 | Passos 	| - Acessar o navegador <br> - Acessar a tela de login <br> -Verificar se o site possui clareza nas escritas de acordo com a palet de cores escolhida. |
 |Critério de Êxito | - Contraste e clareza nas informações contidas na página. |
-|  	|  	|
 
 | **Caso de Teste** 	| **CT-05 – Acesso Protegido** 
 |:---:	|:---:	|
@@ -51,7 +47,6 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 | Objetivo do Teste 	| Verificar segurança de acesso. |
 | Passos 	| - Acessar o navegador <br> - Realizar login com um e-mail cadastrado <br> - Inserir outra senha para verificar se erro de usuario e senha será exibido. |
 |Critério de Êxito | - Negar acesso e indicar erro em caso de informações não verificadas. |
-|  	|  	|
 
 | **Caso de Teste** 	| **CT-06 – Favoritos**	|
 |:---:	|:---:	|
@@ -59,6 +54,5 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
 | Objetivo do Teste 	| Verificar URL de acesso em todos os navegadores atuais. |
 | Passos 	| - Acessar os navegadores <br> - Informar URL nos navegadores <br> -Confirmar Acessos sem erros. |
 |Critério de Êxito | - Realizar acesso online por diferentes navegadores. |
-|  	|  	|
 
 
