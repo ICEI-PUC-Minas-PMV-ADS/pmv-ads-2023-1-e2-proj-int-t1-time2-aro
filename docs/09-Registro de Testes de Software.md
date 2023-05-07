@@ -23,7 +23,7 @@
 |:---:	|:---:	|
 | Vídeo | <video src="https://user-images.githubusercontent.com/70116762/236707523-e13e42ea-d6fd-4d73-ae4c-6d082ab4686c.mp4"> |
 |	Requisito Associado 	| RF-10 O sistema deve permitir que os clientes entrem em contato com a loja por meio de outros canais (redes sociais) |
-| Avaliação | Sucesso, link de redirecionamento para contato com a loja funcionam corretamente |
+| Avaliação | Sucesso, links de redirecionamento para contato com a loja funcionam corretamente |
 |  	|  	|
 
 
