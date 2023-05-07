@@ -2,7 +2,330 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<style>
+
+    h1 span {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        display: inline-block;
+        color: #040404;
+    }
+
+    h2 {
+        font-size: 17px;
+        text-align: center;
+    }
+
+
+    .div-slider {
+        width: auto;
+        height: 400px;
+        text-align: center;
+    }
+
+    .slides-front {
+        padding: 0;
+        width: 980px;
+        height: 370px;
+        display: block;
+        margin: auto;
+        position: relative;
+    }
+
+        .slides-front * {
+            user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+        }
+
+        .slides-front input {
+            display: none;
+        }
+
+    .slide-container {
+        display: block;
+    }
+
+    .slide {
+        top: 0;
+        opacity: 0;
+        width: 980px;
+        height: 370px;
+        display: block;
+        position: absolute;
+        transform: scale(0);
+        transition: all .7s ease-in-out 0.1s;
+    }
+
+        .slide img {
+            width: 95%;
+            height: 95%;
+        }
+
+    .nav label {
+        width: 90px;
+        height: 100%;
+        display: none;
+        position: absolute;
+        opacity: 0;
+        z-index: 9;
+        cursor: pointer;
+        transition: opacity .2s;
+        color: #FFF;
+        font-size: 130pt;
+        text-align: center;
+        line-height: 380px;
+        font-family: "Varela Round", sans-serif;
+        background-color: rgba(255, 255, 255, .3);
+        text-shadow: 0px 0px 15px rgb(119, 119, 119);
+    }
+
+    .slide:hover + .nav label {
+        opacity: 0.5;
+    }
+
+    .nav label:hover {
+        opacity: 1;
+    }
+
+    .nav .next {
+        right: 0;
+    }
+
+    input:checked + .slide-container .slide {
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity 1s ease-in-out 0.1s;
+    }
+
+    input:checked + .slide-container .nav label {
+        display: block;
+    }
+
+    .nav-dots {
+        width: 100%;
+        bottom: 9px;
+        height: 11px;
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+
+        .nav-dots .nav-dot {
+            top: 375px;
+            width: 11px;
+            height: 11px;
+            margin: 0 4px;
+            position: relative;
+            border-radius: 100%;
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+            .nav-dots .nav-dot:hover {
+                cursor: pointer;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+    input#img-1:checked ~ .nav-dots label#img-dot-1,
+    input#img-2:checked ~ .nav-dots label#img-dot-2,
+    input#img-3:checked ~ .nav-dots label#img-dot-3,
+    
+
+    h3 {
+        font-family: effra,Helvetica,Arial,sans-serif;
+        font-size: 17px;
+        text-align: center;
+    }
+
+
+    .cards {
+        display: grid;
+        grid-column: 1/-1;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        background: #fff;
+        grid-gap: 2rem;
+        padding: 2rem;
+        perspective: 1000px;
+    }
+
+    .framework-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 1rem;
+        text-align: center;
+        padding-top: 3rem;
+        position: relative;
+        transform-origin: top center;
+        --rotate: 10deg;
+        transform: rotateX(var(--rotate));
+        transition: transform 0.2s;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+        .framework-card:before {
+            right: auto;
+            left: 20px;
+        }
+
+        .framework-card:hover {
+            transform: rotateX(-20deg);
+        }
+
+        card:before,
+        .framework-card:after {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: #5c0dac;
+            border: 1px solid #000;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+            top: 15px;
+            right: 20px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .framework-card:before,
+        .framework-card:after {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: #5c0dac;
+            border: 1px solid #000;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+            top: 15px;
+            right: 20px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .framework-card img {
+            height: 80px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .framework-card p {
+            font-family: 'radnika-next';
+            font-weight: 900;
+            background: #f1d7ff;
+        }
+
+    Contato a {
+        color: black;
+        font-size: 15px;
+        text-decoration: none;
+    }
+
+</style>
+
+<body>
+
+    <div class="text-center">
+        <h1>
+            <span>B</span>
+            <span>E</span>
+            <span>M</span>
+            <span>-</span>
+            <span>V</span>
+            <span>I</span>
+            <span>N</span>
+            <span>D</span>
+            <span>O</span>
+        </h1>
+        <br />
+
+        <h2>
+            "Praticar o autocuidado é uma forma inteligente e eficaz de melhorar inúmeros aspectos em prol da qualidade de vida.
+            <br> Aumenta a autoestima,
+            diminui os custos com a saúde e melhora as funções mentais e físicas."
+        </h2>
+
+        <hr />
+
+        <div class="div-slider">
+            <ul class="slides-front">
+                <input type="radio" name="radio-btn" id="img-1" checked="">
+                <li class="slide-container">
+                    <div class="slide">
+                        <img src="https://blog.artelasse.com.br/wp-content/uploads/2022/02/beneficios-da-aromaterapia.jpg">
+                    </div>
+                    <div class="nav">
+                        <label for="img-3" class="prev">‹</label>
+                        <label for="img-2" class="next">›</label>
+                    </div>
+                </li>
+
+                <input type="radio" name="radio-btn" id="img-2">
+                <li class="slide-container">
+                    <div class="slide">
+                        <img src="https://static.baratocoletivo.com.br/2022/1126/oferta_16694826782523_oferta_16287105767939_8.jpg">
+                    </div>
+                    <div class="nav">
+                        <label for="img-1" class="prev">‹</label>
+                        <label for="img-3" class="next">›</label>
+                    </div>
+                </li>
+
+                <input type="radio" name="radio-btn" id="img-3">
+                <li class="slide-container">
+                    <div class="slide">
+                        <img src="https://www.oleumvitta.com/cdn/shop/articles/shutterstock_1803012376.jpg?v=1610462824">
+                    </div>
+                    <div class="nav">
+                        <label for="img-2" class="prev">‹</label>
+                        <label for="img-1" class="next">›</label>
+                    </div>
+                </li>
+
+                <li class="nav-dots">
+                    <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+                    <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+                    <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cards" style="max-width: 100%;">
+        <div class="framework-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXnk_N9lpA2ycWrH-_Z-UNuqt8rcx37zK-9c-kz9eLFAuvYYMTw7wrg8w3yeYW9bTy6Co&usqp=CAU">
+            <p>Linha Roll On</p>
+            Garante proteção por 48 horas mantendo a hidratação natural da pele.
+            <br> Sua fórmula contém extratos naturais, mantendo a hidratação natural da sua pele protegendo e cuidado de você.
+        </div>
+        <div class="framework-card" style="max-width: 100%;">
+            <img src="https://img.freepik.com/vetores-premium/conjunto-de-produtos-cosmeticos-de-beleza-para-a-pele-em-aquarela_255026-346.jpg">
+            <p>Linha Terapêutica</p>
+            Dentre os benefícios da aromaterapia temos: aliviar os sintomas de ansiedade, insônia, dor, depressão, resfriado, promover o bem-estar e fortalecer as defesas do corpo.
+            <br>Essa terapia revela que existem ligações entre o olfato e os sentimentos.
+        </div>
+        <div class="framework-card" style="max-width: 100%;">
+            <img src="https://thumbs.dreamstime.com/b/mujer-con-una-mascarilla-cosm%C3%A9tica-vector-120634426.jpg">
+            <p>Linha SPA</p>
+            Criada para espaços funcionais, com modelos e design que se destacam em ambientes menores como apartamentos, coberturas e pequenas áreas de lazer, mas que também se integram a grandes ambientes como uma opção de relaxamento para o stress do dia a dia.
+        </div>
+    </div>
+
+    <div class="contato">
+
+        <!-- início botão Instagram -->
+        <a href="https://instagram.com/permita_se.harmonia?igshid=ZWIzMWE5ZmU3Zg==" style="position:fixed;width:50px;height:50px;bottom:75px;right:15px;border-radius:50px;text-align:center;font-size:30px;z-index:999997;box-shadow: 0px 0px 0px #888" target="_blank">
+            <img src="./img/instagram.png" width="50" height="50" alt="Siga nosso Instagram">
+        </a>
+        <!--  fim botão Instagram  -->
+        <!-- Inicio botão Whatsapp -->
+        <a href="https://wa.me/5531982493554?text=Oi!%20Vim%20do%20site%20e%20desejo%20receber%20atendimento." style="position:fixed;width:50px;height:50px;bottom:15px;right:15px;border-radius:50px;text-align:center;font-size:30px;z-index:999997;box-shadow: 0px 0px 0px #888;" target="_blank">
+            <img src="./img/whatsapp.png" width="34" height="34" alt="Fale Conosco pelo WhatsApp">
+        </a>
+        <!-- fim botão WhatsApp  -->
+
+    </div>
+
+</body>

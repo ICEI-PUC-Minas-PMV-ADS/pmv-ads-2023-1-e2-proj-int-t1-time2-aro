@@ -8,10 +8,10 @@
     @foreach (var item in Model)
     {
         <div class="col-md-4 col-xs-6 border-primary mb-3">
-            <div class="card mb-3" style="max-width: 540px;">
+            <div class="card mb-3" style="background:#f6eff6; max-width: 400px">
                 <div class="row g-0">
                     <div class="col-md-12">
-                        <div class="card-header text-white bg-info">
+                        <div class="card-header text-white bg-secondary">
                             <p class="card-text">
                                 <h5 class="card-title">
                                     @item.Nome
@@ -24,20 +24,22 @@
                         <img src="@item.ImagemUrl" width="100%" alt="@item.Nome">
                     </div>
                     <div class="col-md-6">
-                        <div class="card-body">
+                        <div class="card-body" style="font-size: 0.88em">
                             <p class="card-text">@item.Descricao</p>
                             <p class="card-text"><b>Categoria: </b>@item.Categoria.Nome</p>
-                            <p class="card-text "><b>Status: </b>
-                                <span class="badge bg-success text-white">DISPONÍVEL</span></p>
-                        </div> 
+                            <p class="card-text ">
+                                <b>Status: </b>
+                                <span class="badge bg-success text-white">DISPONÍVEL</span>
+                            </p>
+                        </div>
                     </div>
                     <div class="col-md-12">
-                        <div class="card-footer ">
+                        <div class="card-footer">
                             <p class="card-text">
-                                <a class="btn btn-outline-primary float-right" asp-action="Detalhes" asp-route-id="@item.Id">
+                                <a class="btn btn-outline-primary float-right" asp-action="Detalhes" asp-route-id="@item.Id" style="font-size: 0.9em">
                                     <i class="bi bi-eye-fill"></i> Detalhes
                                 </a>
-                                <a class="btn btn-success text-white"><i class="bi bi-cart-plus"></i> Carrinho (Preço @item.Preco.ToString("c"))</a>
+                                <a class="btn btn-success text-white" style="font-size: 0.9em"><i class="bi bi-cart-plus"></i> Carrinho (Preço @item.Preco.ToString("c"))</a>
                             </p>
                         </div>
                     </div>
