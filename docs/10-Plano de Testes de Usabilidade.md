@@ -14,7 +14,7 @@ Nesse sentido, o teste irá usar usuários reais para execução de determinadas
  
 | **Caso de Teste** 	| **CT-01 – Acesso a Plataforma** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RNF-01 - A aplicação deve ser de faço acesso. |
+|	Requisito Associado 	| RNF-01 - A aplicação deve ser de fácil acesso. |
 | Objetivo do Teste 	| Verificar se o usuário consegue acessar a plataforma de maneira rapida e fácil. |
 | Passos 	| - Acessar o navegador com a URL do site <br> -Verificar o funcionamento da tela de login e seu desempenho no momento do cadastro. |
 |Critério de Êxito | - Realizar cadastro e login sem dificuldades. |
