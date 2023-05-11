@@ -26,7 +26,7 @@ namespace permita_se.Controllers
                 CarrinhoTotal = _carrinho.GetCarrinhoTotal(),
             };
 
-            return View();
+            return View(response);
         }
     }
 }
