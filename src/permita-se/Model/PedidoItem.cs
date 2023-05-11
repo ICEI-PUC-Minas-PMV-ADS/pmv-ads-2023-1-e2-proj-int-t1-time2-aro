@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using permita_se.Data.Services;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
@@ -26,5 +27,7 @@ namespace permita_se.Model
         [ForeignKey(nameof(IdPedido))]
         [InverseProperty(nameof(Model.Pedido.PedidoItems))]
         public virtual Pedido Pedido { get; set; }
+        public IProdutoService produtoService { get; private set; }
+
     }
 }
