@@ -7,27 +7,27 @@ using System.Linq;
 
 namespace permita_se.Data.Carrinho
 {
-    public class Carrinho
+    public class CarrinhoDeCompra
     {
         public PermitaSeDbContext _context { get; set; }
 
-        public string CarrinhoId { get; set; }
+        public int IdCarrinho { get; set; }
 
         public List<CarrinhoItem> CarrinhoItems { get; set; }
 
-        public Carrinho(PermitaSeDbContext context)
+        public CarrinhoDeCompra(PermitaSeDbContext context)
 
         { _context = context; }
 
         public void AddItemaoCarrinho(Produto produto)
         {
-            var CarrinhoItem = _context.CarrinhoItems.FirstOrDefault(n => n.Produto.Id == produto.Id && n.CarrinhoId == CarrinhoId);
+            var CarrinhoItem = _context.CarrinhoItems.FirstOrDefault(n => n.Produto.Id == produto.Id && n.IdCarrinho == IdCarrinho);
 
             if (CarrinhoItem == null)
             {
                 CarrinhoItem = new CarrinhoItem()
                 {
-                    CarrinhoId = CarrinhoId,
+                    IdCarrinho = IdCarrinho,
                     Produto = produto,
                     Quantidade = 1
                 };
@@ -43,7 +43,7 @@ namespace permita_se.Data.Carrinho
 
         public void RemoverItemdoCarrinho(Produto produto)
         {
-            var CarrinhoItem = _context.CarrinhoItems.FirstOrDefault(n => n.Produto.Id == produto.Id && n.CarrinhoId == CarrinhoId);
+            var CarrinhoItem = _context.CarrinhoItems.FirstOrDefault(n => n.Produto.Id == produto.Id && n.IdCarrinho == IdCarrinho);
 
             if (CarrinhoItem != null)
             {
@@ -53,7 +53,7 @@ namespace permita_se.Data.Carrinho
                 }
                 else
                 {
-                    _context.CarrinhoItems.(CarrinhoItem);
+                    _context.CarrinhoItems.Remove(CarrinhoItem);
 
                 }
 
@@ -65,15 +65,13 @@ namespace permita_se.Data.Carrinho
 
         public List<CarrinhoItem> GetCarrinhoItems()
         {
-            return CarrinhoItems ?? (CarrinhoItems = _context.CarrinhoItems.Where(n => n.CarrinhoId ==
-            CarrinhoId).Include(n => n.Produto).ToList());
+            return CarrinhoItems ?? (CarrinhoItems = _context.CarrinhoItems.Where(n => n.IdCarrinho ==
+            IdCarrinho).Include(n => n.Produto).ToList());
         }
 
         public double GetCarrinhoTotal()
         {
-            var total = _context.CarrinhoItem.Where(n => n.CarrinhoId == CarrinhoId).Select(selector: n => n.Produto.Preco * n.Quantidade).Sum();
-            return total;
-
+            return ((double)_context.CarrinhoItems.Where(n => n.IdCarrinho == IdCarrinho).Select(selector: n => n.Produto.Preco * n.Quantidade).Sum());
         }
     }
 }

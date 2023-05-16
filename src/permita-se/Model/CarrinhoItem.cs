@@ -20,6 +20,6 @@ namespace permita_se.Model
         [ForeignKey(nameof(IdProduto))]
         [InverseProperty(nameof(Model.Produto.CarrinhoItems))]
         public virtual Produto Produto { get; set; }
-     
+    
     }
 }

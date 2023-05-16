@@ -8,22 +8,22 @@ namespace permita_se.Controllers
     public class PedidosController : Controller
     {
         private readonly IProdutoService _produtoService;
-        private readonly Carrinho _carrinho;
-        public PedidosController(IProdutoService produtoService, Carrinho carrinho)
+        private readonly CarrinhoDeCompra _carrinhoDeCompra;
+        public PedidosController(IProdutoService produtoService, CarrinhoDeCompra carrinhoDeCompra)
         {
             _produtoService = produtoService;
-            _carrinho = carrinho;
+            _carrinhoDeCompra = carrinhoDeCompra;
         }
 
         public IActionResult Index()
         {
-            var items = _carrinho.GetCarrinhoItems();
-            _carrinho.CarrinhoItems = items
+            var items = _carrinhoDeCompra.GetCarrinhoItems();
+            _carrinhoDeCompra.CarrinhoItems = items;
 
             var response = new CarrinhoVM()
             {
-                Carrinho = _carrinho,
-                CarrinhoTotal = _carrinho.GetCarrinhoTotal(),
+                CarrinhoDeCompra = _carrinhoDeCompra,
+                CarrinhoTotal = _carrinhoDeCompra.GetCarrinhoTotal()
             };
 
             return View(response);

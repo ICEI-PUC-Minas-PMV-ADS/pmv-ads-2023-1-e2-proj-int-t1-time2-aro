@@ -25,15 +25,15 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model.Carrinho.CarrinhoItem)
+                @foreach (var item in Model.CarrinhoDeCompra.CarrinhoItems)
                 {
                     <tr>
-                        <td class="aling-middle">@item.Amount</td>
+                        <td class="aling-middle">@item.Quantidade</td>
                         <td class="aling-middle">@item.Produto.Nome</td>
-                        <td class="aling-middle">@item.Produto.Preço.ToString("c")</td>
-                        <td class="aling-middle">((@item.Amount*item.Produto.Preço).ToString("c"))</td>
+                        <td class="aling-middle">@item.Produto.Preco.ToString("c")</td>
+                        <td class="aling-middle">@((item.Quantidade*item.Produto.Preco).ToString("c")) </td>
                         <td class="aling-middle">
-                            <a class="text-danger" asp-controller="Produtos" asp-action="AddItemaoCarrinho">
+                            <a class="text-danger" asp-controller="Pedidos" asp-action="AddItemAoCarrinho">
                                 asp-route-id="@item.Produto.Id">
                                 <i class="badge-info bi-cart-plus"></i>
 
@@ -54,8 +54,8 @@
         </table>
         <dv class="text-center">
             <div class="btn-group">
-                <a class="btn btn-outline-success" asp-controller="Produtos" asp-action="Índex">
-                    Add mais items
+                <a class="btn btn-outline-success" asp-controller="Produtos" asp-action="Index">
+                    Continuar Comprando 
                 </a>
 
             </div>
