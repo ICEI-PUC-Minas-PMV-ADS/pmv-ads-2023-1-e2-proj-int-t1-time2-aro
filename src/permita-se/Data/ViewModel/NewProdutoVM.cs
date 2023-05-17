@@ -11,7 +11,7 @@ namespace permita_se.Data.ViewModel
         [Display(Name = "Nome")]
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         [MinLength(2, ErrorMessage = "O campo {0} deve ter no mínimo {1} caracteres")]
-        [MaxLength(30, ErrorMessage = "O campo {0} deve ter no máximo {1} caracteres")]
+        [MaxLength(50, ErrorMessage = "O campo {0} deve ter no máximo {1} caracteres")]
         [RegularExpression(@"^(?!\s)[\p{L}0-9_\- ]+(?<!\s)$", ErrorMessage = "Caracteres inválidos no campo {0}")]
         public string Nome { get; set; }
 
@@ -24,7 +24,7 @@ namespace permita_se.Data.ViewModel
 
         [Display(Name = "Preço")]
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
-        public decimal Preco { get; set; }
+        public double Preco { get; set; }
 
         [Display(Name = "URL da Imagem")]
         [Required(ErrorMessage = "O campo {0} é obrigatório")]

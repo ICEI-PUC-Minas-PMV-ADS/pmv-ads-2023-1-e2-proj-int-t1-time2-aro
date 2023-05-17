@@ -1,6 +1,4 @@
-using System;
-
-namespace permita_se.Model
+﻿namespace permita_se.Model
 {
     public class ErrorViewModel
     {
