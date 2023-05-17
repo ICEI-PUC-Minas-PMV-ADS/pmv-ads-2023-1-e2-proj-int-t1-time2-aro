@@ -27,7 +27,5 @@ namespace permita_se.Model
         [ForeignKey(nameof(IdPedido))]
         [InverseProperty(nameof(Model.Pedido.PedidoItems))]
         public virtual Pedido Pedido { get; set; }
-        public IProdutoService produtoService { get; private set; }
-
     }
 }

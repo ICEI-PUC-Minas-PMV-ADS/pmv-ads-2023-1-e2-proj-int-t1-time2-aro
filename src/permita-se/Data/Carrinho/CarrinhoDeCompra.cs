@@ -10,7 +10,7 @@ namespace permita_se.Data.Carrinho
     public class CarrinhoDeCompra
     {
         public PermitaSeDbContext _context { get; set; }
-
+        
         public int IdCarrinho { get; set; }
 
         public List<CarrinhoItem> CarrinhoItems { get; set; }
@@ -60,8 +60,6 @@ namespace permita_se.Data.Carrinho
             }
             _context.SaveChanges();
         }
-
-
 
         public List<CarrinhoItem> GetCarrinhoItems()
         {
