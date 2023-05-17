@@ -29,7 +29,8 @@ namespace permita_se.Controllers
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                var filteredResult = allProdutos.Where(n => n.Nome.Contains(searchString) || n.Descricao.Contains(searchString)).ToList();
+                var filteredResult = allProdutos.Where(n => n.Nome.ToLower().Contains(searchString.ToLower()) || 
+                                                            n.Descricao.ToLower().Contains(searchString.ToLower())).ToList();
                 return View("Index", filteredResult);
             }
 
