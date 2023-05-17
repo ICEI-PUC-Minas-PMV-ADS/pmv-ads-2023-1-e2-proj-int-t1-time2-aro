@@ -1,10 +1,11 @@
-﻿ using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using permita_se.Model;
 
 
 namespace permita_se.Data
 {
-    public partial class PermitaSeDbContext : DbContext
+    public partial class PermitaSeDbContext : IdentityDbContext<Usuario>
     {
         public PermitaSeDbContext()
         {
