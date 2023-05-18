@@ -1,32 +1,39 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.Collections.Generic;
-<<<<<<< HEAD
 using System.ComponentModel.DataAnnotations;
-=======
->>>>>>> 57250059651b921ef597ddfeb1581736571e723f
 using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace permita_se.Model
 {
-<<<<<<< HEAD
-    [Table("usuario")]
-    public partial class Usuario : IdentityUser   
-=======
-    public partial class Usuario:IdentityUser
->>>>>>> 57250059651b921ef597ddfeb1581736571e723f
+    public partial class Usuario : IdentityUser
     {
+        [Key]
+        [Column("id")]
+        public int Id { get; set; }
+        [Column("nome")]
+        [StringLength(100)]
         public string Nome { get; set; }
-        
+        [Required]
+        [Column("email")]
+        [StringLength(255)]
+        public string Email { get; set; }
+        [Required]
+        [Column("senha")]
+        [StringLength(20)]
+        public string Senha { get; set; }
+        [Column("idade")]
         public int Idade { get; set; }
-        
+        [Column("telefone")]
+        [StringLength(20)]
         public string Telefone { get; set; }
+        [Column("gerente")]
+        public bool Gerente { get; set; }
 
-        //Relacionamentos
         [InverseProperty(nameof(Favorito.Usuario))]
-        public virtual List<Favorito> Favoritos { get; set; }
+        public virtual ICollection<Favorito> Favoritos { get; set; }
 
         [InverseProperty(nameof(Pedido.Usuario))]
-        public virtual List<Pedido> Pedidos { get; set; }
+        public virtual ICollection<Pedido> Pedidos { get; set; }
     }
 }
