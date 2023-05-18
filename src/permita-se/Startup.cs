@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -7,6 +9,8 @@ using Microsoft.Extensions.Hosting;
 using permita_se.Data;
 using permita_se.Data.Services;
 using permita_se.Data.Services.Impl;
+using permita_se.Model;
+using System;
 
 namespace permita_se
 {
@@ -30,6 +34,15 @@ namespace permita_se
             services.AddScoped<ICategoriasService, CategoriasService>();
             services.AddScoped<IProdutoService, ProdutoService>();
 
+            //Identity configuration
+            services.AddIdentity<Usuario, IdentityRole>().AddEntityFrameworkStores<PermitaSeDbContext>();
+            services.AddMemoryCache();
+            services.AddSession();
+            services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            });
+
             services.AddControllersWithViews();
             
         }
@@ -52,6 +65,8 @@ namespace permita_se
 
             app.UseRouting();
 
+            //Authentication & Authorization
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -61,7 +76,7 @@ namespace permita_se
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            AppDbInitializer.Seed(applicationBuilder: app);
+            AppDbInitializer.Seed(app);
             AppDbInitializer.SeedUsersAndRolesAsync(app).Wait();
         }
     }
