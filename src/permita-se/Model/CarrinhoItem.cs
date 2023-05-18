@@ -4,21 +4,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace permita_se.Model
 {
-    [Table("carrinho_item")]
     public partial class CarrinhoItem
     {
         [Key]
-        [Column("id")]
         public int Id { get; set; }
-        [Column("id_produto")]
-        public int IdProduto { get; set; }
-        [Column("quantidade")]
-        public int Quantidade { get; set; }
-        [Column("id_carrinho")]
-        public int IdCarrinho { get; set; }
 
-        [ForeignKey(nameof(IdProduto))]
-        [InverseProperty(nameof(Model.Produto.CarrinhoItems))]
-        public virtual Produto Produto { get; set; }
+        public int Quantidade { get; set; }
+
+        public string IdCarrinho { get; set; }
+
+        //Produto
+        public int IdProduto { get; set; }
+        [ForeignKey("IdProduto")]
+        public Produto Produto { get; set; }
     }
 }
