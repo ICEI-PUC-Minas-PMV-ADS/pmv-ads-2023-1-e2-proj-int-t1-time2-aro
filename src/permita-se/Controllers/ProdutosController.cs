@@ -106,9 +106,24 @@ namespace permita_se.Controllers
         }
         public async Task<IActionResult> Deletar(int id)
         {
-            var produto = await _service.GetByIdAsync(id);
+            var produtoDetail = await _service.GetProdutoByIdAsync(id);
+            if (produtoDetail == null) return View("NotFound");
 
-            return produto == null ? View("NotFound") : View(produto);
+            var response = new NewProdutoVM()
+            {
+                Id = produtoDetail.Id,
+                Nome = produtoDetail.Nome,
+                Descricao = produtoDetail.Descricao,
+                Preco = produtoDetail.Preco,
+                ImagemURL = produtoDetail.ImagemUrl,
+                IdCategoria = produtoDetail.IdCategoria,
+            };
+
+            var produtoDropdownData = await _service.GetNewProdutoDropdownValues();
+
+            ViewBag.IdCategoria = new SelectList(produtoDropdownData.Categorias, "Id", "Nome");
+
+            return View(response);
         }
 
         [HttpPost, ActionName("Deletar")]
