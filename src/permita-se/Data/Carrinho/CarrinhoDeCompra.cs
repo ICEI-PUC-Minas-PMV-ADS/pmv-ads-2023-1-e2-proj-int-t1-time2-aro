@@ -4,6 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
 using System.Linq;
+using System;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace permita_se.Data.Carrinho
 {
@@ -18,6 +21,17 @@ namespace permita_se.Data.Carrinho
         public CarrinhoDeCompra(PermitaSeDbContext context)
 
         { _context = context; }
+
+        public static CarrinhoDeCompra GetCarrinhoDeCompra(IServiceProvider services)
+        {
+            ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
+            var context = services.GetService<PermitaSeDbContext>();
+
+            string IdCarrinho = session.GetString("IdCarrinho") ?? Guid.NewGuid().ToString().ToString();    
+            session.SetString("IdCarrinho", IdCarrinho);
+
+            return new CarrinhoDeCompra(context) { IdCarrinho = IdCarrinho };
+        }
 
         public void AddItemaoCarrinho(Produto produto)
         {

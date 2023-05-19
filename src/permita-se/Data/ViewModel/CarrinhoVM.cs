@@ -1,5 +1,4 @@
-﻿
-using permita_se.Data.Carrinho;
+﻿using permita_se.Data.Carrinho;
 
 
 namespace permita_se.Data.ViewModel

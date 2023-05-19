@@ -2,6 +2,7 @@
 using permita_se.Data.Carrinho;
 using permita_se.Data.Services;
 using permita_se.Data.ViewModel;
+using System.Threading.Tasks;
 
 namespace permita_se.Controllers
 {
@@ -15,7 +16,7 @@ namespace permita_se.Controllers
             _carrinhoDeCompra = carrinhoDeCompra;
         }
 
-        public IActionResult Index()
+        public IActionResult CarrinhoDeCompra()
         {
             var items = _carrinhoDeCompra.GetCarrinhoItems();
             _carrinhoDeCompra.CarrinhoItems = items;
@@ -27,6 +28,17 @@ namespace permita_se.Controllers
             };
 
             return View(response);
+        }
+        
+        public async Task<RedirectToActionResult> AddAoCarrinhoDeCompra(int id)
+        {
+            var item = await _produtoService.GetProdutoByIdAsync(id);
+            if (item != null) 
+            {
+                _carrinhoDeCompra.AddItemAoCarrinhoDeCompra(item);
+            }
+            return RedirectToAction(nameof(CarrinhoDeCompra));
+
         }
     }
 }
