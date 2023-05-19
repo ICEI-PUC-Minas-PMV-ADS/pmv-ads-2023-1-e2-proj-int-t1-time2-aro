@@ -1,12 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using permita_se.Model;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace permita_se.Data.Carrinho
 {
@@ -14,13 +12,13 @@ namespace permita_se.Data.Carrinho
     {
         public PermitaSeDbContext _context { get; set; }
         
-        public int IdCarrinho { get; set; }
+        public string IdCarrinho { get; set; }
 
         public List<CarrinhoItem> CarrinhoItems { get; set; }
 
-        public CarrinhoDeCompra(PermitaSeDbContext context)
-
-        { _context = context; }
+        public CarrinhoDeCompra(PermitaSeDbContext context) { 
+            _context = context; 
+        }
 
         public static CarrinhoDeCompra GetCarrinhoDeCompra(IServiceProvider services)
         {
@@ -33,7 +31,7 @@ namespace permita_se.Data.Carrinho
             return new CarrinhoDeCompra(context) { IdCarrinho = IdCarrinho };
         }
 
-        public void AddItemaoCarrinho(Produto produto)
+        public void AddItemAoCarrinho(Produto produto)
         {
             var CarrinhoItem = _context.CarrinhoItems.FirstOrDefault(n => n.Produto.Id == produto.Id && n.IdCarrinho == IdCarrinho);
 
@@ -55,7 +53,7 @@ namespace permita_se.Data.Carrinho
             _context.SaveChanges();
         }
 
-        public void RemoverItemdoCarrinho(Produto produto)
+        public void RemoverItemDoCarrinho(Produto produto)
         {
             var CarrinhoItem = _context.CarrinhoItems.FirstOrDefault(n => n.Produto.Id == produto.Id && n.IdCarrinho == IdCarrinho);
 

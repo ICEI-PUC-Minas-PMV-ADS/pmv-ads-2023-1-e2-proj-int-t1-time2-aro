@@ -32,7 +32,7 @@ namespace permita_se
             services.AddScoped<ICategoriasService, CategoriasService>();
             services.AddScoped<IProdutoService, ProdutoService>();
 
-            services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sc => CarrinhoDeCompra.GetCarrinhoDeCompra(sc));
 
             services.AddSession();

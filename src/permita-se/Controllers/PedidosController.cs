@@ -30,12 +30,12 @@ namespace permita_se.Controllers
             return View(response);
         }
         
-        public async Task<RedirectToActionResult> AddAoCarrinhoDeCompra(int id)
+        public async Task<RedirectToActionResult> AddItemAoCarrinhoDeCompra(int id)
         {
             var item = await _produtoService.GetProdutoByIdAsync(id);
             if (item != null) 
             {
-                _carrinhoDeCompra.AddItemaoCarrinho(item);
+                _carrinhoDeCompra.AddItemAoCarrinho(item);
             }
             return RedirectToAction(nameof(CarrinhoDeCompra));
 
