@@ -35,7 +35,7 @@ namespace permita_se.Controllers
             var item = await _produtoService.GetProdutoByIdAsync(id);
             if (item != null) 
             {
-                _carrinhoDeCompra.AddItemAoCarrinhoDeCompra(item);
+                _carrinhoDeCompra.AddItemaoCarrinho(item);
             }
             return RedirectToAction(nameof(CarrinhoDeCompra));
 
