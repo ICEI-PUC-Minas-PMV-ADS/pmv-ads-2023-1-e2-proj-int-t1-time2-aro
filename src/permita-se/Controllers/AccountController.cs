@@ -2,8 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using permita_se.Data;
 using permita_se.Data.ViewModel;
-using permita_se.Migrations;
-using System;
+using permita_se.Model;
 
 namespace permita_se.Controllers
 {
@@ -17,7 +16,7 @@ namespace permita_se.Controllers
         public AccountController(UserManager<Usuario> userManager, SignInManager<Usuario> signInManager, PermitaSeDbContext context)
         {
             _userManager = userManager;
-            _signInManager = signInManager ?? throw new ArgumentNullException(nameof(signInManager));
+            _signInManager = signInManager;
             _context = context;
         }
 

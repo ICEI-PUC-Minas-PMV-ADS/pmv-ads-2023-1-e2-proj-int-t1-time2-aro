@@ -1,8 +1,7 @@
-﻿@using permita_se.Data.ViewModel;
-@model LoginVM;
+﻿@model LoginVM;
 
 @{
-    ViewData["Titulo"] = "Faça Login na sua conta";
+    ViewData["Title"] = "Faça Login na sua conta";
 }
 
 <div class="row">
@@ -30,7 +29,7 @@
 
                     <div class="form-group">
                         <input class="btn btn-outline-success float-right" type="submit" value="Login"/>
-                        <a class="btn btn-outline-secondary" asp-controller="filmes" href="">content</a>
+                        <a class="btn btn-outline-secondary" asp-controller="Home" asp-action="Index">Cancelar</a>
                     </div>
                 </form>
             </div>
