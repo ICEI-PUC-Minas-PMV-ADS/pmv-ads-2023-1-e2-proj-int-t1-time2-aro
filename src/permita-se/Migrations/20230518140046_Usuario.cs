@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
+
 namespace permita_se.Migrations
 {
     public partial class Usuario : Migration
