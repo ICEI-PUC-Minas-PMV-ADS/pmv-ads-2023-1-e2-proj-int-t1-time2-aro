@@ -48,4 +48,3 @@ namespace permita_se.Data
         }
     }
 }
-
