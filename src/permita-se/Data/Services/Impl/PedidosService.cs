@@ -1,12 +1,12 @@
-﻿using permita_se.Data.Services;
+﻿using Microsoft.EntityFrameworkCore;
+using permita_se.Data.Services;
 using permita_se.Model;
-using System.Data.Entity;
-using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace permita_se.Data
+namespace permita_se.Data.Services.Impl
 {
     public class PedidosService : IPedidosService
     {
@@ -16,20 +16,23 @@ namespace permita_se.Data
         {
             _context = context;
         }
-        public async Task<List<Pedido>> GetPedidosByUserIdAsync(string userId)
+
+        public async Task<List<Pedido>> GetPedidosByUserIdAsync(string IdUsuario)
         {
-            var pedidos = await _context.Pedidos.Include(n => n.PedidoItems).ThenInclude(n => n.Produtos).Where(n => n.UserId)
-                == userId).ToListAsync();
+            var pedidos = await _context.Pedidos.Include(n => n.PedidoItems).ThenInclude(n => n.Produto)
+                .Where(n => n.IdUsuario == IdUsuario).ToListAsync();
+
             return pedidos;
         }
 
-        public async Task PedidoDaLojaAsync(List<CarrinhoItem> items, string userId, string userEmailAddress)
+        public async Task CriarPedidoAsync(List<CarrinhoItem> items, string IdUsuario)
         {
-            var pedido = new Pedido();
+            var pedido = new Pedido()
             {
-                UserId = userId;
-                Email = userEmailAddress;
+                IdUsuario = IdUsuario,
+                DataPedido = System.DateTime.Now
             };
+
             await _context.Pedidos.AddAsync(pedido);
             await _context.SaveChangesAsync();
 
@@ -39,8 +42,8 @@ namespace permita_se.Data
                 {
                     Quantidade = item.Quantidade,
                     IdProduto = item.Produto.Id,
-                    IdPedido = item.Id,
-                    Preco = item.Preco,
+                    IdPedido = pedido.Id,
+                    Preco = item.Produto.Preco,
                 };
                 await _context.PedidoItems.AddAsync(pedidoItem);
             }
