@@ -1,4 +1,0 @@
-﻿[*.cs]
-
-# IDE0022: Usar o corpo do bloco para método
-csharp_style_expression_bodied_methods = true
