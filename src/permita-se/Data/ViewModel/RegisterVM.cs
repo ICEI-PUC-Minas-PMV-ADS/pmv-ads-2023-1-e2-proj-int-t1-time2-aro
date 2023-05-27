@@ -16,13 +16,8 @@ namespace permita_se.Data.ViewModel
         [Required(ErrorMessage = "Telefone é necessário")]
         public string Telefone { get; set; }
 
-
-        [Display(Name = "Data de Nascimento")]
-        [Required(ErrorMessage = "Telefone é necessário")]
-        public string DataNascimento { get; set; }
-
         [Display(Name = "Email")]
-        [Required(ErrorMessage ="E-mail é necessário")]
+        [Required(ErrorMessage = "E-mail é necessário")]
         public string Email { get; set; }
 
         [Required]

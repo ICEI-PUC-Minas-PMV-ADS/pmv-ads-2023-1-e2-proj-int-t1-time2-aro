@@ -36,7 +36,6 @@
                                 <a class="dropdown-item" asp-controller="Categorias" asp-action="Index"><i class="bi bi-clipboard2-plus"></i> Categorias de Produtos</a>
                             </div>
                         </li>
-
                     </ul>
 
                     <form class="form-inline my-2 my-lg-0" asp-controller="Produtos" asp-action="Filtro" style="padding-right: 25px;">
@@ -44,30 +43,8 @@
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
                     </form>
 
+                    <partial name="_Identity.cshtml"/>
 
-                    <a class="btn btn-outline-succes my-2 my-sm-0" asp-controller="Account" asp-action="Login">
-                        <i class="bi bi-box-arrow-in-right"></i>Login
-                    </a>
-
-                    <a class="btn btn-outline-primary my-2 my-sm-0" asp-controller="Account" asp-action="Register">
-                        <i class="bi bi-person-plus"></i>Registrar-se
-                    </a>
-
-
-                    @*Sessão botão de login*@
-                    <div class="dropdown">
-                        <button class="btn btn-outline-success dropdown-toggle" type="button" id="profile-btn" data-toggle="dropdown"
-                                aria-expanded="false">
-                            <i class="bi bi-person-badge"></i> Olá Usuário
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="profile-btn">
-                            <li>
-                                <a class="dropdown-item" asp-controller="Pedidos" asp-action="Index">
-                                    <i class="bi bi-list"></i> Pedidos
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </nav>

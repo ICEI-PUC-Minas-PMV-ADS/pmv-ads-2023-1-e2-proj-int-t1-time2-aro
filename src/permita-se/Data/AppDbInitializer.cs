@@ -44,6 +44,7 @@ namespace permita_se.Data
                     Sobrenome = "User",
                     DataNascimento = DateTime.Now,
                     Telefone = "999999999",
+                    UserName = "admin-user",
                     Email = adminUserEmail,
                     EmailConfirmed = true
                 };
@@ -60,8 +61,9 @@ namespace permita_se.Data
                 {
                     Nome = "Application",
                     Sobrenome = "User",
-                    DataNascimento= DateTime.Now,
+                    DataNascimento = DateTime.Now,
                     Telefone = "999999999",
+                    UserName = "app-user",
                     Email = appUserEmail,
                     EmailConfirmed = true
                 };
