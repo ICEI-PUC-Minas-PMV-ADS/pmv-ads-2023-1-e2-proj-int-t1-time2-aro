@@ -1,5 +1,5 @@
 ﻿@model NewProdutoVM
-
+@using permita_se.Data.Enum;
 @{
     ViewData["Title"] = "Editando produto";
 }
@@ -32,9 +32,9 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label asp-for="ImagemURL" class="control-label" onchange="trocarImagem(this)"></label>
-                                <input asp-for="ImagemURL" class="form-control" onchange="trocarImagem(this)" />
-                                <span asp-validation-for="ImagemURL" class="text-danger"></span>
+                                <label asp-for="ProdutoStatus" class="control-label"></label>
+                                <select asp-for="ProdutoStatus" class="form-control" asp-items="Html.GetEnumSelectList<ProdutoStatus>()"></select>
+                                <span asp-validation-for="ProdutoStatus" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="col-md-6">                           
@@ -42,6 +42,13 @@
                                 <label asp-for="IdCategoria" class="control-label"></label>
                                 <select asp-for="IdCategoria" class="form-control" asp-items="ViewBag.IdCategoria"></select>
                                 <span asp-validation-for="IdCategoria" class="text-danger"></span>
+                            </div>
+                        </div>
+                         <div class="col-md-12">
+                            <div class="form-group">
+                                <label asp-for="ImagemURL" class="control-label" onchange="trocarImagem(this)"></label>
+                                <input asp-for="ImagemURL" class="form-control" onchange="trocarImagem(this)" />
+                                <span asp-validation-for="ImagemURL" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -60,7 +67,6 @@
                     <div class="form-group">
                         <input type="submit" value="Editar" class="btn btn-outline-success float-right" />
                         <a class="btn btn-outline-secondary" asp-action="Index">Cancelar</a>
-                        <input type="submit"  value="Excluir" class="btn btn-outline-danger float-right" asp-action="Deletar" asp-route-id="@Model.Id" />
                     </div>
 
                 </form>

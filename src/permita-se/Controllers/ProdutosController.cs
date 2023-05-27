@@ -79,12 +79,12 @@ namespace permita_se.Controllers
                 Preco = produtoDetail.Preco,
                 ImagemURL = produtoDetail.ImagemUrl,
                 IdCategoria = produtoDetail.IdCategoria,
+                ProdutoStatus = produtoDetail.ProdutoStatus,
             };
 
             var produtoDropdownData = await _service.GetNewProdutoDropdownValues();
 
             ViewBag.IdCategoria = new SelectList(produtoDropdownData.Categorias, "Id", "Nome");
-
             return View(response);
         }
 
@@ -117,6 +117,7 @@ namespace permita_se.Controllers
                 Preco = produtoDetail.Preco,
                 ImagemURL = produtoDetail.ImagemUrl,
                 IdCategoria = produtoDetail.IdCategoria,
+                ProdutoStatus = produtoDetail.ProdutoStatus,
             };
 
             var produtoDropdownData = await _service.GetNewProdutoDropdownValues();

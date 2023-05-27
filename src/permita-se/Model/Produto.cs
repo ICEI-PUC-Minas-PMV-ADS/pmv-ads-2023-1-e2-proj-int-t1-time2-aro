@@ -1,4 +1,5 @@
 ﻿using permita_se.Data.Base;
+using permita_se.Data.Enum;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -20,8 +21,11 @@ namespace permita_se.Model
         public string ImagemUrl { get; set; }
 
         public int IdCategoria { get; set; }
+
         [ForeignKey("IdCategoria")]
         public virtual Categoria Categoria { get; set; }
+
+        public ProdutoStatus ProdutoStatus { get; set; }
 
         //Relacionamentos
         public virtual List<CarrinhoItem> CarrinhoItems { get; set; }
