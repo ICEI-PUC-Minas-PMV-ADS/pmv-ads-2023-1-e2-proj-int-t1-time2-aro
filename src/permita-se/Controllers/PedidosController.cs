@@ -10,10 +10,20 @@ namespace permita_se.Controllers
     {
         private readonly IProdutoService _produtoService;
         private readonly CarrinhoDeCompra _carrinhoDeCompra;
-        public PedidosController(IProdutoService produtoService, CarrinhoDeCompra carrinhoDeCompra)
+        private readonly IPedidosService _pedidosService;
+        public PedidosController(IProdutoService produtoService, CarrinhoDeCompra carrinhoDeCompra, IPedidosService pedidosService)
         {
             _produtoService = produtoService;
             _carrinhoDeCompra = carrinhoDeCompra;
+            _pedidosService = pedidosService;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            string IdUsuario = "";
+            
+            var pedidos = await _pedidosService.GetPedidosByUserIdAsync(IdUsuario);
+            return View(pedidos);
         }
 
         public IActionResult CarrinhoDeCompra()
@@ -50,6 +60,18 @@ namespace permita_se.Controllers
             }
             return RedirectToAction(nameof(CarrinhoDeCompra));
 
+        }
+
+        public async IActionResult FinalizarPedido()
+        {
+            var items = _carrinhoDeCompra.GetCarrinhoItems();
+            string IdUsuario = "";
+            string usuarioAdd = "";
+
+            await _pedidosService.StorePedidoAsync(items, IdUsuario, usuarioAdd);
+            await _carrinhoDeCompra.ClearCarrinhoDeCompraAsync();
+
+            return View("PedidoCompleto");
         }
     }
 }

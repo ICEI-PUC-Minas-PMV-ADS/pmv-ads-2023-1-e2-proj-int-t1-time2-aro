@@ -4,7 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 using permita_se.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace permita_se.Data.Carrinho
 {
@@ -82,6 +84,13 @@ namespace permita_se.Data.Carrinho
         public double GetCarrinhoTotal()
         {
             return ((double)_context.CarrinhoItems.Where(n => n.IdCarrinho == IdCarrinho).Select(selector: n => n.Produto.Preco * n.Quantidade).Sum());
+        }
+
+        public async Task ClearCarrinhoDeCompraAsync()
+        {
+            var items = await _context.CarrinhoItems.Where(n => n.IdCarrinho == IdCarrinho).ToListAsync();
+            _context.CarrinhoItems.RemoveRange(items);
+            await _context.SaveChangesAsync();
         }
     }
 }

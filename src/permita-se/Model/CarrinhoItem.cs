@@ -11,8 +11,6 @@ namespace permita_se.Model
 
         public int Quantidade { get; set; }
 
-        public double Preco { get; set; }
-
         public string IdCarrinho { get; set; }
 
         //Produto
