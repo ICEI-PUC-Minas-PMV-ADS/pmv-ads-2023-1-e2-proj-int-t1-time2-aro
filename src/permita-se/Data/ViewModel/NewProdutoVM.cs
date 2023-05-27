@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using permita_se.Data.Enum;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace permita_se.Data.ViewModel
@@ -33,6 +34,10 @@ namespace permita_se.Data.ViewModel
         [Display(Name = "Categoria")]
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         public int IdCategoria { get; set; }
+
+        [Display(Name = "Status")]
+        [Required(ErrorMessage = "O campo {0} é obrigatório")]
+        public ProdutoStatus ProdutoStatus { get; set; }
 
     }
 }

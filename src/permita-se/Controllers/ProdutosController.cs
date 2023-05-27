@@ -79,12 +79,12 @@ namespace permita_se.Controllers
                 Preco = produtoDetail.Preco,
                 ImagemURL = produtoDetail.ImagemUrl,
                 IdCategoria = produtoDetail.IdCategoria,
+                ProdutoStatus = produtoDetail.ProdutoStatus,
             };
 
             var produtoDropdownData = await _service.GetNewProdutoDropdownValues();
 
             ViewBag.IdCategoria = new SelectList(produtoDropdownData.Categorias, "Id", "Nome");
-
             return View(response);
         }
 
@@ -102,6 +102,38 @@ namespace permita_se.Controllers
             }
 
             await _service.EditarProdutoAsync(produto);
+            return RedirectToAction(nameof(Index));
+        }
+        public async Task<IActionResult> Deletar(int id)
+        {
+            var produtoDetail = await _service.GetProdutoByIdAsync(id);
+            if (produtoDetail == null) return View("NotFound");
+
+            var response = new NewProdutoVM()
+            {
+                Id = produtoDetail.Id,
+                Nome = produtoDetail.Nome,
+                Descricao = produtoDetail.Descricao,
+                Preco = produtoDetail.Preco,
+                ImagemURL = produtoDetail.ImagemUrl,
+                IdCategoria = produtoDetail.IdCategoria,
+                ProdutoStatus = produtoDetail.ProdutoStatus,
+            };
+
+            var produtoDropdownData = await _service.GetNewProdutoDropdownValues();
+
+            ViewBag.IdCategoria = new SelectList(produtoDropdownData.Categorias, "Id", "Nome");
+
+            return View(response);
+        }
+
+        [HttpPost, ActionName("Deletar")]
+        public async Task<IActionResult> DeletarConfirmado(int id)
+        {
+            var produto = await _service.GetByIdAsync(id);
+            if (produto == null) return View("NotFound");
+
+            await _service.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
         }
     }

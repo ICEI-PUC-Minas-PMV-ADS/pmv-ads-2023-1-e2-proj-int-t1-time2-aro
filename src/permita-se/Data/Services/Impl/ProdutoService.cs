@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using permita_se.Data.Base.Impl;
+using permita_se.Data.Enum;
 using permita_se.Data.ViewModel;
 using permita_se.Model;
 using System.Linq;
@@ -23,7 +24,8 @@ namespace permita_se.Data.Services.Impl
                 Descricao = data.Descricao,
                 Preco = data.Preco,
                 ImagemUrl = data.ImagemURL,
-                IdCategoria = data.IdCategoria
+                IdCategoria = data.IdCategoria,
+                ProdutoStatus = data.ProdutoStatus
             };
             await _context.Produtos.AddAsync(newProduto);
             await _context.SaveChangesAsync();
@@ -39,7 +41,8 @@ namespace permita_se.Data.Services.Impl
                 dbProduto.Descricao = data.Descricao;
                 dbProduto.Preco = data.Preco;
                 dbProduto.ImagemUrl = data.ImagemURL;
-                dbProduto.IdCategoria = data.IdCategoria;               
+                dbProduto.IdCategoria = data.IdCategoria;
+                dbProduto.ProdutoStatus = data.ProdutoStatus;
                 await _context.SaveChangesAsync();
             }
 

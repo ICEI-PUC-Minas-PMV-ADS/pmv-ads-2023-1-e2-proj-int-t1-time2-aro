@@ -1,4 +1,6 @@
 ﻿@model NewProdutoVM
+@using permita_se.Data.Enum;
+
 
 @{
     ViewData["Title"] = "Adicionando produto";
@@ -38,6 +40,13 @@
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="ProdutoStatus" class="control-label"></label>
+                                <select asp-for="ProdutoStatus" class="form-control" asp-items="Html.GetEnumSelectList<ProdutoStatus>()"></select>
+                                <span asp-validation-for="ProdutoStatus" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
                             <div class="form-group">
                                 <label asp-for="ImagemURL" class="control-label"></label>
                                 <input asp-for="ImagemURL" class="form-control" />
