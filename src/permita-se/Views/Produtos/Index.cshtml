@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Produto>
+@using permita_se.Data.Enum;
 
 @{
     ViewData["Title"] = "Produtos";
@@ -16,20 +17,28 @@
                                 <h5 class="card-title">
                                     @item.Nome
                                     <a class="text-white float-right" asp-action="Editar" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
+                                    <a class="text-danger float-right" asp-action="Deletar" asp-route-id="@item.Id"><i class="bi bi-trash"></i></a>
                                 </h5>
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <img src="@item.ImagemUrl" width="100%" alt="@item.Nome">
                     </div>
-                    <div class="col-md-6">
-                        <div class="card-body" style="font-size: 0.88em">
+                    <div class="col-md-12">
+                        <div class="card-body">
                             <p class="card-text">@item.Descricao</p>
                             <p class="card-text"><b>Categoria: </b>@item.Categoria.Nome</p>
                             <p class="card-text ">
                                 <b>Status: </b>
-                                <span class="badge bg-success text-white">DISPONÍVEL</span>
+                                @if (item.ProdutoStatus == ProdutoStatus.Disponível)
+                                {
+                                    <span class="badge bg-success text-white">@item.ProdutoStatus</span>
+                                }
+                                else                             
+                                {
+                                    <span class="badge bg-danger text-white">@item.ProdutoStatus</span>
+                                }
                             </p>
                         </div>
                     </div>
