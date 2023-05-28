@@ -1,7 +1,6 @@
 ﻿@model NewProdutoVM
 @using permita_se.Data.Enum;
 
-
 @{
     ViewData["Title"] = "Adicionando produto";
 }
@@ -9,12 +8,12 @@
 <div class="row">
     <div class="col-md-8 offset-2">
         <p>
-            <h4>Criar um novo produto</h4>
+            <h4>Adicionar um novo produto</h4>
         </p>
 
         <div class="row">
             <div class="col-md-8 offset-2">
-                <form asp-action="Criar">
+                <form enctype="multipart/form-data" asp-action="Criar">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                     <div class="row">
@@ -48,9 +47,8 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label asp-for="ImagemURL" class="control-label"></label>
-                                <input asp-for="ImagemURL" class="form-control" />
-                                <span asp-validation-for="ImagemURL" class="text-danger"></span>
+                                <label asp-for="ImagemUpload" class="control-label"></label>
+                                <input asp-for="ImagemUpload" class="form-control"/>
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -60,10 +58,6 @@
                                 <span asp-validation-for="Descricao" class="text-danger"></span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-md-4 offset-4 text-center">
-                        <img width="100%" id="ImagemUrlPreview" />
                     </div>
 
                     <div class="form-group">
@@ -78,12 +72,3 @@
 
     </div>
 </div>
-
-@section Scripts{
-    <script>
-        $("#ImagemURL").on("change", function () {
-            var output = document.getElementById('ImagemURLPreview');
-            output.src = $(this).val();
-        })
-    </script>
-}

@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Detalhes do Produto";
+    var imagemPath = "~/img/" + (Model.ImagemUrl ?? "no-image.png");
 }
 
 <div class="row">
@@ -18,7 +19,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <img src="@Model.ImagemUrl" width="100%" alt="@Model.Nome">
+                    <img src="@imagemPath" asp-append-version="true" width="100%" alt="@Model.Nome">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
