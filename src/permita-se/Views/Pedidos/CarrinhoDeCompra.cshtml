@@ -32,11 +32,18 @@
                         <td class="aling-middle">@item.Produto.Preco.ToString("c")</td>
                         <td class="aling-middle">@((item.Quantidade*item.Produto.Preco).ToString("c")) </td>
                         <td class="aling-middle">
-                            <a class="text-danger" asp-controller="Pedidos" asp-action="AddItemAoCarrinho">
-                                asp-route-id="@item.Produto.Id">
-                                <i class="badge-info bi-cart-plus"></i>
+
+                            <a class="text-danger" asp-controller="Pedidos" asp-action="RemoveItemAoCarrinho"
+                           asp-route-id="@item.Produto.Id">
+                                <i class="bi bi-cart-dash"></i>
 
                             </a>
+                            <a class="text-success" asp-controller="Pedidos" asp-action="AddItemAoCarrinho"
+                                asp-route-id="@item.Produto.Id">
+                                <i class="bi bi-cart-plus"></i>
+
+                            </a>
+
                         </td>
                     </tr>
                 }

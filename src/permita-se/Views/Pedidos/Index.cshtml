@@ -4,7 +4,7 @@
     ViewData["Title"] = "Todos os Pedidos";
 }
 
-<div class="row"
+<div class="row">
     <div class="col-md-8 offset-2">
         <p>
             <h4>Liste todos os seus pedidos</h4>
@@ -12,10 +12,12 @@
 
         <table class="table">
             <thead>
+                <tr>
                 <th>ID Pedido</th>
-                <td>Items</td>
+                <th>Items</th>
                 <th> Total</th>
                 <th> Usuario</th>
+                </tr>
             </thead>
             <tbody>
                 @foreach (var pedido in Model)
@@ -28,7 +30,7 @@
                                 {
                                            <li>
                                               <div class="alert alert-info" role="alert">
-                                                <span class="badge bg-success">@item.Quantidade</span> [@ITempDataDictionary.Preco.ToString("c")] - @item.Produto.Nome
+                                                <span class="badge bg-success">@item.Quantidade</span> [@item.Preco.ToString("c")] - @item.Produto.Nome
                                               </div>
                                            </li>
                                 }

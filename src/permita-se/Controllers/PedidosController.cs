@@ -40,7 +40,7 @@ namespace permita_se.Controllers
             return View(response);
         }
         
-        public async Task<IActionResult> AddItemAoCarrinhoDeCompra(int id)
+        public async Task<IActionResult> AddItemAoCarrinho(int id)
         {
             var item = await _produtoService.GetProdutoByIdAsync(id);
             if (item != null) 
@@ -51,7 +51,7 @@ namespace permita_se.Controllers
 
         }
 
-        public async Task<IActionResult> RemoveItemAoCarrinhoDeCompra(int id)
+        public async Task<IActionResult> RemoveItemAoCarrinho(int id)
         {
             var item = await _produtoService.GetProdutoByIdAsync(id);
             if (item != null)
@@ -62,13 +62,12 @@ namespace permita_se.Controllers
 
         }
 
-        public async IActionResult FinalizarPedido()
+        public async Task <IActionResult> FinalizarPedido()
         {
             var items = _carrinhoDeCompra.GetCarrinhoItems();
             string IdUsuario = "";
-            string usuarioAdd = "";
 
-            await _pedidosService.StorePedidoAsync(items, IdUsuario, usuarioAdd);
+            await _pedidosService.CriarPedidoAsync(items, IdUsuario);
             await _carrinhoDeCompra.ClearCarrinhoDeCompraAsync();
 
             return View("PedidoCompleto");
