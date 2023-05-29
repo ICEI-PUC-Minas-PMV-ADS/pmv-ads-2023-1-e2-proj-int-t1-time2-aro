@@ -62,13 +62,13 @@ namespace permita_se.Controllers
 
         }
 
-        public async Task <IActionResult> FinalizarPedido()
+        public async Task<IActionResult> FinalizarPedido()
         {
             var items = _carrinhoDeCompra.GetCarrinhoItems();
             string IdUsuario = "";
 
             await _pedidosService.CriarPedidoAsync(items, IdUsuario);
-            await _carrinhoDeCompra.ClearCarrinhoDeCompraAsync();
+            await _carrinhoDeCompra.LimparCarrinhoDeCompraAsync();
 
             return View("PedidoCompleto");
         }

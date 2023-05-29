@@ -86,7 +86,7 @@ namespace permita_se.Data.Carrinho
             return ((double)_context.CarrinhoItems.Where(n => n.IdCarrinho == IdCarrinho).Select(selector: n => n.Produto.Preco * n.Quantidade).Sum());
         }
 
-        public async Task ClearCarrinhoDeCompraAsync()
+        public async Task LimparCarrinhoDeCompraAsync()
         {
             var items = await _context.CarrinhoItems.Where(n => n.IdCarrinho == IdCarrinho).ToListAsync();
             _context.CarrinhoItems.RemoveRange(items);
