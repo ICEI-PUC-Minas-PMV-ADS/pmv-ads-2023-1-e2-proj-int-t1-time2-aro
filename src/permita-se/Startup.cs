@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using permita_se.Data;
+using permita_se.Data.Carrinho;
 using permita_se.Data.Services;
 using permita_se.Data.Services.Impl;
 
@@ -29,8 +31,15 @@ namespace permita_se
             //Services configuration
             services.AddScoped<ICategoriasService, CategoriasService>();
             services.AddScoped<IProdutoService, ProdutoService>();
+            services.AddScoped<IPedidosService, PedidosService>();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sc => CarrinhoDeCompra.GetCarrinhoDeCompra(sc));
+
+            services.AddSession();
 
             services.AddControllersWithViews();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +59,7 @@ namespace permita_se
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseSession();
 
             app.UseAuthorization();
 
