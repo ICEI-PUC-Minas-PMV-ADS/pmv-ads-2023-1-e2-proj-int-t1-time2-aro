@@ -1,16 +1,19 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace permita_se.Model
 {
-    public partial class Usuario:IdentityUser
+    public partial class Usuario : IdentityUser
     {
         public string Nome { get; set; }
-        
-        public int Idade { get; set; }
-        
+
+        public string Sobrenome { get; set; }
+
+        public DateTime DataNascimento{ get; set; }
+
         public string Telefone { get; set; }
 
         //Relacionamentos

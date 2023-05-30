@@ -15,8 +15,11 @@
                 <tr>
                 <th>ID Pedido</th>
                 <th>Items</th>
-                <th> Total</th>
-                <th> Usuario</th>
+                    <th>Total</th>
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <th>Usuario</th>
+                    }
                 </tr>
             </thead>
             <tbody>
@@ -35,13 +38,14 @@
                                            </li>
                                 }
                                 </ul>
-
                            </td>
-
                              <td class="align-middle">
                                @pedido.PedidoItems.Select(n => n.Produto.Preco * n.Quantidade).Sum().ToString("c")
                              </td>
-                          <td class="aling-middle"> - </td>
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <td class="align-middle"> @pedido.Usuario.Nome</td>
+                    }
                       </tr>
                 }
             </tbody>

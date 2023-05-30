@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using permita_se.Data.Services;
+using permita_se.Data.Static;
 using permita_se.Data.ViewModel;
 using System.IO;
 using System.Linq;
@@ -9,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace permita_se.Controllers
 {
+    [Authorize(Roles = UserRoles.Admin)]
     public class ProdutosController : Controller
     {
         private readonly IProdutoService _service;
@@ -20,12 +23,15 @@ namespace permita_se.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
+        [AllowAnonymous]
+
         public async Task<IActionResult> Index()
         {
             var allProdutos = await _service.GetAllAsync(n => n.Categoria);
             return View(allProdutos);
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> Filtro(string searchString)
         {
             var allProdutos = await _service.GetAllAsync(n => n.Categoria);
@@ -40,6 +46,7 @@ namespace permita_se.Controllers
             return View("Index", allProdutos);
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> Detalhes(int id)
         {
             var produtoDetail = await _service.GetProdutoByIdAsync(id);
