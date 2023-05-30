@@ -46,9 +46,9 @@
                         <div class="card-footer">
                             <p class="card-text">
                                 <a class="btn btn-outline-primary float-right" asp-action="Detalhes" asp-route-id="@item.Id" style="font-size: 0.9em">
-                                    <i class="bi bi-eye-fill"></i> Detalhes
-                                </a>
-                                <a class="btn btn-success text-white" asp-controller="Pedidos" asp-action="AddItemAoCarrinho" asp-route-id="@item.Id" style="font-size: 0.9em"><i class="bi bi-cart-plus"></i> Carrinho (Preço @item.Preco.ToString("c"))</a>
+                                    <i class="bi bi-eye-fill"></i> Detalhes</a>
+                                <a class="btn btn-success text-white @((ProdutoStatus.Indisponível == item.ProdutoStatus) ? "disabled" : "")" asp-controller="Pedidos" asp-action="AddItemAoCarrinho" asp-route-id="@item.Id" style="font-size: 0.9em">
+                                    <i class="bi bi-cart-plus"></i> Carrinho (Preço @item.Preco.ToString("c"))</a>
                             </p>
                         </div>
                     </div>
