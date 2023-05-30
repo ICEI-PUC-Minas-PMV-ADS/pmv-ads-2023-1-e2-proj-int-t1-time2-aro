@@ -2,6 +2,7 @@
 using permita_se.Data.Base.Impl;
 using permita_se.Data.ViewModel;
 using permita_se.Model;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,6 +14,18 @@ namespace permita_se.Data.Services.Impl
         public ProdutoService(PermitaSeDbContext context) : base(context)
         {
             _context = context;
+        }
+
+        public async Task<List<Pedido>> GetOrdersByUserIdAndRoleAsync(string userId, string userRole)
+        {
+            var orders = await _context.Pedidos.Include(n => n.PedidoItems).ThenInclude(n => n.Produto).ToListAsync();
+
+            if (userRole != "Admin")
+            {
+                orders = orders.Where(n => n.IdUsuario == userId).ToList();
+            }
+
+            return orders;
         }
 
         public async Task AddNewProdutoAsync(NewProdutoVM data)
