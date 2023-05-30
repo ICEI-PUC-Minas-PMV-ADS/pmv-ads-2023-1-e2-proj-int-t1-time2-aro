@@ -1,12 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using permita_se.Data.Carrinho;
 using permita_se.Data.Services;
+using permita_se.Data.Static;
 using permita_se.Data.ViewModel;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace permita_se.Controllers
 {
+    [Authorize]
     public class PedidosController : Controller
     {
         private readonly IProdutoService _produtoService;

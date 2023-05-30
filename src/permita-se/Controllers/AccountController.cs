@@ -6,6 +6,7 @@ using permita_se.Data.ViewModel;
 using permita_se.Model;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace permita_se.Controllers
 {
@@ -91,6 +92,10 @@ namespace permita_se.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Produtos");
         }
-     
+
+        public IActionResult AccessDenied(string ReturnUrl)
+        {
+            return View();
+        }
     }
 }

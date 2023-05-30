@@ -27,6 +27,15 @@ else
                     <i class="bi bi-list"></i> Pedidos
                 </a>
             </li>
+
+            @if (User.IsInRole("Admin"))
+            {
+                <li>
+                    <a class="dropdown-item" asp-controller="Account" asp-action="Users">
+                        <i class="bi bi-people"></i> Usuarios
+                    </a>
+                </li>
+            }
         </ul>
     </div>
 

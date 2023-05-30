@@ -12,7 +12,11 @@
                 <tr class="text-center">
                     <th>@Html.DisplayNameFor(model => model.Nome)</th>
                     <th>@Html.DisplayNameFor(model => model.Descricao)</th>
-                    <th>Gerenciamento</th>
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <th>Gerenciamento</th>
+                    }
+                    
                 </tr>
             </thead>
             <tbody>
