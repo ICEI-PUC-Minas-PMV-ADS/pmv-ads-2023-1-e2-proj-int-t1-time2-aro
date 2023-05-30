@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Detalhes do Produto";
+    var imagemPath = "~/img/" + (Model.ImagemUrl ?? "no-image.png");
 }
 
 <div class="row">
@@ -18,7 +19,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <img src="@Model.ImagemUrl" width="100%" alt="@Model.Nome">
+                    <img src="@imagemPath" asp-append-version="true" width="100%" alt="@Model.Nome">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
@@ -28,7 +29,7 @@
                             </p>
                             <p class="card-text ">
                                 <b>Status: </b>
-                                <span class="badge bg-success text-white">DISPONÍVEL</span>
+                                <span class="badge bg-success text-white">@Model.ProdutoStatus</span>
                             </p>
                         </div>
                     </div>
@@ -36,7 +37,7 @@
                         <div class="card-footer ">
                             <p class="card-text">
                                 <a class="btn btn-outline-primary float-right" asp-action="Index">Voltar</a>
-                                <a class="btn btn-success text-white"><i class="bi bi-cart-plus"></i> Carrinho (Preço @Model.Preco.ToString("c"))</a>
+                                <a class="btn btn-success text-white" asp-controller"Pedidos" asp-action"AddItemAoCarrinho" asp-route-id="@Model.Id" ><i class="bi bi-cart-plus"></i> Carrinho (Preço @Model.Preco.ToString("c"))</a>
                             </p>
                         </div>
                     </div>

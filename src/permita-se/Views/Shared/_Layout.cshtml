@@ -50,6 +50,26 @@
 
                     <partial name="_Identity.cshtml"/>
 
+                    <ul class="navbar-nav">
+                        @await Component.InvokeAsync("ResumoCarrinhoDeCompra")
+                    </ul>
+
+                    @*Usuario profile section*@
+                  <div class="dropdown">
+                    <button class="btn btn-outline-success" dropdown-toggle type="button" id="profile-btn" data-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="bi bi-person-badge"></i> Olá
+                     </button>
+                     <ul class="dropdown-menu" arial-labelledby="profile-btn">
+                         <li>
+                             <a class="dropdown-item" asp-controller="Pedidos" asp-action="Index">
+                                 <i class="bi bi-list"></i> Pedidos
+                             </a>
+                         </li>
+                     </ul>
+
+                     </div>
+                   </div>
                 </div>
             </div>
         </nav>

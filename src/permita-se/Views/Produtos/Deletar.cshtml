@@ -2,66 +2,65 @@
 @using permita_se.Data.Enum;
 
 @{
-    ViewData["Title"] = "Adicionando produto";
+    ViewData["Title"] = "Deletando produto";
+    var imagemPath = "~/img/" + (Model.ImagemURL ?? "no-image.png");
 }
 
 <div class="row">
     <div class="col-md-8 offset-2">
         <p>
-            <h4>Adicionar um novo produto</h4>
+            <h4>Deletando produto</h4>
         </p>
 
         <div class="row">
             <div class="col-md-8 offset-2">
-                <form enctype="multipart/form-data" asp-action="Criar">
+                <form asp-action="Deletar">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label asp-for="Nome" class="control-label"></label>
-                                <input asp-for="Nome" class="form-control" />
+                                <input asp-for="Nome" class="form-control" readonly/>
                                 <span asp-validation-for="Nome" class="text-danger"></span>
-                            </div>
-                        </div>
-                        <div class="col-md-6">                           
-                            <div class="form-group">
-                                <label asp-for="IdCategoria" class="control-label"></label>
-                                <select asp-for="IdCategoria" class="form-control" asp-items="ViewBag.IdCategoria"></select>
-                                <span asp-validation-for="IdCategoria" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label asp-for="Preco" class="control-label"></label>
-                                <input asp-for="Preco" class="form-control" />
+                                <input asp-for="Preco" class="form-control" readonly />
                                 <span asp-validation-for="Preco" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label asp-for="ProdutoStatus" class="control-label"></label>
-                                <select asp-for="ProdutoStatus" class="form-control" asp-items="Html.GetEnumSelectList<ProdutoStatus>()"></select>
+                                <select asp-for="ProdutoStatus" class="form-control" asp-items="Html.GetEnumSelectList<ProdutoStatus>()" readonly></select>
                                 <span asp-validation-for="ProdutoStatus" class="text-danger"></span>
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-6">                           
                             <div class="form-group">
-                                <label asp-for="ImagemUpload" class="control-label"></label>
-                                <input asp-for="ImagemUpload" class="form-control"/>
+                                <label asp-for="IdCategoria" class="control-label"></label>
+                                <select asp-for="IdCategoria" class="form-control" asp-items="ViewBag.IdCategoria" readonly></select>
+                                <span asp-validation-for="IdCategoria" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label asp-for="Descricao" class="control-label"></label>
-                                <textarea asp-for="Descricao" class="form-control"></textarea>
+                                <textarea asp-for="Descricao" class="form-control" readonly></textarea>
                                 <span asp-validation-for="Descricao" class="text-danger"></span>
                             </div>
                         </div>
                     </div>
 
+                    <div class="col-md-4 offset-4 text-center">
+                        <img width="100%" src="@imagemPath" asp-append-version="true" />
+                    </div>
+
                     <div class="form-group">
-                        <input type="submit" value="Criar" class="btn btn-outline-success float-right" />
+                        <input type="submit" value="Deletar" class="btn btn-danger float-right" />
                         <a class="btn btn-outline-secondary" asp-action="Index">Cancelar</a>
                     </div>
 

@@ -1,0 +1,76 @@
+﻿@model CarrinhoVM
+
+@{
+    ViewData["Title"] = "Carrinho De Compra";
+}
+
+<div class="row">
+
+    <div class="col-md-8 offset-2">
+        <div class="text-center">
+            <h2>
+                Seu resumo do carrinho de compras
+            </h2>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Quantidade</th>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.CarrinhoDeCompra.CarrinhoItems)
+                {
+                    <tr>
+                        <td class="aling-middle">@item.Quantidade</td>
+                        <td class="aling-middle">@item.Produto.Nome</td>
+                        <td class="aling-middle">@item.Produto.Preco.ToString("c")</td>
+                        <td class="aling-middle">@((item.Quantidade*item.Produto.Preco).ToString("c")) </td>
+                        <td class="aling-middle">
+
+                            <a class="text-danger" asp-controller="Pedidos" asp-action="RemoveItemAoCarrinho"
+                           asp-route-id="@item.Produto.Id">
+                                <i class="bi bi-cart-dash"></i>
+
+                            </a>
+                            <a class="text-success" asp-controller="Pedidos" asp-action="AddItemAoCarrinho"
+                                asp-route-id="@item.Produto.Id">
+                                <i class="bi bi-cart-plus"></i>
+
+                            </a>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2"></td>
+                    <td><b>Total:</b></td>
+                    <td>
+                        @Model.CarrinhoTotal.ToString("c")
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <dv class="text-center">
+            <div class="btn-group">
+                <a class="btn btn-outline-primary" asp-action="FinalizarPedido">
+                    Finalizar Pedido
+                </a>
+                <a class="btn btn-outline-success" asp-controller="Produtos" asp-action="Index">
+                    Continuar Comprando 
+                </a>
+
+            </div>
+        </dv>
+
+    </div>
+
+</div>

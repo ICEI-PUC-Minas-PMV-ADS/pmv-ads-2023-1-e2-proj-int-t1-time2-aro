@@ -1,52 +1,52 @@
 ﻿@model List<Pedido>
 
-@{ 
-    ViewData["Title"] = "All orders";
+@{
+    ViewData["Title"] = "Todos os Pedidos";
 }
 
 <div class="row">
     <div class="col-md-8 offset-2">
         <p>
-            <h4>List of all your orders</h4>
+            <h4>Liste todos os seus pedidos</h4>
         </p>
 
         <table class="table">
             <thead>
                 <tr>
-                    <th>Order ID</th>
-                    <th>Items</th>
+                <th>ID Pedido</th>
+                <th>Items</th>
                     <th>Total</th>
                     @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                     {
-                        <th>User</th>
+                        <th>Usuario</th>
                     }
                 </tr>
             </thead>
             <tbody>
-                @foreach (var order in Model)
+                @foreach (var pedido in Model)
                 {
-                <tr>
-                    <td class="align-middle">@order.Id</td>
-                    <td class="align-middle">
-                        <ul style="list-style-type:none">
-                            @foreach (var item in order.PedidoItems)
-                            {
-                                <li>
-                                    <div class="alert alert-info" role="alert">
-                                        <span class="badge bg-success">@item.Quantidade</span> [@item.Preco.ToString("c")] - @item.Produto.Nome
-                                    </div>
-                                </li>
-                            }
-                        </ul>
-                    </td>
-                    <td class="align-middle">
-                        @order.PedidoItems.Select(m => m.Produto.Preco * m.Quantidade).Sum().ToString("c")
-                    </td>
+                      <tr>
+                           <td class="align-middle">@pedido.Id</td>
+                            <td class="align-middle">
+                                <ul style="list-style-type:none">
+                                @foreach (var item in pedido.PedidoItems)
+                                {
+                                           <li>
+                                              <div class="alert alert-info" role="alert">
+                                                <span class="badge bg-success">@item.Quantidade</span> [@item.Preco.ToString("c")] - @item.Produto.Nome
+                                              </div>
+                                           </li>
+                                }
+                                </ul>
+                           </td>
+                             <td class="align-middle">
+                               @pedido.PedidoItems.Select(n => n.Produto.Preco * n.Quantidade).Sum().ToString("c")
+                             </td>
                     @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                     {
-                        <td class="align-middle"> @order.Usuario.Nome </td>
+                        <td class="align-middle"> @pedido.Usuario.Nome </td>
                     }
-                    </tr>
+                      </tr>
                 }
             </tbody>
         </table>
