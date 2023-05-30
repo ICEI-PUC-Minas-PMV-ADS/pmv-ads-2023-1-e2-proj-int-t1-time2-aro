@@ -2,6 +2,7 @@
 using permita_se.Data.Carrinho;
 using permita_se.Data.Services;
 using permita_se.Data.ViewModel;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace permita_se.Controllers
@@ -20,9 +21,10 @@ namespace permita_se.Controllers
 
         public async Task<IActionResult> Index()
         {
-            string IdUsuario = "";
+            string idUsuario = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            string userRole = User.FindFirstValue(ClaimTypes.Role);
             
-            var pedidos = await _pedidosService.GetPedidosByUserIdAsync(IdUsuario);
+            var pedidos = await _pedidosService.GetPedidosByUserIdAndRoleAsync(idUsuario, userRole);
             return View(pedidos);
         }
 
@@ -65,12 +67,14 @@ namespace permita_se.Controllers
         public async Task<IActionResult> FinalizarPedido()
         {
             var items = _carrinhoDeCompra.GetCarrinhoItems();
-            string IdUsuario = "";
+            string IdUsuario = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            string userEmailAddress = User.FindFirstValue(ClaimTypes.Email);
+
 
             await _pedidosService.CriarPedidoAsync(items, IdUsuario);
             await _carrinhoDeCompra.LimparCarrinhoDeCompraAsync();
 
-            return View("PedidoCompleto");
+            return View("FinalizarPedido");
         }
     }
 }

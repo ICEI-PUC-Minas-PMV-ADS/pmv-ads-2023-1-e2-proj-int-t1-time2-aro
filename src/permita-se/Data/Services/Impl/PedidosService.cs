@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using permita_se.Data.Services;
+using permita_se.Data.Services.Impl;
 using permita_se.Model;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace permita_se.Data.Services.Impl
 {
     public class PedidosService : IPedidosService
+
     {
 
         private readonly PermitaSeDbContext _context;
@@ -17,10 +18,14 @@ namespace permita_se.Data.Services.Impl
             _context = context;
         }
 
-        public async Task<List<Pedido>> GetPedidosByUserIdAsync(string IdUsuario)
+        public async Task<List<Pedido>> GetPedidosByUserIdAndRoleAsync(string IdUsuario, string userRole)
         {
-            var pedidos = await _context.Pedidos.Include(n => n.PedidoItems).ThenInclude(n => n.Produto)
-                .Where(n => n.IdUsuario == IdUsuario).ToListAsync();
+            var pedidos = await _context.Pedidos.Include(n => n.PedidoItems).ThenInclude(n => n.Produto).Include(n => n.Usuario).ToListAsync();
+
+            if(userRole != "Admin")
+            {
+                pedidos = pedidos.Where(n => n.IdUsuario == IdUsuario).ToList();
+            }
 
             return pedidos;
         }

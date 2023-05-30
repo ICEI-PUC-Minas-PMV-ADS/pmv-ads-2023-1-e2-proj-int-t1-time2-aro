@@ -19,6 +19,8 @@ namespace permita_se.Model
         [ForeignKey(nameof(IdUsuario))]
         public virtual Usuario Usuario { get; set; }
 
+     
+
         //Relacionamento Pedido-PedidoItem
         public virtual List<PedidoItem> PedidoItems { get; set; }
     }
