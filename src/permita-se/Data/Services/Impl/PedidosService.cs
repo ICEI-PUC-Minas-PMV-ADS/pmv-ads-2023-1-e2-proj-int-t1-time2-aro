@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using permita_se.Data.Services.Impl;
 using permita_se.Model;
 using System.Collections.Generic;
 using System.Linq;

@@ -23,18 +23,6 @@ namespace permita_se.Data.Services.Impl
             _webHostEnvironment = webHostEnvironment;
         }
 
-        public async Task<List<Pedido>> GetOrdersByUserIdAndRoleAsync(string userId, string userRole)
-        {
-            var orders = await _context.Pedidos.Include(n => n.PedidoItems).ThenInclude(n => n.Produto).ToListAsync();
-
-            if (userRole != "Admin")
-            {
-                orders = orders.Where(n => n.IdUsuario == userId).ToList();
-            }
-
-            return orders;
-        }
-
         public async Task AddNewProdutoAsync(NewProdutoVM data)
         {
             var newProduto = new Produto()

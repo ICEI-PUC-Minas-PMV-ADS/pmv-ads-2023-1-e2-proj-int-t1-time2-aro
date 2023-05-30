@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using permita_se.Data.Carrinho;
 using permita_se.Data.Services;
-using permita_se.Data.Static;
 using permita_se.Data.ViewModel;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -71,13 +70,11 @@ namespace permita_se.Controllers
         {
             var items = _carrinhoDeCompra.GetCarrinhoItems();
             string IdUsuario = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            string userEmailAddress = User.FindFirstValue(ClaimTypes.Email);
-
 
             await _pedidosService.CriarPedidoAsync(items, IdUsuario);
             await _carrinhoDeCompra.LimparCarrinhoDeCompraAsync();
 
-            return View("FinalizarPedido");
+            return View();
         }
     }
 }

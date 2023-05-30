@@ -1,18 +1,16 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using permita_se.Data;
 using permita_se.Data.Static;
 using permita_se.Data.ViewModel;
 using permita_se.Model;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace permita_se.Controllers
 {
     public class AccountController : Controller
     {
-        private const string ActionName = "Home";
         private readonly UserManager<Usuario> _userManager;
         private readonly SignInManager<Usuario> _signInManager;
         private readonly PermitaSeDbContext _context;
