@@ -17,27 +17,27 @@
                                 <h5 class="card-title">
                                     @item.Nome
                                     <a class="text-white float-right" asp-action="Editar" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
-                                    <a class="text-danger float-right" asp-action="Deletar" asp-route-id="@item.Id"><i class="bi bi-trash"></i></a>
+                                    <a class="text-white float-right" asp-action="Deletar" asp-route-id="@item.Id"><i class="bi bi-trash"></i></a>
                                 </h5>
                             </p>
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <img src="~/img/@item.ImagemUrl" width="100%" alt="@item.Nome">
+                        <img src="~/img/@item.ImagemUrl" height="330px" width="100%" alt="@item.Nome" class="align-content-center">
                     </div>
                     <div class="col-md-12">
                         <div class="card-body">
                             <p class="card-text">@item.Descricao</p>
                             <p class="card-text"><b>Categoria: </b>@item.Categoria.Nome</p>
-                            <p class="card-text ">
+                            <p class="card-text">
                                 <b>Status: </b>
                                 @if (item.ProdutoStatus == ProdutoStatus.Disponível)
                                 {
-                                    <span class="badge bg-success text-white">@item.ProdutoStatus</span>
+                                    <span class="badge bg-success text-white" style="font-size: 0.88em">@item.ProdutoStatus</span>
                                 }
                                 else                             
                                 {
-                                    <span class="badge bg-danger text-white">@item.ProdutoStatus</span>
+                                    <span class="badge bg-danger text-white" style="font-size: 0.88em">@item.ProdutoStatus</span>
                                 }
                             </p>
                         </div>
