@@ -23,14 +23,13 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <img src="~/img/@item.ImagemUrl" height="330px" width="100%" alt="@item.Nome" class="align-content-center">
+                        <img src="~/img/@item.ImagemUrl" height="330px" width="100%" max-width="370px" alt="@item.Nome" class="align-content-center">
                     </div>
                     <div class="col-md-12">
                         <div class="card-body">
-                            <p class="card-text">@item.Descricao</p>
+                            <p class="card-text" style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">@item.Descricao</p>
                             <p class="card-text"><b>Categoria: </b>@item.Categoria.Nome</p>
-                            <p class="card-text">
-                                <b>Status: </b>
+                            <p class="card-text">                            
                                 @if (item.ProdutoStatus == ProdutoStatus.Disponível)
                                 {
                                     <span class="badge bg-success text-white" style="font-size: 0.88em">@item.ProdutoStatus</span>
