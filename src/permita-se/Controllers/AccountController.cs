@@ -73,8 +73,10 @@ namespace permita_se.Controllers
             var newUser = new Usuario()
             {
                 Nome = registerVM.Nome,
+                Sobrenome = registerVM.Sobrenome,
+                Telefone = registerVM.Telefone,
                 Email = registerVM.Email,
-                UserName = registerVM.Email
+                UserName = registerVM.Nome
             };
             var newUserResponse = await _userManager.CreateAsync(newUser, registerVM.Senha);
 
