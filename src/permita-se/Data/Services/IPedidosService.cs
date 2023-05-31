@@ -6,8 +6,8 @@ namespace permita_se.Data.Services
 {
     public interface IPedidosService
     {
-        Task<List<Pedido>> GetPedidosByUserIdAsync(string IdUsuario);
         Task CriarPedidoAsync(List<CarrinhoItem> items, string IdUsuario);
+        Task<List<Pedido>> GetPedidosByUserIdAndRoleAsync(string IdUsuario, string userRole);
     }
 }
 

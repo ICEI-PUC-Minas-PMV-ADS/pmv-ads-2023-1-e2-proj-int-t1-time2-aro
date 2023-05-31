@@ -16,8 +16,12 @@
                             <p class="card-text">
                                 <h5 class="card-title">
                                     @item.Nome
-                                    <a class="text-white float-right" asp-action="Editar" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
-                                    <a class="text-white float-right" asp-action="Deletar" asp-route-id="@item.Id"><i class="bi bi-trash"></i></a>
+                                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                                    {
+                                        <a class="text-white float-right" asp-action="Editar" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
+                                        <a class="text-white float-right" asp-action="Deletar" asp-route-id="@item.Id"><i class="bi bi-trash"></i></a>
+                                    }
+                                  
                                 </h5>
                             </p>
                         </div>
@@ -57,8 +61,11 @@
     }
 </div>
 
-<div style="position: fixed; right: 25px; bottom: 65px;" class="text-white">
-    <a asp-controller="Produtos" asp-action="Criar" class="btn btn-success">
-        <i class="bi bi-plus-circle"></i> Adicionar
-    </a>
-</div>
+ @if(User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+    <div style="position: fixed; right: 25px; bottom: 65px;" class="text-white">
+        <a asp-controller="Produtos" asp-action="Criar" class="btn btn-success">
+            <i class="bi bi-plus-circle"></i> Adicionar
+        </a>
+    </div>
+  }

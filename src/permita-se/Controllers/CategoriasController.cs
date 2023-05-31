@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using permita_se.Data.Services;
+using permita_se.Data.Static;
 using permita_se.Model;
 using System.Threading.Tasks;
 
 namespace permita_se.Controllers
 {
+    [Authorize(Roles = UserRoles.Admin)]
     public class CategoriasController : Controller
     {
         private readonly ICategoriasService _service;
@@ -14,6 +17,7 @@ namespace permita_se.Controllers
             _service = service;
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
             var allCategorias = await _service.GetAllAsync();
@@ -37,6 +41,7 @@ namespace permita_se.Controllers
             return View(categoria);
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> Editar(int id)
         {
             var categoria = await _service.GetByIdAsync(id);

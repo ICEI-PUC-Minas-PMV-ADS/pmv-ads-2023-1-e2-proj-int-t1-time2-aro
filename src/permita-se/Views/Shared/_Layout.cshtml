@@ -27,15 +27,22 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Produtos" asp-action="Index"><i class="bi bi-flower1"></i> Catálogo</a>
                         </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="bi bi-gear"></i> Gerenciamento
-                            </a>
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-gear"></i> Gerenciamento
+                                </a>
 
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" asp-controller="Categorias" asp-action="Index"><i class="bi bi-clipboard2-plus"></i> Categorias de Produtos</a>
-                            </div>
-                        </li>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" asp-controller="Categorias" asp-action="Index"><i class="bi bi-clipboard2-plus"></i> Categorias de Produtos</a>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        @await Component.InvokeAsync("ResumoCarrinhoDeCompra")
                     </ul>
 
                     <form class="form-inline my-2 my-lg-0" asp-controller="Produtos" asp-action="Filtro" style="padding-right: 25px;">
@@ -43,25 +50,7 @@
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
                     </form>
 
-                    <ul class="navbar-nav">
-                        @await Component.InvokeAsync("ResumoCarrinhoDeCompra")
-                    </ul>
-
-                    @*Usuario profile section*@
-                    <div class="dropdown">
-                        <button class="btn btn-outline-success" dropdown-toggle type="button" id="profile-btn" data-toggle="dropdown"
-                                aria-expanded="false">
-                            <i class="bi bi-person-badge"></i> Olá
-                        </button>
-                        <ul class="dropdown-menu" arial-labelledby="profile-btn">
-                            <li>
-                                <a class="dropdown-item" asp-controller="Pedidos" asp-action="Index">
-                                    <i class="bi bi-list"></i> Pedidos
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
+                    <partial name="_Identity.cshtml" />
                 </div>
             </div>
         </nav>
@@ -84,3 +73,5 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+

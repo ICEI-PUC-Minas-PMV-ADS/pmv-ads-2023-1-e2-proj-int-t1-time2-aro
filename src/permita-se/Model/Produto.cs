@@ -27,6 +27,8 @@ namespace permita_se.Model
 
         public ProdutoStatus ProdutoStatus { get; set; }
 
+
+
         //Relacionamentos
         public virtual List<CarrinhoItem> CarrinhoItems { get; set; }
 
