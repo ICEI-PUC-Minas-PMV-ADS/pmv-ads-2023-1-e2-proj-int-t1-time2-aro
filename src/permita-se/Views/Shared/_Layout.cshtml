@@ -48,9 +48,13 @@
 
                     <partial name="_Identity.cshtml" />
 
-                    <ul class="navbar-nav">
-                        @await Component.InvokeAsync("ResumoCarrinhoDeCompra")
-                    </ul>
+                    @if (ViewBag.HideCarrinho != true) 
+                    {
+                        <ul class="navbar-nav">
+                            @await Component.InvokeAsync("ResumoCarrinhoDeCompra")
+                        </ul>
+                    }
+                    
                 </div>
             </div>
         </nav>

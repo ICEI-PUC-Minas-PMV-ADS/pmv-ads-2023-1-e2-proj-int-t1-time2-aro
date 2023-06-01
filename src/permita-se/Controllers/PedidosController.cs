@@ -74,6 +74,8 @@ namespace permita_se.Controllers
             await _pedidosService.CriarPedidoAsync(items, IdUsuario);
             await _carrinhoDeCompra.LimparCarrinhoDeCompraAsync();
 
+            ViewBag.HideCarrinho = true;
+
             return View();
         }
     }

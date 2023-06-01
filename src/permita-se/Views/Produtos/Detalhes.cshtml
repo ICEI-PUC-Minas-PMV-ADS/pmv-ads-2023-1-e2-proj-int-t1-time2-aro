@@ -1,4 +1,5 @@
 ﻿@model Produto
+@using System.Globalization;
 @using permita_se.Data.Enum;
 
 @{
@@ -8,7 +9,7 @@
 
 <div class="row">
         <div class="col-md-8 offset-2">
-            <div class="card mb-3" style="background:#f6eff6 max-width: 540px;">
+            <div class="card mb-3" style="background:#f6eff6; max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-12">
                         <div class="card-header text-white bg-secondary">
@@ -39,7 +40,8 @@
                             <p class="card-text">
                             <a class="btn btn-outline-primary float-right @((ProdutoStatus.Indisponível == Model.ProdutoStatus) ? "disabled" : "")" asp-action="Index">Voltar</a>
                                 <a class="btn btn-success text-white" asp-controller="Pedidos" asp-action="AddItemAoCarrinho" asp-route-id="@Model.Id" >
-                                <i class="bi bi-cart-plus"></i> Carrinho (Preço @Model.Preco.ToString("c"))</a>
+                                <i class="bi bi-cart-plus"></i> Carrinho (Preço @Model.Preco.ToString("c", CultureInfo.CreateSpecificCulture("pt-BR")))
+                            </a>
                             </p>
                         </div>
                     </div>
