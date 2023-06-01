@@ -68,7 +68,6 @@ namespace permita_se.Data.Carrinho
                 else
                 {
                     _context.CarrinhoItems.Remove(CarrinhoItem);
-
                 }
 
             }

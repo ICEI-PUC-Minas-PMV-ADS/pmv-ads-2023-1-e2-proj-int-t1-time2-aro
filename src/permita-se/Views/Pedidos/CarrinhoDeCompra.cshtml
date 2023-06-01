@@ -1,4 +1,5 @@
-﻿@model CarrinhoVM
+﻿@using System.Globalization;
+@model CarrinhoVM
 
 @{
     ViewData["Title"] = "Carrinho De Compra";
@@ -29,8 +30,8 @@
                     <tr>
                         <td class="aling-middle">@item.Quantidade</td>
                         <td class="aling-middle">@item.Produto.Nome</td>
-                        <td class="aling-middle">@item.Produto.Preco.ToString("c")</td>
-                        <td class="aling-middle">@((item.Quantidade*item.Produto.Preco).ToString("c")) </td>
+                        <td class="aling-middle">@item.Produto.Preco.ToString("c", CultureInfo.CreateSpecificCulture("pt-BR"))</td>
+                        <td class="aling-middle">@((item.Quantidade * item.Produto.Preco).ToString("c", CultureInfo.CreateSpecificCulture("pt-BR")))</td>
                         <td class="aling-middle">
 
                             <a class="text-danger" asp-controller="Pedidos" asp-action="RemoveItemAoCarrinho"
@@ -53,7 +54,7 @@
                     <td colspan="2"></td>
                     <td><b>Total:</b></td>
                     <td>
-                        @Model.CarrinhoTotal.ToString("c")
+                        @Model.CarrinhoTotal.ToString("c", CultureInfo.CreateSpecificCulture("pt-BR"))
                     </td>
                 </tr>
             </tfoot>
@@ -61,7 +62,7 @@
 
         <dv class="text-center">
             <div class="btn-group">
-                <a class="btn btn-outline-primary" asp-action="FinalizarPedido">
+                <a class="btn btn-outline-primary @((Math.Abs(Model.CarrinhoTotal) < 0.001) ? "disabled" : "")" asp-action="FinalizarPedido">
                     Finalizar Pedido
                 </a>
                 <a class="btn btn-outline-success" asp-controller="Produtos" asp-action="Index">

@@ -1,4 +1,5 @@
-﻿@model List<Pedido>
+﻿@using System.Globalization;
+@model List<Pedido>
 
 @{
     ViewData["Title"] = "Todos os Pedidos";
@@ -33,14 +34,14 @@
                                 {
                                            <li>
                                               <div class="alert alert-info" role="alert">
-                                                <span class="badge bg-success">@item.Quantidade</span> [@item.Preco.ToString("c")] - @item.Produto.Nome
+                                                    <span class="badge bg-success">@item.Quantidade</span> [@item.Preco.ToString("c", CultureInfo.CreateSpecificCulture("pt-BR"))] - @item.Produto.Nome
                                               </div>
                                            </li>
                                 }
                                 </ul>
                            </td>
                              <td class="align-middle">
-                               @pedido.PedidoItems.Select(n => n.Produto.Preco * n.Quantidade).Sum().ToString("c")
+                            @pedido.PedidoItems.Select(n => n.Produto.Preco * n.Quantidade).Sum().ToString("c", CultureInfo.CreateSpecificCulture("pt-BR"))
                              </td>
                     @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                     {
