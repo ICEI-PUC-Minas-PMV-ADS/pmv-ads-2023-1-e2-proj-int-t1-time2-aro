@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using permita_se.Data.Enum;
-using System;
 using System.ComponentModel.DataAnnotations;
 
 
@@ -27,9 +26,9 @@ namespace permita_se.Data.ViewModel
 
         [Display(Name = "Preço")]
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
-        [Range(0.01, 99999.99, ErrorMessage = "O campo {0} deve estar entre {1} e {2}")]
-        [RegularExpression(@"^\d+(,\d{1,2})?$", ErrorMessage = "O campo {0} deve ter no máximo 2 casas decimais")]
-        public double? Preco { get; set; }
+        //[Range(0.01, 99999.99, ErrorMessage = "O campo {0} deve estar entre {1} e {2}")]
+        [RegularExpression(@"^[0-9]*(\,[0-9]{0,2})?$", ErrorMessage = "Valor inválido! Preço deve estar no formato ##,##")]
+        public string Preco { get; set; }
 
         public string ImagemURL { get; set; }
 

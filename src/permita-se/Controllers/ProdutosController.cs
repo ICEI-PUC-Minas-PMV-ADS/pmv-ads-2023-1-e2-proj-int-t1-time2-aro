@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using permita_se.Data.Services;
 using permita_se.Data.Static;
 using permita_se.Data.ViewModel;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -85,7 +86,7 @@ namespace permita_se.Controllers
                 Id = produtoDetail.Id,
                 Nome = produtoDetail.Nome,
                 Descricao = produtoDetail.Descricao,
-                Preco = produtoDetail.Preco,
+                Preco = produtoDetail.Preco.ToString(CultureInfo.CreateSpecificCulture("pt-BR")),
                 ImagemURL = produtoDetail.ImagemUrl,
                 IdCategoria = produtoDetail.IdCategoria,
                 ProdutoStatus = produtoDetail.ProdutoStatus,
@@ -124,7 +125,7 @@ namespace permita_se.Controllers
                 Id = produtoDetail.Id,
                 Nome = produtoDetail.Nome,
                 Descricao = produtoDetail.Descricao,
-                Preco = produtoDetail.Preco,
+                Preco = produtoDetail.Preco.ToString("c", CultureInfo.CreateSpecificCulture("pt-BR")),
                 ImagemURL = produtoDetail.ImagemUrl,
                 IdCategoria = produtoDetail.IdCategoria,
                 ProdutoStatus = produtoDetail.ProdutoStatus,

@@ -8,7 +8,7 @@ namespace permita_se.Data.ViewModel
         [Required(ErrorMessage ="E-mail é necessário")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Senha é necessário")]
         [DataType(DataType.Password)]
         public string Senha { get; set; }
 

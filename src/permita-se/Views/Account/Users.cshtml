@@ -14,7 +14,7 @@
             <thead>
                 <tr class="text-center">
                     <th>@Html.DisplayNameFor(model => model.Nome)</th>
-                    <th>@Html.DisplayNameFor(model => model.Sobrenome)</th>
+                    <th>@Html.DisplayNameFor(model => model.Telefone)</th>
                     <th>@Html.DisplayNameFor(model => model.Email)</th>
                 </tr>
             </thead>
@@ -23,10 +23,10 @@
                 {
                 <tr>
                     <td class="align-middle">
-                        @Html.DisplayFor(modelItem => item.Nome)
+                        @Html.DisplayFor(modelItem => item.Nome + " " + item.Sobrenome)
                     </td>
                     <td class="align-middle">
-                        @Html.DisplayFor(modelItem => item.Sobrenome)
+                        @Html.DisplayFor(modelItem => item.Telefone)
                     </td>
                     <td class="align-middle">
                         @Html.DisplayFor(modelItem => item.Email)
