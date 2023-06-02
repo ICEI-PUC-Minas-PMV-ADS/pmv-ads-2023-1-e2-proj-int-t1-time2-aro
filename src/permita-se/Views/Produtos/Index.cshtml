@@ -17,12 +17,12 @@
                             <p class="card-text">
                                 <h5 class="card-title">
                                     @item.Nome
+                                    <a class="text-white float-right" asp-controller="Favoritos" asp-action="AddFavorito" asp-route-id="@item.Id"><i class="bi bi-heart"></i></a>
                                     @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                                     {
                                         <a class="text-white float-right" asp-action="Editar" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
                                         <a class="text-white float-right" asp-action="Deletar" asp-route-id="@item.Id"><i class="bi bi-trash"></i></a>
                                     }
-                                  
                                 </h5>
                             </p>
                         </div>

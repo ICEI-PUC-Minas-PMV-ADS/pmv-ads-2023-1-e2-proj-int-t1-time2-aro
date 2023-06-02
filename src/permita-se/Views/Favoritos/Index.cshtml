@@ -1,0 +1,55 @@
+﻿@using System.Globalization;
+@model List<Favorito>
+
+@{
+    ViewData["Title"] = "Favoritos";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h4>Produtos Favoritos</h4>
+        </p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Remover</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="align-middle">
+                            <img class="rounded-circle" src="@item.Produto.ImagemUrl" alt="@item.Produto.Nome" style="max-width: 150px" />
+                        </td>
+                        <td class="align-middle">
+                            @item.Produto.Nome
+                        </td>
+                        <td class="align-middle">
+                            @item.Produto.Preco.ToString("c", CultureInfo.CreateSpecificCulture("pt-BR"))
+                        </td>
+                        <td class="align-middle">
+                            <a class="btn btn-danger text-white" asp-action="RemoverFavorito" asp-route-id="@item.Produto.Id">
+                                <i class="bi bi-trash"></i> Remover
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <dv class="text-center">
+            <div class="btn-group">
+                <a class="btn btn-outline-success" asp-controller="Produtos" asp-action="Index">
+                    Continuar Comprando
+                </a>
+            </div>
+        </dv>
+
+    </div>
+</div>
