@@ -13,8 +13,8 @@
         <table class="table">
             <thead>
                 <tr>
-                <th>ID Pedido</th>
-                <th>Items</th>
+                    <th>ID Pedido</th>
+                    <th>Items</th>
                     <th>Total</th>
                     @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                     {
@@ -25,31 +25,30 @@
             <tbody>
                 @foreach (var pedido in Model)
                 {
-                      <tr>
-                           <td class="align-middle">@pedido.Id</td>
-                            <td class="align-middle">
-                                <ul style="list-style-type:none">
+                    <tr>
+                        <td class="align-middle">@pedido.Id</td>
+                        <td class="align-middle">
+                            <ul style="list-style-type:none">
                                 @foreach (var item in pedido.PedidoItems)
                                 {
-                                           <li>
-                                              <div class="alert alert-info" role="alert">
-                                                <span class="badge bg-success">@item.Quantidade</span> [@item.Preco.ToString("c")] - @item.Produto.Nome
-                                              </div>
-                                           </li>
+                                    <li>
+                                        <div class="alert alert-info" role="alert">
+                                            <span class="badge bg-success">@item.Quantidade</span> [@item.Preco.ToString("c")] - @item.Produto.Nome
+                                        </div>
+                                    </li>
                                 }
-                                </ul>
-                           </td>
-                             <td class="align-middle">
-                               @pedido.PedidoItems.Select(n => n.Produto.Preco * n.Quantidade).Sum().ToString("c")
-                             </td>
-                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
-                    {
-                        <td class="align-middle"> @pedido.Usuario.Nome</td>
-                    }
-                      </tr>
+                            </ul>
+                        </td>
+                        <td class="align-middle">
+                            @pedido.PedidoItems.Select(n => n.Produto.Preco * n.Quantidade).Sum().ToString("c")
+                        </td>
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                            <td class="align-middle"> @pedido.Usuario.Nome</td>
+                        }
+                    </tr>
                 }
             </tbody>
         </table>
-
     </div>
 </div>
