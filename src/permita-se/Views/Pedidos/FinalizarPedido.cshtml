@@ -1,15 +1,27 @@
 ﻿@model string
 
+@{
+    ViewData["Title"] = "Finalizar Pedido";
+}
+
 <div class=" row">
-    <div class="col-md-6 offset-3 alert alert-sucess text-center">
-        <h2>Pedido Finalizado com sucesso!</h2>
-        <p>Você pode checar o status do pedido no Chat do Whatsapp.</p>
+    <div class="col"></div>
+    <div class="col-md-6 alert alert-sucess text-center">
+        <h2>Pedido registrado com sucesso!</h2>
+        <p>Obrigado por escolher nossa loja!</p>
         <hr />
-        <p>Obrigada por comprar com a gente!</p>
+        <p>A conclusão do seu pedido será feita via <strong>WhatsApp</strong>, <br />clique no botão abaixo para ser redirecionado:</p>
+        
+        
     </div>
-    <div class="col-md-2 offset-5 btn-group text-center">
+    <div class="col"></div>
+</div>
+<div class=" row">
+    <div class="col"></div>
+    <div class="col-md-2 btn-group text-center">
         <a class="btn btn-outline-primary" href="@Model">
             Finalizar Pedido
         </a>
     </div>
+    <div class="col"></div>
 </div>

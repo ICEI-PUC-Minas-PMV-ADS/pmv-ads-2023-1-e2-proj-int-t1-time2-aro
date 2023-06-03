@@ -8,6 +8,7 @@ using permita_se.Model;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Numerics;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -78,6 +79,12 @@ namespace permita_se.Controllers
         public async Task<IActionResult> FinalizarPedido()
         {
             var items = _carrinhoDeCompra.GetCarrinhoItems();
+
+            if (items?.Any() != true) 
+            {
+                return RedirectToAction(nameof(CarrinhoDeCompra));
+            }
+
             string IdUsuario = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             await _pedidosService.CriarPedidoAsync(items, IdUsuario);

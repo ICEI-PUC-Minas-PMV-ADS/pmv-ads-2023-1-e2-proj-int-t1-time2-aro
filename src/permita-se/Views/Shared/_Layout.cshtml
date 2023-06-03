@@ -30,7 +30,8 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Favoritos" asp-action="Index">
-                                <i class="bi bi-bag-heart"></i> Favoritos</a>
+                                <i class="bi bi-bag-heart"></i> Favoritos
+                            </a>
                         </li>
 
                         @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
@@ -41,8 +42,15 @@
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" asp-controller="Categorias" asp-action="Index"><i class="bi bi-clipboard2-plus"></i> Categorias de Produtos</a>
+                                    <a class="dropdown-item" asp-controller="Categorias" asp-action="Index">
+                                        <i class="bi bi-clipboard2-plus"></i> Categorias de Produtos
+                                    </a>
+                               
+                                    <a class="dropdown-item" asp-controller="Account" asp-action="Users">
+                                        <i class="bi bi-people"></i> Usuarios
+                                    </a>
                                 </div>
+                                
                             </li>
                         }
                     </ul>
@@ -54,13 +62,13 @@
 
                     <partial name="_Identity.cshtml" />
 
-                    @if (ViewBag.HideCarrinho != true) 
+                    @if (ViewBag.HideCarrinho != true)
                     {
                         <ul class="navbar-nav">
                             @await Component.InvokeAsync("ResumoCarrinhoDeCompra")
                         </ul>
                     }
-                    
+
                 </div>
             </div>
         </nav>
