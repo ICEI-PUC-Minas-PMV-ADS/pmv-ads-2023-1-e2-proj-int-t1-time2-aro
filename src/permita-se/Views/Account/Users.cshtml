@@ -21,17 +21,17 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                <tr>
-                    <td class="align-middle">
-                        @(item.Nome + " " + item.Sobrenome)
-                    </td>
-                    <td class="align-middle">
-                        @item.Telefone
-                    </td>
-                    <td class="align-middle">
-                        @item.Email
-                    </td>
-                </tr>
+                    <tr>
+                        <td class="align-middle">
+                            @(item.Nome + " " + item.Sobrenome)
+                        </td>
+                        <td class="align-middle">
+                            @(string.Format("{0:(##) #####-####}", item.Telefone))
+                        </td>
+                        <td class="align-middle">
+                            @item.Email
+                        </td>
+                    </tr>
                 }
             </tbody>
 

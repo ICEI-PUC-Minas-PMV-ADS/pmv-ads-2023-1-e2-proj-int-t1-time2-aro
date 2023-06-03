@@ -15,6 +15,7 @@
             <thead>
                 <tr>
                     <th>ID Pedido</th>
+                    <th>Data</th>
                     <th>Items</th>
                     <th>Total</th>
                     @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
@@ -28,6 +29,7 @@
                 {
                     <tr>
                         <td class="align-middle">@pedido.Id</td>
+                        <td class="align-middle">@pedido.DataPedido</td>
                         <td class="align-middle">
                             <ul style="list-style-type:none">
                                 @foreach (var item in pedido.PedidoItems)
@@ -40,7 +42,7 @@
                                 }
                             </ul>
                         </td>
-                        <td class="align-middle">
+                        <td class="align-middle" style="white-space: nowrap;">
                             @pedido.PedidoItems.Select(n => n.Produto.Preco * n.Quantidade).Sum().ToString("c", CultureInfo.CreateSpecificCulture("pt-BR"))
                         </td>
                         @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
