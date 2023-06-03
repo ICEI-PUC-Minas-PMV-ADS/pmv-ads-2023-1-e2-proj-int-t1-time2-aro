@@ -69,7 +69,6 @@ namespace permita_se.Data.Carrinho
                 {
                     _context.CarrinhoItems.Remove(CarrinhoItem);
                 }
-
             }
             _context.SaveChanges();
         }
@@ -82,7 +81,8 @@ namespace permita_se.Data.Carrinho
 
         public double GetCarrinhoTotal()
         {
-            return ((double)_context.CarrinhoItems.Where(n => n.IdCarrinho == IdCarrinho).Select(selector: n => n.Produto.Preco * n.Quantidade).Sum());
+            return ((double)_context.CarrinhoItems.Where(n => n.IdCarrinho == IdCarrinho)
+                .Select(selector: n => n.Produto.Preco * n.Quantidade).Sum());
         }
 
         public async Task LimparCarrinhoDeCompraAsync()

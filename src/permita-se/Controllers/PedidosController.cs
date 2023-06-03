@@ -14,6 +14,7 @@ namespace permita_se.Controllers
         private readonly IProdutoService _produtoService;
         private readonly CarrinhoDeCompra _carrinhoDeCompra;
         private readonly IPedidosService _pedidosService;
+
         public PedidosController(IProdutoService produtoService, CarrinhoDeCompra carrinhoDeCompra, IPedidosService pedidosService)
         {
             _produtoService = produtoService;
@@ -44,18 +45,18 @@ namespace permita_se.Controllers
             return View(response);
         }
         
-        public async Task<IActionResult> AddItemAoCarrinho(int id)
+        public async Task<IActionResult> AdicionarItem(int id)
         {
             var item = await _produtoService.GetProdutoByIdAsync(id);
             if (item != null) 
             {
                 _carrinhoDeCompra.AddItemAoCarrinho(item);
             }
-            return RedirectToAction(nameof(CarrinhoDeCompra));
 
+            return RedirectToAction(nameof(CarrinhoDeCompra));
         }
 
-        public async Task<IActionResult> RemoveItemAoCarrinho(int id)
+        public async Task<IActionResult> RemoverItem(int id)
         {
             var item = await _produtoService.GetProdutoByIdAsync(id);
             if (item != null)

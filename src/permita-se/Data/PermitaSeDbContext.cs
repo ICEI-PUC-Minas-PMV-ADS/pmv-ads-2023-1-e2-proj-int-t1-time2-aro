@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using permita_se.Model;
-using System;
-using System.Collections.Generic;
 
 namespace permita_se.Data
 {

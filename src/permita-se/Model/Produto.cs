@@ -27,6 +27,9 @@ namespace permita_se.Model
 
         public ProdutoStatus ProdutoStatus { get; set; }
 
+        [NotMapped]
+        public bool IsFavorito { get; set; }
+
 
 
         //Relacionamentos
