@@ -1,26 +1,9 @@
 ﻿<div class=" row">
     <div class="col-md-6 offset-3 alert alert-sucess text-center">
         <h2>Pedido Finalizado com sucesso!</h2>
-        <p>Você pode checar o status do pedido no seu perfil</p>
+        <p>Você pode checar o status do pedido no Chat do Whatsapp.</p>
         <hr />
         <p>Obrigada por comprar com a gente!</p>
     </div>
 
-    <h2>Detalhamento do Pedido</h2>
-
-    <p>Cliente: @Model.NomeUsuario</p>
-    <p>Telefone: @Model.TelefoneCliente</p>
-
-    <h3>Produtos:</h3>
-    <ul>
-        @foreach (var produto in Model.Produtos)
-        {
-            <li>@produto.Nome - R$ @produto.Preco</li>
-        }
-    </ul>
-
-    <p>Total: R$ @Model.Total</p>
-
-    <p>Para finalizar a compra, clique no link abaixo:</p>
-    <a href="https://api.whatsapp.com/send?phone=5531982493554&text=Ol%C3%A1%2C%20gostaria%20de%20finalizar%20a%20compra">Finalizar Compra via WhatsApp</a>
 </div>

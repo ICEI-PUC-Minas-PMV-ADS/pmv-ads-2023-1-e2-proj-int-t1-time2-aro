@@ -3,8 +3,14 @@ using Microsoft.AspNetCore.Mvc;
 using permita_se.Data.Carrinho;
 using permita_se.Data.Services;
 using permita_se.Data.ViewModel;
+using permita_se.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace permita_se.Controllers
 {
@@ -25,7 +31,7 @@ namespace permita_se.Controllers
         {
             string idUsuario = User.FindFirstValue(ClaimTypes.NameIdentifier);
             string userRole = User.FindFirstValue(ClaimTypes.Role);
-            
+
             var pedidos = await _pedidosService.GetPedidosByUserIdAndRoleAsync(idUsuario, userRole);
             return View(pedidos);
         }
@@ -43,11 +49,11 @@ namespace permita_se.Controllers
 
             return View(response);
         }
-        
+
         public async Task<IActionResult> AddItemAoCarrinho(int id)
         {
             var item = await _produtoService.GetProdutoByIdAsync(id);
-            if (item != null) 
+            if (item != null)
             {
                 _carrinhoDeCompra.AddItemAoCarrinho(item);
             }
@@ -72,9 +78,24 @@ namespace permita_se.Controllers
             string IdUsuario = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             await _pedidosService.CriarPedidoAsync(items, IdUsuario);
+
+            string texto = "Olá! Vim do site e desejo receber atendimento. \nPedido:";       
+
+            foreach (var item in items)
+            {
+                    texto += 
+                    " \nNome do Produto: " + item.Produto.Nome +
+                    " \nQuantidade: " + item.Quantidade +
+                    " \nValor: " + item.Produto.Preco;
+            }
+
+            texto += " \nTotal Da Compra: " + _carrinhoDeCompra.GetCarrinhoTotal();
             await _carrinhoDeCompra.LimparCarrinhoDeCompraAsync();
 
-            return View();
+            string textoCodificado = Uri.EscapeDataString(texto);
+            string link = "https://wa.me/5531982493554?text=" + textoCodificado;
+
+            return Redirect(link);
         }
     }
 }
