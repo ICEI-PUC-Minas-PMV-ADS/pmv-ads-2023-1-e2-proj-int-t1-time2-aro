@@ -8,12 +8,10 @@ using System.Threading.Tasks;
 namespace permita_se.Data.Services.Impl
 {
     public class PedidosService : IPedidosService
-
     {
-
         private readonly PermitaSeDbContext _context;
-        public PedidosService(PermitaSeDbContext context)
-        {
+
+        public PedidosService(PermitaSeDbContext context) {
             _context = context;
         }
 

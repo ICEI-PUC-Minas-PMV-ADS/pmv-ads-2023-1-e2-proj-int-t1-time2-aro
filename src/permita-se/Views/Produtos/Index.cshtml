@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Produto>
+@using System.Globalization;
 @using permita_se.Data.Enum;
 
 @{
@@ -16,12 +17,20 @@
                             <p class="card-text">
                                 <h5 class="card-title">
                                     @item.Nome
+                                    @if (item.IsFavorito == true)
+                                    {
+                                        <a class="text-danger float-right" asp-controller="Favoritos" asp-action="Adicionar" asp-route-id="@item.Id"><i class="bi bi-heart-fill"></i></a>
+                                    }
+                                    else
+                                    {
+                                        <a class="text-white float-right" asp-controller="Favoritos" asp-action="Adicionar" asp-route-id="@item.Id"><i class="bi bi-heart"></i></a>
+                                    }
+
                                     @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                                     {
                                         <a class="text-white float-right" asp-action="Editar" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
                                         <a class="text-white float-right" asp-action="Deletar" asp-route-id="@item.Id"><i class="bi bi-trash"></i></a>
                                     }
-                                  
                                 </h5>
                             </p>
                         </div>
@@ -33,12 +42,12 @@
                         <div class="card-body">
                             <p class="card-text" style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">@item.Descricao</p>
                             <p class="card-text"><b>Categoria: </b>@item.Categoria.Nome</p>
-                            <p class="card-text">                            
+                            <p class="card-text">
                                 @if (item.ProdutoStatus == ProdutoStatus.Disponível)
                                 {
                                     <span class="badge bg-success text-white" style="font-size: 0.88em">@item.ProdutoStatus</span>
                                 }
-                                else                             
+                                else
                                 {
                                     <span class="badge bg-danger text-white" style="font-size: 0.88em">@item.ProdutoStatus</span>
                                 }
@@ -49,9 +58,11 @@
                         <div class="card-footer">
                             <p class="card-text">
                                 <a class="btn btn-outline-primary float-right" asp-action="Detalhes" asp-route-id="@item.Id" style="font-size: 0.9em">
-                                    <i class="bi bi-eye-fill"></i> Detalhes</a>
-                                <a class="btn btn-success text-white @((ProdutoStatus.Indisponível == item.ProdutoStatus) ? "disabled" : "")" asp-controller="Pedidos" asp-action="AddItemAoCarrinho" asp-route-id="@item.Id" style="font-size: 0.9em">
-                                    <i class="bi bi-cart-plus"></i> Carrinho (Preço @item.Preco.ToString("c"))</a>
+                                    <i class="bi bi-eye-fill"></i> Detalhes
+                                </a>
+                                <a class="btn btn-success text-white @((ProdutoStatus.Indisponível == item.ProdutoStatus) ? "disabled" : "")" asp-controller="Pedidos" asp-action="AdicionarItem" asp-route-id="@item.Id" style="font-size: 0.9em">
+                                    <i class="bi bi-cart-plus"></i> Adicionar (@item.Preco.ToString("c", CultureInfo.CreateSpecificCulture("pt-BR")))
+                                </a>
                             </p>
                         </div>
                     </div>
@@ -61,11 +72,11 @@
     }
 </div>
 
- @if(User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
 {
     <div style="position: fixed; right: 25px; bottom: 65px;" class="text-white">
         <a asp-controller="Produtos" asp-action="Criar" class="btn btn-success">
             <i class="bi bi-plus-circle"></i> Adicionar
         </a>
     </div>
-  }
+}

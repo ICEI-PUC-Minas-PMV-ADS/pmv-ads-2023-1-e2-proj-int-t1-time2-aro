@@ -12,7 +12,6 @@ using permita_se.Data.Carrinho;
 using permita_se.Data.Services;
 using permita_se.Data.Services.Impl;
 using permita_se.Model;
-using System;
 
 namespace permita_se
 {
@@ -36,6 +35,7 @@ namespace permita_se
             services.AddScoped<ICategoriasService, CategoriasService>();
             services.AddScoped<IProdutoService, ProdutoService>();
             services.AddScoped<IPedidosService, PedidosService>();
+            services.AddScoped<IFavoritoService, FavoritoService>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sc => CarrinhoDeCompra.GetCarrinhoDeCompra(sc));

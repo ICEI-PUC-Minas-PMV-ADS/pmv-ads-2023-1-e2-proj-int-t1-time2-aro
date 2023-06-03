@@ -5,8 +5,8 @@ using permita_se.Data.Base.Impl;
 using permita_se.Data.ViewModel;
 using permita_se.Model;
 using System;
+using System.Globalization;
 using System.IO;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -29,7 +29,7 @@ namespace permita_se.Data.Services.Impl
             {   
                 Nome = data.Nome,
                 Descricao = data.Descricao,
-                Preco = data.Preco.Value,
+                Preco = GetPrecoEmDouble(data.Preco),
                 IdCategoria = data.IdCategoria,
                 ProdutoStatus = data.ProdutoStatus
             };
@@ -51,7 +51,7 @@ namespace permita_se.Data.Services.Impl
             {
                 produto.Nome = data.Nome;
                 produto.Descricao = data.Descricao;
-                produto.Preco = data.Preco.Value;
+                produto.Preco = GetPrecoEmDouble(data.Preco);
                 produto.IdCategoria = data.IdCategoria;
                 produto.ProdutoStatus = data.ProdutoStatus;
 
@@ -71,8 +71,10 @@ namespace permita_se.Data.Services.Impl
         }
         public async Task<NewProdutoDropdownVM> GetNewProdutoDropdownValues()
         {
-            var response = new NewProdutoDropdownVM();
-            response.Categorias = await _context.Categorias.OrderBy(n => n.Nome).ToListAsync();
+            var response = new NewProdutoDropdownVM
+            {
+                Categorias = await _context.Categorias.OrderBy(n => n.Nome).ToListAsync()
+            };
             return response;
         }
 
@@ -95,6 +97,12 @@ namespace permita_se.Data.Services.Impl
             }
 
             return nomeArquivo;
+        }
+
+        private static double GetPrecoEmDouble(string preco)
+        {
+            double.TryParse(preco, NumberStyles.Any, CultureInfo.CreateSpecificCulture("pt-BR"), out double result);
+            return result;
         }
 
     }

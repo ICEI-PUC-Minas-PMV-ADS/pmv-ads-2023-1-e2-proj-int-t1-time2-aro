@@ -5,8 +5,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using permita_se.Data.Services;
 using permita_se.Data.Static;
 using permita_se.Data.ViewModel;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace permita_se.Controllers
@@ -14,48 +16,58 @@ namespace permita_se.Controllers
     [Authorize(Roles = UserRoles.Admin)]
     public class ProdutosController : Controller
     {
-        private readonly IProdutoService _service;
+        private readonly IProdutoService _produtoService;
+        private readonly IFavoritoService _favoritoService;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public ProdutosController(IProdutoService service, IWebHostEnvironment webHostEnvironment)
+        public ProdutosController(IProdutoService produtoService, IFavoritoService favoritoService, IWebHostEnvironment webHostEnvironment)
         {
-            _service = service;
+            _produtoService = produtoService;
+            _favoritoService = favoritoService;
             _webHostEnvironment = webHostEnvironment;
         }
 
         [AllowAnonymous]
-
         public async Task<IActionResult> Index()
         {
-            var allProdutos = await _service.GetAllAsync(n => n.Categoria);
-            return View(allProdutos);
+            string idUsuario = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var favoritos = await _favoritoService.GetFavoritosByUserIdAsync(idUsuario);
+
+            var produtos = await _produtoService.GetAllAsync(n => n.Categoria);
+
+            foreach (var fav in favoritos)
+            {
+                produtos.FirstOrDefault(n => n.Id == fav.IdProduto).IsFavorito = true;
+            }
+
+            return View(produtos);
         }
 
         [AllowAnonymous]
-        public async Task<IActionResult> Filtro(string searchString)
+        public async Task<IActionResult> Filtro(string pesquisa)
         {
-            var allProdutos = await _service.GetAllAsync(n => n.Categoria);
+            var produtos = await _produtoService.GetAllAsync(n => n.Categoria);
 
-            if (!string.IsNullOrEmpty(searchString))
+            if (!string.IsNullOrEmpty(pesquisa))
             {
-                var filteredResult = allProdutos.Where(n => n.Nome.ToLower().Contains(searchString.ToLower()) ||
-                                                            n.Descricao.ToLower().Contains(searchString.ToLower())).ToList();
-                return View("Index", filteredResult);
+                var filtro = produtos.Where(n => n.Nome.ToLower().Contains(pesquisa.ToLower()) ||
+                                                            n.Descricao.ToLower().Contains(pesquisa.ToLower())).ToList();
+                return View("Index", filtro);
             }
 
-            return View("Index", allProdutos);
+            return View("Index", produtos);
         }
 
         [AllowAnonymous]
         public async Task<IActionResult> Detalhes(int id)
         {
-            var produtoDetail = await _service.GetProdutoByIdAsync(id);
+            var produtoDetail = await _produtoService.GetProdutoByIdAsync(id);
             return View(produtoDetail);
         }
 
         public async Task<IActionResult> Criar()
         {
-            var produtoDropdownData = await _service.GetNewProdutoDropdownValues();
+            var produtoDropdownData = await _produtoService.GetNewProdutoDropdownValues();
             ViewBag.IdCategoria = new SelectList(produtoDropdownData.Categorias, "Id", "Nome");
             return View();
         }
@@ -65,19 +77,19 @@ namespace permita_se.Controllers
         {
             if (!ModelState.IsValid)
             {
-                var produtoDropdownData = await _service.GetNewProdutoDropdownValues();
+                var produtoDropdownData = await _produtoService.GetNewProdutoDropdownValues();
                 ViewBag.IdCategoria = new SelectList(produtoDropdownData.Categorias, "Id", "Nome");
 
                 return View(produto);
             }
 
-            await _service.AddNewProdutoAsync(produto);
+            await _produtoService.AddNewProdutoAsync(produto);
             return RedirectToAction(nameof(Index));
         }
 
         public async Task<IActionResult> Editar(int id)
         {
-            var produtoDetail = await _service.GetProdutoByIdAsync(id);
+            var produtoDetail = await _produtoService.GetProdutoByIdAsync(id);
             if (produtoDetail == null) return View("NotFound");
 
             var response = new NewProdutoVM()
@@ -85,13 +97,13 @@ namespace permita_se.Controllers
                 Id = produtoDetail.Id,
                 Nome = produtoDetail.Nome,
                 Descricao = produtoDetail.Descricao,
-                Preco = produtoDetail.Preco,
+                Preco = produtoDetail.Preco.ToString(CultureInfo.CreateSpecificCulture("pt-BR")),
                 ImagemURL = produtoDetail.ImagemUrl,
                 IdCategoria = produtoDetail.IdCategoria,
                 ProdutoStatus = produtoDetail.ProdutoStatus,
             };
 
-            var produtoDropdownData = await _service.GetNewProdutoDropdownValues();
+            var produtoDropdownData = await _produtoService.GetNewProdutoDropdownValues();
 
             ViewBag.IdCategoria = new SelectList(produtoDropdownData.Categorias, "Id", "Nome");
             return View(response);
@@ -104,19 +116,19 @@ namespace permita_se.Controllers
 
             if (!ModelState.IsValid)
             {
-                var produtoDropdownData = await _service.GetNewProdutoDropdownValues();
+                var produtoDropdownData = await _produtoService.GetNewProdutoDropdownValues();
                 ViewBag.IdCategoria = new SelectList(produtoDropdownData.Categorias, "Id", "Nome");
 
                 return View(produto);
             }
 
-            await _service.EditarProdutoAsync(produto);
+            await _produtoService.EditarProdutoAsync(produto);
             return RedirectToAction(nameof(Index));
         }
 
         public async Task<IActionResult> Deletar(int id)
         {
-            var produtoDetail = await _service.GetProdutoByIdAsync(id);
+            var produtoDetail = await _produtoService.GetProdutoByIdAsync(id);
             if (produtoDetail == null) return View("NotFound");
 
             var response = new NewProdutoVM()
@@ -124,13 +136,13 @@ namespace permita_se.Controllers
                 Id = produtoDetail.Id,
                 Nome = produtoDetail.Nome,
                 Descricao = produtoDetail.Descricao,
-                Preco = produtoDetail.Preco,
+                Preco = produtoDetail.Preco.ToString("c", CultureInfo.CreateSpecificCulture("pt-BR")),
                 ImagemURL = produtoDetail.ImagemUrl,
                 IdCategoria = produtoDetail.IdCategoria,
                 ProdutoStatus = produtoDetail.ProdutoStatus,
             };
 
-            var produtoDropdownData = await _service.GetNewProdutoDropdownValues();
+            var produtoDropdownData = await _produtoService.GetNewProdutoDropdownValues();
 
             ViewBag.IdCategoria = new SelectList(produtoDropdownData.Categorias, "Id", "Nome");
 
@@ -140,7 +152,7 @@ namespace permita_se.Controllers
         [HttpPost, ActionName("Deletar")]
         public async Task<IActionResult> DeletarConfirmado(int id)
         {
-            var produto = await _service.GetByIdAsync(id);
+            var produto = await _produtoService.GetByIdAsync(id);
 
             if (produto == null) return View("NotFound");
             if (!string.IsNullOrEmpty(produto.ImagemUrl))
@@ -149,7 +161,7 @@ namespace permita_se.Controllers
                 System.IO.File.Delete(filePath);
             }
 
-            await _service.DeleteAsync(id);
+            await _produtoService.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
         }
     }

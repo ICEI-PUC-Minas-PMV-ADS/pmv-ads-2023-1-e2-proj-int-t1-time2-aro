@@ -24,7 +24,13 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Produtos" asp-action="Index"><i class="bi bi-flower1"></i> Catálogo</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Produtos" asp-action="Index">
+                                <i class="bi bi-flower1"></i> Catálogo
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Favoritos" asp-action="Index">
+                                <i class="bi bi-bag-heart"></i> Favoritos</a>
                         </li>
 
                         @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
@@ -48,9 +54,13 @@
 
                     <partial name="_Identity.cshtml" />
 
-                    <ul class="navbar-nav">
-                        @await Component.InvokeAsync("ResumoCarrinhoDeCompra")
-                    </ul>
+                    @if (ViewBag.HideCarrinho != true) 
+                    {
+                        <ul class="navbar-nav">
+                            @await Component.InvokeAsync("ResumoCarrinhoDeCompra")
+                        </ul>
+                    }
+                    
                 </div>
             </div>
         </nav>

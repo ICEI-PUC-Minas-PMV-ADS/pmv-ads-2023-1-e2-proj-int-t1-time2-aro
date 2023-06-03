@@ -1,21 +1,21 @@
 ﻿@model IEnumerable<Usuario>
 
 @{
-    ViewData["Title"] = "Lista de todos os usuarios";
+    ViewData["Title"] = "Usuários";
 }
 
 <div class="row">
     <div class="col-md-6 offset-3">
         <p>
-            <h4>Lista de todos os usuarios</h4>
+            <h4>Lista de todos os usuários</h4>
         </p>
 
         <table class="table">
             <thead>
                 <tr class="text-center">
-                    <th>@Html.DisplayNameFor(model => model.Nome)</th>
-                    <th>@Html.DisplayNameFor(model => model.Sobrenome)</th>
-                    <th>@Html.DisplayNameFor(model => model.Email)</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,13 +23,13 @@
                 {
                 <tr>
                     <td class="align-middle">
-                        @Html.DisplayFor(modelItem => item.Nome)
+                        @(item.Nome + " " + item.Sobrenome)
                     </td>
                     <td class="align-middle">
-                        @Html.DisplayFor(modelItem => item.Sobrenome)
+                        @item.Telefone
                     </td>
                     <td class="align-middle">
-                        @Html.DisplayFor(modelItem => item.Email)
+                        @item.Email
                     </td>
                 </tr>
                 }
