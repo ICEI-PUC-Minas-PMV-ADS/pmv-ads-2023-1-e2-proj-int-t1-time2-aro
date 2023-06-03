@@ -45,7 +45,7 @@ namespace permita_se.Controllers
             return View(response);
         }
         
-        public async Task<IActionResult> AddItemAoCarrinho(int id)
+        public async Task<IActionResult> AdicionarItem(int id)
         {
             var item = await _produtoService.GetProdutoByIdAsync(id);
             if (item != null) 
@@ -56,7 +56,7 @@ namespace permita_se.Controllers
             return RedirectToAction(nameof(CarrinhoDeCompra));
         }
 
-        public async Task<IActionResult> RemoveItemAoCarrinho(int id)
+        public async Task<IActionResult> RemoverItem(int id)
         {
             var item = await _produtoService.GetProdutoByIdAsync(id);
             if (item != null)

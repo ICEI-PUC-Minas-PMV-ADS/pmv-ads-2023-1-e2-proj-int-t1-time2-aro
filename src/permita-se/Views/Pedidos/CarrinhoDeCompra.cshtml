@@ -34,12 +34,12 @@
                         <td class="aling-middle">@((item.Quantidade * item.Produto.Preco).ToString("c", CultureInfo.CreateSpecificCulture("pt-BR")))</td>
                         <td class="aling-middle">
 
-                            <a class="text-danger" asp-controller="Pedidos" asp-action="RemoveItemAoCarrinho"
+                            <a class="text-danger" asp-controller="Pedidos" asp-action="RemoverItem"
                            asp-route-id="@item.Produto.Id">
                                 <i class="bi bi-cart-dash"></i>
 
                             </a>
-                            <a class="text-success" asp-controller="Pedidos" asp-action="AddItemAoCarrinho"
+                            <a class="text-success" asp-controller="Pedidos" asp-action="AdicionarItem"
                                 asp-route-id="@item.Produto.Id">
                                 <i class="bi bi-cart-plus"></i>
 

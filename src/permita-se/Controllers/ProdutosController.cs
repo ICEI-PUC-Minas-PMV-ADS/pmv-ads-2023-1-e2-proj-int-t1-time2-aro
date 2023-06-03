@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using permita_se.Data.Services;
-using permita_se.Data.Services.Impl;
 using permita_se.Data.Static;
 using permita_se.Data.ViewModel;
 using System.Globalization;
@@ -34,29 +33,29 @@ namespace permita_se.Controllers
             string idUsuario = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var favoritos = await _favoritoService.GetFavoritosByUserIdAsync(idUsuario);
 
-            var allProdutos = await _produtoService.GetAllAsync(n => n.Categoria);
+            var produtos = await _produtoService.GetAllAsync(n => n.Categoria);
 
-            foreach (var produto in allProdutos)
+            foreach (var fav in favoritos)
             {
-                produto.IsFavorito = favoritos.Any(n => n.IdProduto == produto.Id);
+                produtos.FirstOrDefault(n => n.Id == fav.IdProduto).IsFavorito = true;
             }
 
-            return View(allProdutos);
+            return View(produtos);
         }
 
         [AllowAnonymous]
-        public async Task<IActionResult> Filtro(string searchString)
+        public async Task<IActionResult> Filtro(string pesquisa)
         {
-            var allProdutos = await _produtoService.GetAllAsync(n => n.Categoria);
+            var produtos = await _produtoService.GetAllAsync(n => n.Categoria);
 
-            if (!string.IsNullOrEmpty(searchString))
+            if (!string.IsNullOrEmpty(pesquisa))
             {
-                var filteredResult = allProdutos.Where(n => n.Nome.ToLower().Contains(searchString.ToLower()) ||
-                                                            n.Descricao.ToLower().Contains(searchString.ToLower())).ToList();
-                return View("Index", filteredResult);
+                var filtro = produtos.Where(n => n.Nome.ToLower().Contains(pesquisa.ToLower()) ||
+                                                            n.Descricao.ToLower().Contains(pesquisa.ToLower())).ToList();
+                return View("Index", filtro);
             }
 
-            return View("Index", allProdutos);
+            return View("Index", produtos);
         }
 
         [AllowAnonymous]

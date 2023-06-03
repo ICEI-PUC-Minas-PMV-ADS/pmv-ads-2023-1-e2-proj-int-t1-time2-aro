@@ -26,7 +26,7 @@ namespace permita_se.Controllers
             return View(favoritos);
         }
         
-        public async Task<IActionResult> AddFavorito(int id)
+        public async Task<IActionResult> Adicionar(int id)
         {
             string idUsuario = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var item = await _produtoService.GetProdutoByIdAsync(id);
@@ -39,7 +39,7 @@ namespace permita_se.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        public async Task<IActionResult> RemoverFavorito(int id)
+        public async Task<IActionResult> Remover(int id)
         {
             string idUsuario = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var item = await _produtoService.GetProdutoByIdAsync(id);
