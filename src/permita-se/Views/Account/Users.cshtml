@@ -5,9 +5,10 @@
 }
 
 <div class="row">
-    <div class="col-md-6 offset-3">
+    <div class="col"></div>
+    <div class="col-md-6">
         <p>
-            <h4>Lista de todos os usuários</h4>
+            <h4>Lista de Usuários</h4>
         </p>
 
         <table class="table">
@@ -21,21 +22,22 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                <tr>
-                    <td class="align-middle">
-                        @(item.Nome + " " + item.Sobrenome)
-                    </td>
-                    <td class="align-middle">
-                        @item.Telefone
-                    </td>
-                    <td class="align-middle">
-                        @item.Email
-                    </td>
-                </tr>
+                    <tr>
+                        <td class="align-middle">
+                            @(item.Nome + " " + item.Sobrenome)
+                        </td>
+                        <td class="align-middle">
+                            @(long.Parse(item.Telefone).ToString(@"(00) 00000-0000"))
+                        </td>
+                        <td class="align-middle">
+                            @item.Email
+                        </td>
+                    </tr>
                 }
             </tbody>
 
         </table>
 
     </div>
+    <div class="col"></div>
 </div>
