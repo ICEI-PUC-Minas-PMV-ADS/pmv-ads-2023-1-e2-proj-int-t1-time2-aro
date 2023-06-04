@@ -59,6 +59,16 @@ namespace permita_se.Controllers
         }
 
         [AllowAnonymous]
+        public async Task<IActionResult> FiltroCategoria(int id)
+        {
+            var produtos = await _produtoService.GetAllAsync(n => n.Categoria);
+
+            var filtro = produtos.Where(n => n.Categoria.Id == id).ToList();
+
+            return View("Index", filtro);
+        }
+
+        [AllowAnonymous]
         public async Task<IActionResult> Detalhes(int id)
         {
             var produtoDetail = await _produtoService.GetProdutoByIdAsync(id);

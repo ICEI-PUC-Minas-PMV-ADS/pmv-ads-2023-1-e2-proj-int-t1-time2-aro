@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using permita_se.Data;
 
 namespace permita_se.Migrations
 {
     [DbContext(typeof(PermitaSeDbContext))]
-    partial class PermitaSeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230604181548_Categoria_Img")]
+    partial class Categoria_Img
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

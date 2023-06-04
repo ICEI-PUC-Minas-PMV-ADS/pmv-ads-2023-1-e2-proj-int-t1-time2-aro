@@ -26,7 +26,6 @@ namespace permita_se.Data.ViewModel
 
         [Display(Name = "Preço")]
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
-        //[Range(0.01, 99999.99, ErrorMessage = "O campo {0} deve estar entre {1} e {2}")]
         [RegularExpression(@"^[0-9]*(\,[0-9]{0,2})?$", ErrorMessage = "Valor inválido! Preço deve estar no formato ##,##")]
         public string Preco { get; set; }
 
