@@ -9,9 +9,9 @@
 | **Caso de Teste** 	| **CT-02 – Responsividade**	|
 |:---:	|:---:	|
 |Requisito Associado | RNF-02 -A aplicação deverá ser responsiva permitindo a visualização em um celular de forma adequada. |
-| Referência | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/89558202/ea9e0c15-efea-4b7b-8f7a-395f2dce3d64) |
-| Referência | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/89558202/4bb858eb-b080-49c4-b621-06d46a563ef3)|
-| Referência | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/89558202/51ed0d9c-df95-4e62-82b8-75b9ee238064)|
+| Referência | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/70116762/a39cbe95-b55b-4425-a9ca-945aa7e1a089)|
+| Referência | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/70116762/805f80c5-8532-464e-946e-4bb1d924ae48)|
+| Referência | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/70116762/5a2d1727-b33e-43ad-a96b-4e31e04a0247)|
 | Avaliação | ✅ O site abriu corretamente e com a tela responsiva no aparelho mobile, no desktop e no notebook.|
 
 | **Caso de Teste** 	| **CT-03 – Publicamente Acessível**	|
