@@ -46,15 +46,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-01| O sistema deve permitir que os clientes criem uma conta | Alta |
-|RF-02| O sistema deve permitir que os gerentes cadastrem e atualizem informações de produtos, como descrições, preços e imagens. | Alta | 
-|RF-03| O sistema deve permitir que os gerentes cadastrem e atualizem *quizzes* interativos. | Alta |
-|RF-04| O sistema deve permitir que os clientes acessem a um *quiz* interativo que sugere os melhores produtos baseado nas suas necessidades | Alta |
-|RF-05| O sistema deve permitir que os clientes salvem o resultado do *quiz* em seu perfil | Média | 
-|RF-06| O sistema deve permitir que os clientes pesquisem produtos por nome e categoria.	| Média |
-|RF-07| O sistema deve permitir que os clientes favoritem os produtos escolhidos | Baixa | 
-|RF-08| O sistema deve permitir que os clientes adicionem produtos a um carrinho de compras  | Alta |
-|RF-09| O sistema deve permitir que os clientes concluam a compra direcionando o pedido para um canal de comunicação externo com algum vendedor(a). | Alta | 
-|RF-10| O sistema deve permitir que os clientes entrem em contato com a loja por meio de outros canais (redes sociais) | Baixa | 
+|RF-02| O sistema deve permitir que os gerentes cadastrem e atualizem informações de produtos, como descrições, preços e imagens. | Alta |  
+|RF-03| O sistema deve permitir que os clientes pesquisem produtos por nome e categoria.	| Média |
+|RF-04| O sistema deve permitir que os clientes favoritem os produtos escolhidos | Baixa | 
+|RF-05| O sistema deve permitir que os clientes adicionem produtos a um carrinho de compras  | Alta |
+|RF-06| O sistema deve permitir que os clientes concluam a compra direcionando o pedido para um canal de comunicação externo com algum vendedor(a). | Alta | 
+|RF-07| O sistema deve permitir que os clientes entrem em contato com a loja por meio de outros canais (redes sociais) | Baixa | 
 
 
 ### Requisitos não Funcionais
