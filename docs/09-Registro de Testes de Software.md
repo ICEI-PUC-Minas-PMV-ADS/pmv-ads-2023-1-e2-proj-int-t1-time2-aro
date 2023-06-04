@@ -1,5 +1,15 @@
 # Registro de Testes de Software
 
+
+
+| **Caso de Teste** 	| **CT-01 – Cadastrar perfil** 	|
+|:---:	|:---:	|
+| Vídeo | <video src=""> |
+|	Requisito Associado 	| RF-01 - O sistema deve permitir que os clientes criem uma conta. |
+| Avaliação 	|✅ Cadastro de perfil realizado com sucesso. |
+|  	|  	|
+
+
 | **Caso de Teste** 	| **CT-02 – Cadastro e atualização de produtos** 	|
 |:---:	|:---:	|
 | Vídeo | <video src="https://user-images.githubusercontent.com/70116762/236707450-673c1f0f-8740-4c6f-9fd6-3691ff4f6c31.mp4"> |
