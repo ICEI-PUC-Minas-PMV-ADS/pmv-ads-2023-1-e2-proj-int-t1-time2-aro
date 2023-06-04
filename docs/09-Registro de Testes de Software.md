@@ -43,11 +43,15 @@
 |	Requisito Associado 	| RF-05 - O sistema deve permitir que os clientes adicionem produtos a um carrinho de compras |
 | Avaliação 	|✅ Produto adicionado e removido do carrinho de compras com sucesso.  |
 |  	|  	|
+  
+| **Caso de Teste** 	| **CT-06 – Pedido Finalizado** 	|
+|:---:	|:---:	|
+| Vídeo | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/70116762/8bff2823-f5a1-4aba-8430-7873fb3df5b7"> |
+|	Requisito Associado | RF-06 - O sistema deve permitir que os clientes concluam a compra direcionando o pedido para um canal de comunicação externo com algum vendedor(a). |
+| Avaliação 	|✅ Pedido Finalizado com sucesso.  |
+|  	|  	|
 
-
-
-
-| **Caso de Teste** 	| **CT-06 – Contato com a loja** 	|
+| **Caso de Teste** 	| **CT-07 – Contato com a loja** 	|
 |:---:	|:---:	|
 | Vídeo | <video src="https://user-images.githubusercontent.com/70116762/236707523-e13e42ea-d6fd-4d73-ae4c-6d082ab4686c.mp4"> |
 |	Requisito Associado 	| RF-07 O sistema deve permitir que os clientes entrem em contato com a loja por meio de outros canais (redes sociais)|
