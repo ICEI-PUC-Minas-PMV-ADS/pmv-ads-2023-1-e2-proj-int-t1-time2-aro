@@ -32,7 +32,7 @@
 | Referência 	| <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/89558202/4636c7d2-f01d-40ad-a9a6-48879bf81eeb"> |
 | Avaliação | ✅ O site bloqueia o acesso do usuário com a senha e/ou email incorreto. |
 
-| **Caso de Teste** 	| **CT-06 – Favoritos**	|
+| **Caso de Teste** 	| **CT-06 – Compatibilidade**	|
 |:---:	|:---:	|
 |Requisito Associado | RNF-06 O site deve ser compatível com os principais navegadores da atualidade (Google Chrome, Opera, Firefox, Microsoft Edge).  |
 | Referência 	| <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/89558202/64ec1de1-e1e0-4c20-8e29-099b6e4be903"> |
