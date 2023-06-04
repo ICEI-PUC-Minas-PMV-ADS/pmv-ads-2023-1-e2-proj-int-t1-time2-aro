@@ -1,4 +1,4 @@
-﻿@model Categoria
+﻿@model CategoriaVM
 
 @{
     ViewData["Title"] = "Adicionando categoria";
@@ -11,7 +11,7 @@
         </p>
         <div class="row">
             <div class="col-md-8 offset-2">
-                <form asp-action="Criar">
+                <form enctype="multipart/form-data" asp-action="Criar">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                     <div class="form-group">
@@ -21,8 +21,14 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="Descricao" class="control-label"></label>
-                        <input asp-for="Descricao" class="form-control" />
+                        <textarea rows="5" asp-for="Descricao" class="form-control"></textarea>
                         <span asp-validation-for="Descricao" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label asp-for="ImagemUpload" class="control-label"></label>
+                            <input asp-for="ImagemUpload" class="form-control" />
+                        </div>
                     </div>
 
                     <div class="form-group">
