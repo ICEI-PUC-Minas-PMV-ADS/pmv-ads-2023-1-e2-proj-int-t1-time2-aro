@@ -3,7 +3,7 @@
 }
 
 <style>
-  
+
     h1 span {
         position: relative;
         top: 10px;
@@ -133,16 +133,72 @@
     input#img-1:checked ~ .nav-dots label#img-dot-1,
     input#img-2:checked ~ .nav-dots label#img-dot-2,
     input#img-3:checked ~ .nav-dots label#img-dot-3,
-    
-
     h3 {
         font-family: effra,Helvetica,Arial,sans-serif;
         font-size: 17px;
         text-align: center;
     }
 
+    .post-slider {
+        position: relative;
+    }
+
+        .post-slider .slider-title {
+            text-align: center;
+            margin: 30px auto;
+        }
+
+        .post-slider .next {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            font-size: 2em;
+            color: #ff6f00;
+            cursor: pointer;
+        }
+
+        .post-slider .prev {
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            font-size: 2em;
+            color: #ff6f00;
+            cursor: pointer;
+        }
+
+    .wrapper {
+        width: 100%;
+        padding-top: 20px;
+        text-align: center;
+        position: relative;
+    }
+
+    .carousel1 {
+        width: 90%;
+        padding-top: 10px;
+        margin: 0px auto;
+        overflow: hidden;
+    }
+
+    .slick-slide {
+        margin: 10px;
+    }
+
+        .slick-slide img {
+            width: 100%;
+            border: 2px solid #fff;
+        }
 
     .cards {
+        padding: 2rem;
+        width: 84%;
+        height: 350px;
+        margin: 0px auto;
+        overflow: hidden;
+        padding: 10px 0px 10px 0px;
+    }
+
+    .cards2 {
         display: grid;
         grid-column: 1/-1;
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -153,57 +209,18 @@
     }
 
     .framework-card {
+        width: 30%;
+        display: inline-block;
         background: #fff;
         border-radius: 20px;
-        padding: 1rem;
+        padding: 2rem;
         text-align: center;
         padding-top: 3rem;
-        position: relative;
-        transform-origin: top center;
-        --rotate: 10deg;
-        transform: rotateX(var(--rotate));
-        transition: transform 0.2s;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 0 1rem;
+        height: 400px;
+        overflow: hidden;
     }
-
-        .framework-card:before {
-            right: auto;
-            left: 20px;
-        }
-
-        .framework-card:hover {
-            transform: rotateX(-20deg);
-        }
-
-        card:before,
-        .framework-card:after {
-            content: '';
-            display: block;
-            width: 8px;
-            height: 8px;
-            background: #5c0dac;
-            border: 1px solid #000;
-            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-            top: 15px;
-            right: 20px;
-            position: absolute;
-            border-radius: 50%;
-        }
-
-        .framework-card:before,
-        .framework-card:after {
-            content: '';
-            display: block;
-            width: 8px;
-            height: 8px;
-            background: #5c0dac;
-            border: 1px solid #000;
-            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-            top: 15px;
-            right: 20px;
-            position: absolute;
-            border-radius: 50%;
-        }
 
         .framework-card img {
             height: 80px;
@@ -216,12 +233,6 @@
             font-weight: 900;
             background: #f1d7ff;
         }
-
-    Contato a {
-        color: black;
-        font-size: 15px;
-        text-decoration: none;
-    }
 
 </style>
 
@@ -293,23 +304,33 @@
         </div>
     </div>
 
-    <div class="cards" style="max-width: 100%;">
-        <div class="framework-card">
-            <img src="~/img/linha-roll-on.png">
-            <p>Linha Roll On</p>
-            Garante proteção por 48 horas mantendo a hidratação natural da pele.
-            <br> Sua fórmula contém extratos naturais, mantendo a hidratação natural da sua pele protegendo e cuidado de você.
-        </div>
-        <div class="framework-card" style="max-width: 100%;">
-            <img src="~/img/linha-terapeutica.png">
-            <p>Linha Terapêutica</p>
-            Dentre os benefícios da aromaterapia temos: aliviar os sintomas de ansiedade, insônia, dor, depressão, resfriado, promover o bem-estar e fortalecer as defesas do corpo.
-            <br>Essa terapia revela que existem ligações entre o olfato e os sentimentos.
-        </div>
-        <div class="framework-card" style="max-width: 100%;">
-            <img src="~/img/linha-spa.png">
-            <p>Linha SPA</p>
-            Criada para espaços funcionais, com modelos e design que se destacam em ambientes menores como apartamentos, coberturas e pequenas áreas de lazer, mas que também se integram a grandes ambientes como uma opção de relaxamento para o stress do dia a dia.
+    <div class="wrapper">
+        <i class="fas fa-chevron-left prev"></i>
+        <i class="fas fa-chevron-right next"></i>
+        <div class="carousel1">
+            <div class="framework-card">
+                <img src="~/img/linha-roll-on.png">
+                <p>Linha Roll On</p>
+                Garante proteção por 48 horas mantendo a hidratação natural da pele.
+                <br> Sua fórmula contém extratos naturais, mantendo a hidratação natural da sua pele protegendo e cuidado de você.
+            </div>
+            <div class="framework-card">
+                <img src="~/img/linha-terapeutica.png">
+                <p>Linha Terapêutica</p>
+                Dentre os benefícios da aromaterapia temos: aliviar os sintomas de ansiedade, insônia, dor, depressão, resfriado, promover o bem-estar e fortalecer as defesas do corpo.
+                <br>Essa terapia revela que existem ligações entre o olfato e os sentimentos.
+            </div>
+            <div class="framework-card">
+                <img src="~/img/linha-spa.png">
+                <p>Linha SPA</p>
+                Criada para espaços funcionais, com modelos e design que se destacam em ambientes menores como apartamentos, coberturas e pequenas áreas de lazer, mas que também se integram a grandes ambientes como uma opção de relaxamento para o stress do dia a dia.
+            </div>
+            <div class="framework-card">
+                <img src="~/img/linha-terapeutica.png">
+                <p>Linha Neymar</p>
+                Dentre os benefícios da aromaterapia temos: aliviar os sintomas de ansiedade, insônia, dor, depressão, resfriado, promover o bem-estar e fortalecer as defesas do corpo.
+                <br>Essa terapia revela que existem ligações entre o olfato e os sentimentos.
+            </div>
         </div>
     </div>
 
@@ -327,5 +348,47 @@
         <!-- fim botão WhatsApp  -->
 
     </div>
+
+    <!-- Carrossel de Imagens -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.carousel1').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2250,
+                nextArrow: $('.next'),
+                prevArrow: $('.prev'),
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 700,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 580,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
 
 </body>
