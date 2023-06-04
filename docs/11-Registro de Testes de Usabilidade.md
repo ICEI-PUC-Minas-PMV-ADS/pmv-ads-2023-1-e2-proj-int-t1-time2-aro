@@ -23,7 +23,7 @@
 | **Caso de Teste** 	| **CT-04 – Contraste e Design**	|
 |:---:	|:---:	|
 |Requisito Associado | RNF-04 A aplicação deve ter bom nível de contraste entre os elementos da tela e um design simples.  |
-| Referência 	| ![image](https://user-images.githubusercontent.com/70116762/236708026-b8927dc8-a8ce-4730-a1c2-c72d0baaead6.png) |
+| Referência 	| ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/70116762/565dcb80-289f-4ec5-bc3f-efb2c6b8b156)|
 | Avaliação | ✅ O contraste está presente e há bastante clareza nas informações contidas na página. |
 
 | **Caso de Teste** 	| **CT-05 – Acesso Protegido**	|
