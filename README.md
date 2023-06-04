@@ -29,7 +29,11 @@ Além disso, o site terá um design atraente e intuitivo, facilitando a navegaç
 
 Para rodar a nossa aplicação localmente, é necessário ter os arquivos do projet, a IDE Visual Studio e o ASP.NET 5 instalados em seu computador.
 
-Você também pode acessar a nossa aplicação através desse endereço [Permita-se](https://permitase.azurewebsites.net)
+Nossa aplicação também se encontra disponível na internet através desse site: [Permita-se](https://permitase.azurewebsites.net).
+
+Para ter acesso a todas as funcionalidades, é necessário logar com a conta de administrador:
+- E-mail: admin@permitase.com
+- Senha: Permitase@123
 
 # Documentação
 
