@@ -1,5 +1,16 @@
 # Registro de Testes de Software
 
+
+
+| **Caso de Teste** 	| **CT-01 – Cadastrar perfil** 	|
+|:---:	|:---:	|
+| Vídeo | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/89558202/5f05955e-e2d7-4fd0-b900-06f2500f2c8f"> |
+| Vídeo | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/89558202/0fcd0575-a838-4a69-9dc1-41d34a46c806"> |
+|	Requisito Associado 	| RF-01 - O sistema deve permitir que os clientes criem uma conta. |
+| Avaliação 	|✅ Cadastro de perfil realizado com sucesso. Login realizado com sucesso. |
+|  	|  	|
+
+
 | **Caso de Teste** 	| **CT-02 – Cadastro e atualização de produtos** 	|
 |:---:	|:---:	|
 | Vídeo | <video src="https://user-images.githubusercontent.com/70116762/236707450-673c1f0f-8740-4c6f-9fd6-3691ff4f6c31.mp4"> |
@@ -8,21 +19,38 @@
 |  	|  	|
 
 
-| **Caso de Teste** 	| **CT-05 – Busca** 	|
+| **Caso de Teste** 	| **CT-03 – Busca** 	|
 |:---:	|:---:	|
 | Vídeo | <video src="https://user-images.githubusercontent.com/70116762/236707522-b5cbf27c-d160-4994-a4d5-b505b19b3346.mp4"> |
-|	Requisito Associado 	| RF-06 O sistema deve permitir que os clientes pesquisem produtos por nome e categoria. |
+|	Requisito Associado 	| RF-03 O sistema deve permitir que os clientes pesquisem produtos por nome e categoria. |
 | Avaliação 	|✅ Filtro de busca funciona corretamente |
+|  	|  	|
+
+
+| **Caso de Teste** 	| **CT-04 – Favoritos** 	|
+|:---:	|:---:	|
+| Vídeo | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/89558202/59ec9a1b-b377-4257-8eb9-96e8f7feef64"> |
+| Vídeo | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/89558202/6963c9c0-9618-4455-b182-8a58aed05e0c"> |
+|	Requisito Associado 	| RF-04 - O sistema deve permitir que os clientes favoritem os produtos escolhidos. |
+| Avaliação 	|✅ Produto adicionado à lista de favoritos com sucesso. |
+|  	|  	|
+
+  
+| **Caso de Teste** 	| **CT-05 – Carrinho de compras e compras** 	|
+|:---:	|:---:	|
+| Vídeo | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/89558202/5c8879a5-847d-42bd-baae-9e30f6e8e198"> |
+| Vídeo | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/89558202/e9cfd639-49cd-4d8c-940e-16c48b3588d3"> |
+|	Requisito Associado 	| RF-05 - O sistema deve permitir que os clientes adicionem produtos a um carrinho de compras |
+| Avaliação 	|✅ Produto adicionado e removido do carrinho de compras com sucesso.  |
 |  	|  	|
 
 
 
 
-
-| **Caso de Teste** 	| **CT-08 – Contato com a loja** 	|
+| **Caso de Teste** 	| **CT-06 – Contato com a loja** 	|
 |:---:	|:---:	|
 | Vídeo | <video src="https://user-images.githubusercontent.com/70116762/236707523-e13e42ea-d6fd-4d73-ae4c-6d082ab4686c.mp4"> |
-|	Requisito Associado 	| RF-10 O sistema deve permitir que os clientes entrem em contato com a loja por meio de outros canais (redes sociais) |
+|	Requisito Associado 	| RF-07 O sistema deve permitir que os clientes entrem em contato com a loja por meio de outros canais (redes sociais)|
 | Avaliação |✅ Links de redirecionamento para contato com a loja funcionam corretamente |
 |  	|  	|
 
