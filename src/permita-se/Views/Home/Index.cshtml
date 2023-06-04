@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
 <style>
@@ -173,8 +173,8 @@
         position: relative;
     }
 
-    .carousel1 {
-        width: 90%;
+    .carousel-card {
+        width: 95%;
         padding-top: 10px;
         margin: 0px auto;
         overflow: hidden;
@@ -189,27 +189,8 @@
             border: 2px solid #fff;
         }
 
-    .cards {
-        padding: 2rem;
-        width: 84%;
-        height: 350px;
-        margin: 0px auto;
-        overflow: hidden;
-        padding: 10px 0px 10px 0px;
-    }
-
-    .cards2 {
-        display: grid;
-        grid-column: 1/-1;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        background: #fff;
-        grid-gap: 2rem;
-        padding: 2rem;
-        perspective: 1000px;
-    }
 
     .framework-card {
-        width: 30%;
         display: inline-block;
         background: #fff;
         border-radius: 20px;
@@ -233,6 +214,12 @@
             font-weight: 900;
             background: #f1d7ff;
         }
+
+    @@media screen and (max-width: 600px) {
+        .framework-card {
+            height: 350px;
+        }
+    }
 
 </style>
 
@@ -259,7 +246,7 @@
         </h2>
 
         <hr />
-
+        <!--
         <div class="div-slider">
             <ul class="slides-front">
                 <input type="radio" name="radio-btn" id="img-1" checked="">
@@ -302,12 +289,11 @@
                 </li>
             </ul>
         </div>
+        -->
     </div>
 
     <div class="wrapper">
-        <i class="fas fa-chevron-left prev"></i>
-        <i class="fas fa-chevron-right next"></i>
-        <div class="carousel1">
+        <div class="carousel-card">
             <div class="framework-card">
                 <img src="~/img/linha-roll-on.png">
                 <p>Linha Roll On</p>
@@ -355,7 +341,7 @@
 
     <script>
         $(document).ready(function () {
-            $('.carousel1').slick({
+            $('.carousel-card').slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 autoplay: true,
@@ -380,7 +366,7 @@
                         }
                     },
                     {
-                        breakpoint: 580,
+                        breakpoint: 600,
                         settings: {
                             slidesToShow: 1,
                             slidesToScroll: 1
