@@ -100,7 +100,7 @@ namespace permita_se.Controllers
         {
             var user = _userManager.FindByIdAsync(IdUsuario).Result;
 
-            string texto = "Olá! Gostaria de finalizar o meu pedido. Seguem os detalhes:" +
+            string texto = "Olá! Vim do site e gostaria de finalizar o meu pedido. Seguem os detalhes:" +
                 "\n\nCliente: " + user.Nome + " " + user.Sobrenome +
                 "\nTelefone de Contato: " + string.Format("{0:(##) #####-####}", user.Telefone) +
                 "\n\nProdutos:";

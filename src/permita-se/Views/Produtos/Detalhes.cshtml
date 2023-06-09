@@ -38,8 +38,8 @@
                     <div class="col-md-12">
                         <div class="card-footer ">
                             <p class="card-text">
-                            <a class="btn btn-outline-primary float-right @((ProdutoStatus.Indisponível == Model.ProdutoStatus) ? "disabled" : "")" asp-action="Index">Voltar</a>
-                            <a class="btn btn-success text-white" asp-controller="Pedidos" asp-action="AdicionarItem" asp-route-id="@Model.Id">
+                            <a class="btn btn-outline-primary float-right" asp-action="Index">Voltar</a>
+                            <a class="btn btn-success text-white @((ProdutoStatus.Indisponível == Model.ProdutoStatus) ? "disabled" : "")" asp-controller="Pedidos" asp-action="AdicionarItem" asp-route-id="@Model.Id">
                                 <i class="bi bi-cart-plus"></i> Carrinho (Preço @Model.Preco.ToString("c", CultureInfo.CreateSpecificCulture("pt-BR")))
                             </a>
                             </p>

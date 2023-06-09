@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using permita_se.Data.Services;
 using permita_se.Data.Static;
 using permita_se.Data.ViewModel;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -18,12 +19,14 @@ namespace permita_se.Controllers
     {
         private readonly IProdutoService _produtoService;
         private readonly IFavoritoService _favoritoService;
+        private readonly ICategoriasService _categoriasService;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public ProdutosController(IProdutoService produtoService, IFavoritoService favoritoService, IWebHostEnvironment webHostEnvironment)
+        public ProdutosController(IProdutoService produtoService, IFavoritoService favoritoService, ICategoriasService categoriasService, IWebHostEnvironment webHostEnvironment)
         {
             _produtoService = produtoService;
             _favoritoService = favoritoService;
+            _categoriasService = categoriasService;
             _webHostEnvironment = webHostEnvironment;
         }
 
@@ -52,6 +55,7 @@ namespace permita_se.Controllers
             {
                 var filtro = produtos.Where(n => n.Nome.ToLower().Contains(pesquisa.ToLower()) ||
                                                             n.Descricao.ToLower().Contains(pesquisa.ToLower())).ToList();
+                if (filtro?.Any() == false) return View("FiltroNotFound", pesquisa);
                 return View("Index", filtro);
             }
 
@@ -64,6 +68,12 @@ namespace permita_se.Controllers
             var produtos = await _produtoService.GetAllAsync(n => n.Categoria);
 
             var filtro = produtos.Where(n => n.Categoria.Id == id).ToList();
+
+            if (filtro?.Any() == false)
+            {
+                var categoria = await _categoriasService.GetByIdAsync(id);
+                return View("FiltroNotFound", "Categoria: " + categoria.Nome);
+            }
 
             return View("Index", filtro);
         }
