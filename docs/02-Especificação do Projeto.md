@@ -79,4 +79,4 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 O objetivo do diagrama de caso de uso em UML é demonstrar as diferentes maneiras que um usuário pode interagir com o sistema. Para o nosso caso, teremos apenas dois usuários: Cliente e Gerente, e no diagrama abaixo, podemos visualizar as funcionalidades acessadas por cada um.
 
-![diagrama-casos-de-uso](img/casos-de-uso-permita-se.png)
+![casos-de-uso-permita-se](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/89558202/6749d81a-7a03-49b3-ae79-d0c3c410a8d2)
