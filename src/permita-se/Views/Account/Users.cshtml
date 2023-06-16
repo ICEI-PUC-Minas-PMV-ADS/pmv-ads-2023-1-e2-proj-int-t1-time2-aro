@@ -11,32 +11,34 @@
             <h4>Lista de Usuários</h4>
         </p>
 
-        <table class="table">
-            <thead>
-                <tr class="text-center">
-                    <th>Nome</th>
-                    <th>Telefone</th>
-                    <th>E-mail</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td class="align-middle">
-                            @(item.Nome + " " + item.Sobrenome)
-                        </td>
-                        <td class="align-middle">
-                            @(long.Parse(item.Telefone).ToString(@"(00) 00000-0000"))
-                        </td>
-                        <td class="align-middle">
-                            @item.Email
-                        </td>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr class="text-center">
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
                     </tr>
-                }
-            </tbody>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="align-middle">
+                                @(item.Nome + " " + item.Sobrenome)
+                            </td>
+                            <td class="align-middle">
+                                @(long.Parse(item.Telefone).ToString(@"(00) 00000-0000"))
+                            </td>
+                            <td class="align-middle">
+                                @item.Email
+                            </td>
+                        </tr>
+                    }
+                </tbody>
 
-        </table>
+            </table>
+        </div>
 
     </div>
     <div class="col"></div>

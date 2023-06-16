@@ -7,49 +7,51 @@
 }
 
 <div class="row">
-    <div class="col-md-2"></div>
+    <div class="col"></div>
     <div class="col-md-8">
         <p>
-            <h4>Produtos Favoritos</h4>
+            <h4>Favoritos</h4>
         </p>
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Produto</th>
-                    <th>Nome</th>
-                    <th>Preço</th> 
-                    <th>Carrinho</th>
-                    <th>Favoritos</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
                     <tr>
-                        <td class="align-middle">
-                            <img class="rounded" src="~/img/@item.Produto.ImagemUrl" alt="@item.Produto.Nome" style="max-width: 150px" />
-                        </td>
-                        <td class="align-middle">
-                            @item.Produto.Nome
-                        </td>
-                        <td class="align-middle">
-                            @item.Produto.Preco.ToString("c", CultureInfo.CreateSpecificCulture("pt-BR"))
-                        </td>
-                        <td class="align-middle">
-                            <a class="btn btn-success text-white @((ProdutoStatus.Indisponível == item.Produto.ProdutoStatus) ? "disabled" : "")" asp-controller="Pedidos" asp-action="AdicionarItem" asp-route-id="@item.Produto.Id">
-                                <i class="bi bi-cart-plus"></i> Adicionar 
-                            </a>
-                        </td>
-                        <td class="align-middle">
-                            <a class="btn btn-danger text-white" asp-action="Remover" asp-route-id="@item.Produto.Id">
-                                <i class="bi bi-heart"></i> Remover
-                            </a>
-                        </td>
+                        <th>Produto</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Carrinho</th>
+                        <th>Favoritos</th>
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="align-middle">
+                                <img class="rounded" src="~/img/@item.Produto.ImagemUrl" alt="@item.Produto.Nome" style="max-width: 150px" />
+                            </td>
+                            <td class="align-middle">
+                                @item.Produto.Nome
+                            </td>
+                            <td class="align-middle">
+                                @item.Produto.Preco.ToString("c", CultureInfo.CreateSpecificCulture("pt-BR"))
+                            </td>
+                            <td class="align-middle">
+                                <a class="btn btn-success text-white @((ProdutoStatus.Indisponível == item.Produto.ProdutoStatus) ? "disabled" : "")" asp-controller="Pedidos" asp-action="AdicionarItem" asp-route-id="@item.Produto.Id">
+                                    <i class="bi bi-cart-plus"></i> Adicionar
+                                </a>
+                            </td>
+                            <td class="align-middle">
+                                <a class="btn btn-danger text-white" asp-action="Remover" asp-route-id="@item.Produto.Id">
+                                    <i class="bi bi-heart"></i> Remover
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
 
         <dv class="text-center">
             <div class="btn-group">
@@ -60,5 +62,5 @@
         </dv>
 
     </div>
-    <div class="col-md-2"></div>
+    <div class="col"></div>
 </div>

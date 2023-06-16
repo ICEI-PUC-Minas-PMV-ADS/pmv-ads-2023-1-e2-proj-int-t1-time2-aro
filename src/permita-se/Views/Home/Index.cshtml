@@ -121,9 +121,12 @@
             @foreach (var item in Model)
             {
                 <div class="framework-card">
-                    <img src="~/img/@item.ImagemUrl">
-                    <a asp-controller="Produtos" asp-action="FiltroCategoria" asp-route-id="@item.Id" style="color: #212529"><p>Linha @item.Nome</p></a>
+                    <a asp-controller="Produtos" asp-action="FiltroCategoria" asp-route-id="@item.Id" style="color: #212529">
+                        <img src="~/img/@item.ImagemUrl">
+                        <p>Linha @item.Nome</p>
+                    </a>
                     @item.Descricao
+
                 </div>
             }
         </div>

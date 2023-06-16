@@ -14,51 +14,53 @@
             </h2>
         </div>
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Quantidade</th>
-                    <th>Produto</th>
-                    <th>Preço</th>
-                    <th>Subtotal</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model.CarrinhoDeCompra.CarrinhoItems)
-                {
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
                     <tr>
-                        <td class="aling-middle">@item.Quantidade</td>
-                        <td class="aling-middle">@item.Produto.Nome</td>
-                        <td class="aling-middle">@item.Produto.Preco.ToString("c", CultureInfo.CreateSpecificCulture("pt-BR"))</td>
-                        <td class="aling-middle">@((item.Quantidade * item.Produto.Preco).ToString("c", CultureInfo.CreateSpecificCulture("pt-BR")))</td>
-                        <td class="aling-middle">
+                        <th>Quantidade</th>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.CarrinhoDeCompra.CarrinhoItems)
+                    {
+                        <tr>
+                            <td class="aling-middle">@item.Quantidade</td>
+                            <td class="aling-middle">@item.Produto.Nome</td>
+                            <td class="aling-middle">@item.Produto.Preco.ToString("c", CultureInfo.CreateSpecificCulture("pt-BR"))</td>
+                            <td class="aling-middle">@((item.Quantidade * item.Produto.Preco).ToString("c", CultureInfo.CreateSpecificCulture("pt-BR")))</td>
+                            <td class="aling-middle">
 
-                            <a class="text-danger" asp-controller="Pedidos" asp-action="RemoverItem"
-                           asp-route-id="@item.Produto.Id">
-                                <i class="bi bi-cart-dash"></i>
+                                <a class="text-danger" asp-controller="Pedidos" asp-action="RemoverItem"
+                                   asp-route-id="@item.Produto.Id">
+                                    <i class="bi bi-cart-dash"></i>
 
-                            </a>
-                            <a class="text-success" asp-controller="Pedidos" asp-action="AdicionarItem"
-                                asp-route-id="@item.Produto.Id">
-                                <i class="bi bi-cart-plus"></i>
+                                </a>
+                                <a class="text-success" asp-controller="Pedidos" asp-action="AdicionarItem"
+                                   asp-route-id="@item.Produto.Id">
+                                    <i class="bi bi-cart-plus"></i>
 
-                            </a>
+                                </a>
 
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td><b>Total:</b></td>
+                        <td>
+                            @Model.CarrinhoTotal.ToString("c", CultureInfo.CreateSpecificCulture("pt-BR"))
                         </td>
                     </tr>
-                }
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="2"></td>
-                    <td><b>Total:</b></td>
-                    <td>
-                        @Model.CarrinhoTotal.ToString("c", CultureInfo.CreateSpecificCulture("pt-BR"))
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
+                </tfoot>
+            </table>
+        </div>
 
         <dv class="text-center">
             <div class="btn-group">
@@ -66,7 +68,7 @@
                     Finalizar Pedido
                 </a>
                 <a class="btn btn-outline-success" asp-controller="Produtos" asp-action="Index">
-                    Continuar Comprando 
+                    Continuar Comprando
                 </a>
 
             </div>

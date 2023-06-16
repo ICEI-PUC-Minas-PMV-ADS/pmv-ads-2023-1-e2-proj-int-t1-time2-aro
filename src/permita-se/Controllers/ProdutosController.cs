@@ -56,6 +56,8 @@ namespace permita_se.Controllers
                 var filtro = produtos.Where(n => n.Nome.ToLower().Contains(pesquisa.ToLower()) ||
                                                             n.Descricao.ToLower().Contains(pesquisa.ToLower())).ToList();
                 if (filtro?.Any() == false) return View("FiltroNotFound", pesquisa);
+
+                ViewBag.Filtro = "Buscando por: " + '"' + pesquisa + '"';
                 return View("Index", filtro);
             }
 
@@ -75,6 +77,7 @@ namespace permita_se.Controllers
                 return View("FiltroNotFound", "Categoria: " + categoria.Nome);
             }
 
+            ViewBag.Filtro = "Linha: " + filtro.FirstOrDefault().Categoria.Nome;
             return View("Index", filtro);
         }
 

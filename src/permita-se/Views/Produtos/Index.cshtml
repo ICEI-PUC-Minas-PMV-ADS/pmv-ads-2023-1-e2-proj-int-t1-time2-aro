@@ -3,10 +3,21 @@
 @using permita_se.Data.Enum;
 
 @{
-    ViewData["Title"] = "Produtos";
+    ViewData["Title"] = "Catálogo";
+    var title = ViewBag.Filtro;
 }
 
 <div class="row">
+
+    @if (ViewBag.Filtro != null)
+    {
+        <div class="col-md-12">
+            <p>
+                <h4>@title</h4>
+            </p>
+        </div>
+    }
+
     @foreach (var item in Model)
     {
         <div class="col-md-4 col-xs-6 border-primary mb-3">
