@@ -6,4 +6,4 @@
 
 ## Conjunto de Slides
 
-[Slides do Projeto](Slides.pdf)
+[Slides do Projeto](docs/Slides.pdf)
