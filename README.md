@@ -27,7 +27,7 @@ Além disso, o site terá um design atraente e intuitivo, facilitando a navegaç
 
 ## Instruções de utilização
 
-Para rodar a nossa aplicação localmente, é necessário ter os arquivos do projet, a IDE Visual Studio e o ASP.NET 5 instalados em seu computador.
+Para rodar a nossa aplicação localmente, é necessário ter os arquivos do projeto, a IDE Visual Studio e o ASP.NET 5 instalados em seu computador.
 
 Nossa aplicação também se encontra disponível na internet através desse site: [Permita-se](https://permitase.azurewebsites.net).
 
