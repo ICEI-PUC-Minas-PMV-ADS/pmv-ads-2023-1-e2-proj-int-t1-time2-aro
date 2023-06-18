@@ -38,3 +38,5 @@
 | Referência 	| <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro/assets/89558202/64ec1de1-e1e0-4c20-8e29-099b6e4be903"> |
 | Avaliação | ✅ O site abriu e funcionou corretamente com os principais navegadores usados. |
 
+## Relatório
+Diante dos resultados obtidos, podemos afirmar que os testes foram concluídos com sucesso e que tudo transcorreu de forma positiva. Nossos esforços e planejamento resultaram em resultados promissores e atingiram os objetivos propostos.
