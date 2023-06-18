@@ -59,3 +59,62 @@
 |  	|  	|
 
 
+
+
+
+
+# Relação do plano de Testes de Software com as histórias das personas
+
+<span style="color:red">
+ 
+| **Caso de Teste** 	| **CT-01 – Cadastrar perfil** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-01 - O sistema deve permitir que os clientes criem uma conta. |
+| Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
+| Contexto de personas 	| Relacionado à necessidade da Bianca Souza, que deseja uma plataforma onde o cliente consiga criar um cadastro no site|
+|Critério de Êxito | - O cadastro foi realizado com sucesso. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-02 – Cadastro e atualização de produtos**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-02	-O sistema deve permitir que os gerentes cadastrem e atualizem informações de produtos, como descrições, preços e imagens. |
+| Objetivo do Teste 	| Verificar se o usuário *GERENTE* consegue efetuar o cadastro e atualização dos produtos. |
+| Contexto de personas 	| Relacionado à necessidade da Bianca Souza, que deseja uma plataforma onde consiga postar os seus produtos, com fotos e todas as especificações de cada um.|
+|Critério de Êxito | - Os cadastros e alterações foram realizados com sucesso. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-03 – Busca**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-03 O sistema deve permitir que os clientes pesquisem produtos por nome e categoria. |
+| Objetivo do Teste 	| Verificar se o usuário *Cliente* obtém êxito ao buscar o produto desejado. |
+| Contexto de personas 	| Relacionado à necessidade da Bianca Souza, que deseja uma plataforma onde consiga filtrar e ordenar seus produtos. <br> Relacionado à necessidade da Fernanda Mendes que deseja pesquisar o produto por uma barra de busca.|
+|Critério de Êxito | - O cliente conseguiu buscar e encontrar o produto desejado. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-04 – Favoritos**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-04 O sistema deve permitir que os clientes favoritem os produtos escolhidos. |
+| Objetivo do Teste 	| Verificar se o usuário *Cliente* obtém êxito ao favoritar um produto. |
+| Contexto de usuário	| Relacionado à necessidade da Iza Souza que deseja deixar como produtos favoritos.  |
+|Critério de Êxito | - O cliente conseguiu adicionar um produto à sua lista de favoritos e também consegue visualizar os produtos em seu perfil. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-05 – Carrinho de compras e compras**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-05 O sistema deve permitir que os clientes adicionem produtos a um carrinho de compras. |
+|Requisito Associado | RF-06 O sistema deve permitir que os clientes concluam a compra direcionando o pedido para um canal de comunicação externo com algum vendedor(a). |
+| Objetivo do Teste 	| Verificar se o usuário *Cliente* obtém êxito ao adicionar um produto ao carrinho de compras e ao efetuar uma compra. |
+| Contexto de usuário	| Relacionado à necessidade da Fernanda Mendes que deseja criar um carrinho com os produtos desejados.  |
+|Critério de Êxito | - O cliente conseguiu adicionar um produto ao seu carrinho de compras e concluir a compra com vendedor externo. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-07 – Contato com a loja**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-07 O sistema deve permitir que os clientes entrem em contato com a loja por meio de outros canais (redes sociais) |
+| Objetivo do Teste 	| Verificar se o usuário *Cliente* obtém êxito ao adicionar um produto ao carrinho de compras e ao efetuar uma compra. |
+| Contexto de usuário	| Relacionado à necessidade da Iza Souza que deseja um canal de comunicação de fácil acesso com os vendedores da loja através do catálogo de vendas.  |
+|Critério de Êxito | - O cliente conseguiu ser direcionado a pagina de contado desejada. |
+|  	|  	|
+
+
+
