@@ -59,7 +59,7 @@
 
 ## Relatório
 
-<span style="color:red">
+Diante dos resultados obtidos, podemos afirmar que os testes foram concluídos com sucesso e que tudo transcorreu de forma positiva. Nossos esforços e planejamento resultaram em resultados promissores e atingiram os objetivos propostos.
  
 | **Caso de Teste** 	| **CT-01 – Cadastrar perfil** 	|
 |:---:	|:---:	|
