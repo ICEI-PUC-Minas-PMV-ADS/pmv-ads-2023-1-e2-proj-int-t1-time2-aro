@@ -1,11 +1,9 @@
 # Instruções de utilização
 
-## Instalação do Site
+Para rodar a nossa aplicação localmente, é necessário ter os arquivos do projeto, a IDE Visual Studio e o ASP.NET 5 instalados em seu computador.
 
-O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado tanto em servidores...
+Nossa aplicação também se encontra disponível na internet através desse site: [Permita-se](https://permitase.azurewebsites.net).
 
-## Histórico de versões
-
-### [0.1.0] - DD/MM/AAAA
-#### Adicionado
-- Adicionado ...
+Para ter acesso a todas as funcionalidades, é necessário logar com a conta de administrador:
+- E-mail: admin@permitase.com
+- Senha: Permitase@123
