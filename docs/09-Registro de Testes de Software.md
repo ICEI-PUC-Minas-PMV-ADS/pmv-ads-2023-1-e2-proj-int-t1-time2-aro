@@ -57,12 +57,7 @@
 | Avaliação |✅ Links de redirecionamento para contato com a loja funcionam corretamente |
 |  	|  	|
 
-
-
-
-
-
-# Relação do plano de Testes de Software com as histórias das personas
+## Relatório
 
 <span style="color:red">
  
