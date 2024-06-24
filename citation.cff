@@ -1,0 +1,23 @@
+message: Please cite this software using these metadata.
+title: Permita-se
+authors:
+  - family-names: Gomes de Freitas
+    given-names: Roberta
+  - family-names: Marcelo Dias Souza
+    given-names: Lucas
+  - family-names: Augusto Alves Lourenço
+    given-names: Gabriel
+  - family-names: Alessandra Simão Reis
+    given-names: Nayra 
+ - family-names: Baier de Araujo
+    given-names: Pricilla 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Curcino de Lima
+    given-names: Mateus 
+keywords:
+  - Vendas
+  - Aromaterapia
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t1-time2-aro
+version: 1.0.0
+date-released: 2023-01
